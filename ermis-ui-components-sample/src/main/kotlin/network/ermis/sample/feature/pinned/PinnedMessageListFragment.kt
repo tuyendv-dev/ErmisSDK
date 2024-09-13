@@ -1,0 +1,52 @@
+
+package network.ermis.sample.feature.pinned
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
+import network.ermis.ui.viewmodel.pinned.PinnedMessageListViewModel
+import network.ermis.ui.viewmodel.pinned.PinnedMessageListViewModelFactory
+import network.ermis.ui.viewmodel.pinned.bindView
+import network.ermis.chat.ui.sample.R
+import network.ermis.sample.common.initToolbar
+import network.ermis.sample.common.navigateSafely
+import network.ermis.chat.ui.sample.databinding.FragmentPinnedMessageListBinding
+
+class PinnedMessageListFragment : Fragment() {
+
+    private val args: PinnedMessageListFragmentArgs by navArgs()
+
+    private val viewModel: PinnedMessageListViewModel by viewModels { PinnedMessageListViewModelFactory(args.cid) }
+
+    private var _binding: FragmentPinnedMessageListBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        _binding = FragmentPinnedMessageListBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        initToolbar(binding.toolbar)
+
+        viewModel.bindView(binding.pinnedMessageListView, viewLifecycleOwner)
+        binding.pinnedMessageListView.setPinnedMessageSelectedListener { message ->
+            requireActivity().findNavController(R.id.hostFragmentContainer)
+                .navigateSafely(PinnedMessageListFragmentDirections.actionOpenChat(message.cid, message.id))
+        }
+    }
+}

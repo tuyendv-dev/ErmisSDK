@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Header Title -->
+    <string name="ermis_ui_message_list_header_thread_title">Thread Reply</string>
+    <string name="ermis_ui_message_list_header_untitled_channel">Channel without name</string>
+
+    <!-- Header Subtitle -->
+    <string name="ermis_ui_message_list_header_thread_subtitle">with %1$s</string>
+    <string name="ermis_ui_message_list_header_disconnected">Waiting for network</string>
+    <string name="ermis_ui_message_list_header_offline">Disconnected</string>
+    <string name="ermis_ui_message_list_header_retry">Try Again</string>
+    <string name="ermis_ui_message_list_header_member_count_online">%1$s, %2$d Online</string>
+    <plurals name="ermis_ui_message_list_header_member_count">
+        <item quantity="one">%1d Member</item>
+        <item quantity="other">%1d Members</item>
+    </plurals>
+
+    <string name="ermis_ui_message_list_header_typing_user">%s is typing</string>
+    <string name="ermis_ui_message_list_header_typing_user_two">%s and %d other are typing</string>
+    <string name="ermis_ui_message_list_header_typing_users">%s and %d others are typing</string>
+
+    <string name="ermis_ui_message_list_header_back_button_content_description">Back button</string>
+</resources>

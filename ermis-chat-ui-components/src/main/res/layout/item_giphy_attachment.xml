@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/ui_spacing_small"
+    android:paddingEnd="@dimen/ui_spacing_small"
+    >
+
+    <network.ermis.ui.view.messages.adapter.view.internal.GapView
+        android:id="@+id/gapView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/pinIndicatorTextView"
+        style="@style/ermisUiTextAppearance.Footnote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:drawablePadding="@dimen/ui_spacing_tiny"
+        android:paddingHorizontal="@dimen/ui_spacing_tiny"
+        android:paddingTop="@dimen/ui_spacing_tiny"
+        android:paddingBottom="@dimen/ui_spacing_small"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gapView"
+        tools:visibility="visible"
+        />
+
+    <Space
+        android:id="@+id/reactionsSpace"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/ui_spacing_medium"
+        android:layout_marginStart="@dimen/ui_spacing_medium"
+        android:layout_marginEnd="@dimen/ui_spacing_medium"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/messageContainer"
+        app:layout_constraintStart_toStartOf="@id/messageContainer"
+        app:layout_constraintTop_toBottomOf="@id/pinIndicatorTextView"
+        />
+
+    <LinearLayout
+        android:id="@+id/messageContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp"
+        app:layout_constraintEnd_toEndOf="@id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@id/reactionsSpace"
+        >
+
+        <network.ermis.ui.view.messages.adapter.view.MessageReplyView
+            android:id="@+id/replyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            />
+
+        <network.ermis.ui.view.messages.adapter.view.internal.GiphyMediaAttachmentView
+            android:id="@+id/mediaAttachmentView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:hyphenationFrequency="normal"
+            android:paddingLeft="@dimen/ui_spacing_medium"
+            android:paddingTop="@dimen/ui_spacing_small"
+            android:paddingRight="@dimen/ui_spacing_medium"
+            android:paddingBottom="@dimen/ui_spacing_small"
+            android:textAppearance="@style/ermisUiTextAppearance.Body"
+            android:textColor="@color/ui_text_color_primary"
+            android:textColorLink="@color/ui_accent_blue"
+            app:lineHeight="16sp"
+            />
+
+    </LinearLayout>
+
+    <network.ermis.ui.view.messages.reactions.view.ViewReactionsView
+        android:id="@+id/reactionsView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@id/reactionsSpace"
+        app:layout_constraintTop_toTopOf="@id/reactionsSpace"
+        />
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        style="?attr/ermisUiMessageListItemAvatarStyle"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <Space
+        android:id="@+id/threadGuideline"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/ermis_ui_message_thread_reply_footnote_translation"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/messageContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <network.ermis.ui.view.messages.adapter.view.internal.FootnoteView
+        android:id="@+id/footnote"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_spacing_small"
+        app:layout_constraintEnd_toEndOf="@+id/marginEnd"
+        app:layout_constraintStart_toStartOf="@id/marginStart"
+        app:layout_constraintTop_toBottomOf="@+id/messageContainer"
+        />
+
+    <ImageView
+        android:id="@+id/deliveryFailedIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/messageContainer"
+        app:layout_constraintEnd_toStartOf="@id/userAvatarMineView"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_warning"
+        tools:visibility="visible"
+        />
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarMineView"
+        style="?attr/ermisUiMessageListItemAvatarStyle"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_constraintGuide_begin="20dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/marginEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:layout_constraintGuide_end="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

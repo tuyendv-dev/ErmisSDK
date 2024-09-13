@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- Giphy Media Attachment View -->
+    <declare-styleable name="GiphyMediaAttachmentView">
+        <!-- Drawable of the media attachment progressbar -->
+        <attr name="ermisUiGiphyMediaAttachmentProgressIcon" format="reference" />
+        <!-- Giphy icon drawable -->
+        <attr name="ermisUiGiphyMediaAttachmentGiphyIcon" format="reference" />
+        <!-- Media attachment placeholder icon -->
+        <attr name="ermisUiGiphyMediaAttachmentPlaceHolderIcon" format="reference" />
+        <!-- Media attachment background color -->
+        <attr name="ermisUiGiphyMediaAttachmentImageBackgroundColor" format="color|reference" />
+        <!-- Determines the sizing strategy of Giphy containers -->
+        <attr name="ermisUiGiphyMediaAttachmentSizingMode" format="enum">
+            <!-- Automatically sizes the container according to the available
+             width and height while respecting the original Giphy aspect ratio.
+
+             Choosing this value makes the container ignore attributes
+             'ermisUiGiphyMediaAttachmentWidth', 'ermisUiGiphyMediaAttachmentHeight' and
+             'ermisUiDimensionRatio'. -->
+            <enum name="adaptive" value="0" />
+            <!-- Applies a fixed size to the Giphy container. You can provide these
+            by passing in values to 'ermisUiGiphyMediaAttachmentWidth',
+             'ermisUiGiphyMediaAttachmentHeight' and  'ermisUiDimensionRatio'. -->
+            <enum name="fixed_size" value="1" />
+        </attr>
+        <!-- Represents a ratio of width/ height. -->
+        <attr name="ermisUiGiphyMediaAttachmentDimensionRatio" format="float" />
+        <!-- The width of the Giphy Container. -->
+        <attr name="ermisUiGiphyMediaAttachmentWidth" format="dimension">
+            <!-- The view should be as big as its parent (minus padding). -->
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <!-- The height of the Giphy Container. -->
+        <attr name="ermisUiGiphyMediaAttachmentHeight" format="dimension">
+            <!-- The view should be as big as its parent (minus padding). -->
+            <enum name="match_parent" value="-1" />
+        </attr>
+        <!-- Sets the Giphy type -->
+        <attr name="ermisUiGiphyMediaAttachmentGiphyType" format="enum">
+            <enum name="original" value="0" />
+            <enum name="fixedHeight" value="1" />
+            <enum name="fixedHeightDownsampled" value="2" />
+        </attr>
+        <!-- Sets the scaleType -->
+        <attr name="ermisUiGiphyMediaAttachmentScaleType" format="enum">
+            <!-- Scale using the image matrix when drawing. See
+                 {@link android.widget.ImageView#setImageMatrix(Matrix)}. -->
+            <enum name="matrix" value="0" />
+            <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#FILL}. -->
+            <enum name="fitXY" value="1" />
+            <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#START}. -->
+            <enum name="fitStart" value="2" />
+            <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#CENTER}. -->
+            <enum name="fitCenter" value="3" />
+            <!-- Scale the image using {@link android.graphics.Matrix.ScaleToFit#END}. -->
+            <enum name="fitEnd" value="4" />
+            <!-- Center the image in the view, but perform no scaling. -->
+            <enum name="center" value="5" />
+            <!-- Scale the image uniformly (maintain the image's aspect ratio) so both dimensions
+                 (width and height) of the image will be equal to or larger than the corresponding
+                 dimension of the view (minus padding). The image is then centered in the view. -->
+            <enum name="centerCrop" value="6" />
+            <!-- Scale the image uniformly (maintain the image's aspect ratio) so that both
+                 dimensions (width and height) of the image will be equal to or less than the
+                 corresponding dimension of the view (minus padding). The image is then centered in
+                 the view. -->
+            <enum name="centerInside" value="7" />
+        </attr>
+    </declare-styleable>
+
+</resources>

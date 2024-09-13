@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_search_view_background"
+    android:paddingStart="@dimen/spacing_small"
+    android:paddingEnd="@dimen/spacing_small"
+    >
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/ui_literal_transparent"
+        android:hint="@string/chat_group_info_edit_name_label"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:paddingHorizontal="@dimen/spacing_small"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textColorHint="@color/ui_text_color_hint"
+        android:textDirection="locale"
+        android:textSize="@dimen/ui_text_medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill"
+        />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/ui_literal_transparent"
+        android:hint="@string/chat_group_info_edit_description_hint"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:paddingHorizontal="@dimen/spacing_small"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textColorHint="@color/ui_text_color_hint"
+        android:textDirection="locale"
+        android:textSize="@dimen/ui_text_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameEditText"
+        tools:ignore="Autofill"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="ermisUi.AttachmentGallery" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="ermisUiTheme">@style/ermisUiTheme</item>
+        <item name="android:statusBarColor">@color/ui_grey</item>
+    </style>
+</resources>

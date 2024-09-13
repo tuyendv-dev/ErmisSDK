@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ermis_ui_channel_list_header_connected">Ermis</string>
+    <string name="ermis_ui_channel_list_header_disconnected">Waiting for network</string>
+    <string name="ermis_ui_channel_list_header_offline">Disconnected</string>
+</resources>

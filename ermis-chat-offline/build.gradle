@@ -1,0 +1,91 @@
+import network.ermis.Dependencies
+import network.ermis.Configuration
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.devtools.ksp'
+apply plugin: 'de.mannodermaus.android-junit5'
+apply plugin: 'androidx.baselineprofile'
+
+ext {
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
+    PUBLISH_ARTIFACT_ID = 'ermis-chat-offline'
+    PUBLISH_VERSION = rootVersionName
+}
+
+apply from: "${rootDir}/scripts/publish-module.gradle"
+apply from: "${rootDir}/scripts/android.gradle"
+
+android {
+    namespace "network.ermis.offline"
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    testOptions.unitTests {
+        includeAndroidResources = true
+        returnDefaultValues = true
+        all {
+            testLogging {
+                events 'failed', 'standardOut', 'standardError'
+                showExceptions true
+                showCauses true
+                showStackTraces true
+                exceptionFormat 'full'
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            testCoverageEnabled false
+        }
+    }
+}
+
+baselineProfile {
+    baselineProfileOutputDir = "."
+    filter {
+        include("io.ermis.chat.android.offline.**")
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += [
+                '-progressive',
+                '-Xexplicit-api=strict',
+                '-opt-in=kotlin.RequiresOptIn',
+                '-opt-in=io.getstream.chat.android.core.internal.InternalStreamChatApi',
+        ]
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+}
+
+dependencies {
+    api project(':ermis-chat-client')
+    implementation Dependencies.streamLog
+    // Kotlin
+    implementation Dependencies.kotlinReflect
+    implementation Dependencies.coroutinesCore
+
+    // Google libs
+    implementation Dependencies.androidxAppCompat
+    implementation Dependencies.androidxCoreKtx
+    implementation Dependencies.androidxLifecycleLiveDataKtx
+    implementation Dependencies.roomRuntime
+    implementation Dependencies.roomKtx
+    ksp Dependencies.roomCompiler
+    implementation Dependencies.workRuntimeKtx
+
+    // Serialization
+    implementation Dependencies.moshi
+    implementation Dependencies.moshiKotlin
+    implementation Dependencies.moshiAdapters
+    ksp Dependencies.moshiCodegen
+
+    detektPlugins(Dependencies.detektFormatting)
+}

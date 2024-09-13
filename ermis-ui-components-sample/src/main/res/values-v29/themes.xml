@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/stream_color_primary</item>
+        <item name="colorPrimaryDark">@color/stream_color_primary_dark</item>
+        <item name="colorAccent">@color/stream_color_accent</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="ermisUiTheme">@style/StreamTheme</item>
+    </style>
+
+    <style name="StreamTheme" parent="@style/ermisUiTheme">
+        <item name="ermisUiChannelActionsDialogStyle">@style/ChannelActionsDialogTheme</item>
+        <item name="ermisUiMessageListStyle">@style/MessageListTheme</item>
+        <item name="ermisUiMessageComposerViewStyle">@style/MessageComposerViewTheme</item>
+        <item name="ermisUiAudioRecordPlayerViewStyle">@style/AudioRecordPlayerViewTheme</item>
+    </style>
+
+    <style name="ChannelActionsDialogTheme" parent="ermisUi.ChannelList.ActionsDialog">
+        <item name="ermisUiChannelActionsViewInfoEnabled">true</item>
+    </style>
+
+    <style name="MessageListTheme" parent="ermisUi.MessageList">
+        <item name="ermisUiMessageListAudioRecordPlayerViewStyleOwn">@style/AudioRecordPlayerViewThemeOwn</item>
+        <item name="ermisUiMessageListAudioRecordPlayerViewStyleTheirs">@style/AudioRecordPlayerViewThemeTheirs</item>
+    </style>
+
+    <style name="MessageComposerViewTheme" parent="ermisUi.MessageComposerView">
+        <item name="ermisUiMessageComposerAudioRecordingButtonVisible">true</item>
+        <item name="ermisUiMessageComposerAudioRecordPlayerViewStyle">@style/AudioRecordPlayerViewThemePreview</item>
+    </style>
+
+    <style name="AudioRecordPlayerViewTheme" parent="ermisUi.AudioRecordPlayerView">
+        <item name="ermisUiAudioRecordPlayerFileIconContainerVisible">true</item>
+    </style>
+
+    <style name="AudioRecordPlayerViewThemeOwn" parent="ermisUi.AudioRecordPlayerView">
+        <item name="ermisUiAudioRecordPlayerFileIconContainerVisible">true</item>
+    </style>
+
+    <style name="AudioRecordPlayerViewThemeTheirs" parent="ermisUi.AudioRecordPlayerView">
+        <item name="ermisUiAudioRecordPlayerFileIconContainerVisible">true</item>
+    </style>
+
+    <style name="AudioRecordPlayerViewThemePreview" parent="ermisUi.AudioRecordPlayerView">
+        <item name="ermisUiAudioRecordPlayerFileIconContainerVisible">false</item>
+    </style>
+</resources>

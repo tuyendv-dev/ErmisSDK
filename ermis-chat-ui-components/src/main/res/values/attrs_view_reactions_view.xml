@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="ViewReactionsView">
+        <!-- Color of the reactions bubble for the message sent by the current user -->
+        <attr name="ermisUiReactionsBubbleColorMine" />
+        <!-- Color of the reactions bubble for the message sent by the other user -->
+        <attr name="ermisUiReactionsBubbleColorTheirs" />
+        <!-- Border color of the reactions bubble for the message sent by the current user -->
+        <attr name="ermisUiReactionsBubbleBorderColorMine" format="color|reference" />
+        <!-- Border color of the reactions bubble for the message sent by another user -->
+        <attr name="ermisUiReactionsBubbleBorderColorTheirs" format="color|reference" />
+        <!-- Border width of the reactions bubble for the message sent by the current user -->
+        <attr name="ermisUiReactionsBubbleBorderWidthMine" format="dimension|reference" />
+        <!-- Border width of the reactions bubble for the message sent by another user -->
+        <attr name="ermisUiReactionsBubbleBorderWidthTheirs" format="dimension|reference" />
+        <!-- Orientation of the bubble -->
+        <attr name="ermisUiMessageOptionsUserReactionOrientation" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+            <enum name="by_user" value="2" />
+            <enum name="by_user_inverted" value="3" />
+        </attr>
+    </declare-styleable>
+</resources>

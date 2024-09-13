@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userContainer"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/ui_white_snow"
+    >
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        style="@style/ermisUiChannelListAvatarStyle"
+        android:layout_marginStart="@dimen/spacing_small"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textSize="@dimen/ui_text_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/onlineTextView"
+        app:layout_constraintEnd_toStartOf="@id/checkboxImageView"
+        app:layout_constraintStart_toEndOf="@id/userAvatarView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Some user"
+        />
+
+    <TextView
+        android:id="@+id/onlineTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_small"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_small"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toStartOf="@id/checkboxImageView"
+        app:layout_constraintStart_toEndOf="@id/userAvatarView"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="last seen one hours ago"
+        />
+
+    <ImageView
+        android:id="@+id/checkboxImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:src="@drawable/ic_check_filled"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/ui_accent_blue"
+        tools:ignore="ContentDescription"
+        />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="0dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userAvatarView"
+        />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ui_divider_height"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

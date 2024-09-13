@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="EditReactionsView">
+        <!-- A color of reactions "bubble" when it's displayed for message posted by the current user -->
+        <attr name="ermisUiReactionsBubbleColorMine" />
+        <!-- A color of reactions "bubble" when it's displayed for message which is not posted by the current user -->
+        <attr name="ermisUiReactionsBubbleColorTheirs" />
+    </declare-styleable>
+</resources>

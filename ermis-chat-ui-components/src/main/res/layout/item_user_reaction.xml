@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reactionContainer"
+    android:layout_width="@dimen/ui_channel_actions_member_height"
+    android:layout_height="wrap_content"
+    >
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        style="?attr/ermisUiMessageOptionsAvatarStyle"
+        android:layout_marginStart="@dimen/ui_spacing_small"
+        android:layout_marginTop="@dimen/ui_spacing_small"
+        android:layout_marginEnd="@dimen/ui_spacing_small"
+        app:layout_constraintBottom_toTopOf="@id/userNameTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <network.ermis.ui.view.messages.reactions.user.SingleReactionView
+        android:id="@+id/userReactionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_spacing_small"
+        android:layout_marginEnd="@dimen/ui_spacing_small"
+        android:layout_marginBottom="@dimen/ui_spacing_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:singleLine="true"
+        android:textAppearance="@style/ermisUiTextAppearance.FootnoteBold"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userAvatarView"
+        tools:text="User"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

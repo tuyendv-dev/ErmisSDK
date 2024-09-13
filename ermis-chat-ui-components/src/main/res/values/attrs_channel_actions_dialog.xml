@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="ChannelActionsDialog">
+        <!-- Channel actions dialog title with member names -->
+        <attr name="ermisUiChannelActionsMemberNamesTextSize" format="dimension|reference" />
+        <attr name="ermisUiChannelActionsMemberNamesTextColor" format="color|reference" />
+        <attr name="ermisUiChannelActionsMemberNamesTextFont" format="reference" />
+        <attr name="ermisUiChannelActionsMemberNamesTextFontAssets" format="string" />
+        <attr name="ermisUiChannelActionsMemberNamesTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Channel actions dialog subtitle with member info -->
+        <attr name="ermisUiChannelActionsMemberInfoTextSize" format="dimension|reference" />
+        <attr name="ermisUiChannelActionsMemberInfoTextColor" format="color|reference" />
+        <attr name="ermisUiChannelActionsMemberInfoTextFont" format="reference" />
+        <attr name="ermisUiChannelActionsMemberInfoTextFontAssets" format="string" />
+        <attr name="ermisUiChannelActionsMemberInfoTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Channel action item text style -->
+        <attr name="ermisUiChannelActionsItemTextSize" format="dimension|reference" />
+        <attr name="ermisUiChannelActionsItemTextColor" format="color|reference" />
+        <attr name="ermisUiChannelActionsItemTextFont" format="reference" />
+        <attr name="ermisUiChannelActionsItemTextFontAssets" format="string" />
+        <attr name="ermisUiChannelActionsItemTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiChannelActionsWarningItemTextSize" format="dimension|reference" />
+        <attr name="ermisUiChannelActionsWarningItemTextColor" format="color|reference" />
+        <attr name="ermisUiChannelActionsWarningItemTextFont" format="reference" />
+        <attr name="ermisUiChannelActionsWarningItemTextFontAssets" format="string" />
+        <attr name="ermisUiChannelActionsWarningItemTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiChannelActionsViewInfoIcon" format="reference" />
+        <attr name="ermisUiChannelActionsViewInfoEnabled" format="boolean" />
+        <attr name="ermisUiChannelActionsMarkAsReadIcon" format="reference" />
+        <attr name="ermisUiChannelActionsMarkAsReadEnabled" format="boolean" />
+        <attr name="ermisUiChannelActionsLeaveGroupIcon" format="reference" />
+        <attr name="ermisUiChannelActionsLeaveGroupEnabled" format="boolean" />
+        <attr name="ermisUiChannelActionsDeleteConversationIcon" format="reference" />
+        <attr name="ermisUiChannelActionsDeleteConversationEnabled" format="boolean" />
+        <attr name="ermisUiChannelActionsCancelIcon" format="reference" />
+        <attr name="ermisUiChannelActionsCancelEnabled" format="boolean" />
+        <attr name="ermisUiChannelActionsBackground" format="reference" />
+    </declare-styleable>
+</resources>

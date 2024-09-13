@@ -1,0 +1,43 @@
+package network.ermis.core.models
+
+import androidx.compose.runtime.Immutable
+
+/**
+ * App settings, as they are configured in the dashboard.
+ *
+ * @param app [App] The configurations of the app.
+ */
+@Immutable
+public data class AppSettings(
+    val app: App,
+)
+
+/**
+ * The representation of the app, with its configurations.
+ *
+ * @param name The name of the app.
+ * @param fileUploadConfig [FileUploadConfig] The configuration of file uploads.
+ * @param imageUploadConfig [FileUploadConfig] The configuration of image uploads.
+ */
+@Immutable
+public data class App(
+    val name: String,
+    val fileUploadConfig: FileUploadConfig,
+    val imageUploadConfig: FileUploadConfig,
+)
+
+/**
+ * The configuration of file upload.
+ *
+ * @param allowedFileExtensions Allowed file extensions.
+ * @param allowedFileExtensions Allowed mime types.
+ * @param blockedFileExtensions Blocked mime types.
+ * @param blockedMimeTypes Blocked mime types.
+ */
+@Immutable
+public data class FileUploadConfig(
+    val allowedFileExtensions: List<String>,
+    val allowedMimeTypes: List<String>,
+    val blockedFileExtensions: List<String>,
+    val blockedMimeTypes: List<String>,
+)

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <attr name="ermisUiReactionsBubbleColorMine" format="color|reference" />
+    <attr name="ermisUiReactionsBubbleColorTheirs" format="color|reference" />
+    <attr name="ermisUiValidTheme" format="boolean" />
+
+    <!--Themes attributes-->
+    <declare-styleable name="ermisUiStyleable">
+        <attr name="ermisUiTheme" format="reference" />
+        <attr name="ermisUiMessageListStyle" format="reference" />
+        <attr name="ermisUiMessageListViewReactionsStyle" format="reference" />
+        <attr name="ermisUiSingleReactionViewStyle" format="reference" />
+        <attr name="ermisUiMessageListGiphyAttachmentStyle" format="reference" />
+        <attr name="ermisUiMessageListMediaAttachmentStyle" format="reference" />
+        <attr name="ermisUiMessageListFileAttachmentStyle" format="reference" />
+        <attr name="ermisUiMessageListUnsupportedAttachmentStyle" format="reference" />
+        <attr name="ermisUiMessageListItemAvatarStyle" format="reference" />
+        <attr name="ermisUiMessageListHeaderAvatarStyle" format="reference" />
+        <attr name="ermisUiChannelListItemAvatarStyle" format="reference" />
+        <attr name="ermisUiMentionListStyle" format="reference" />
+        <attr name="ermisUiMentionPreviewItemAvatarStyle" format="reference" />
+        <attr name="ermisUiChannelListHeaderStyle" format="reference" />
+        <attr name="ermisUiChannelListHeaderAvatarStyle" format="reference" />
+        <attr name="ermisUiChannelListViewStyle" format="reference" />
+        <attr name="ermisUiChannelActionsDialogAvatarStyle" format="reference" />
+        <attr name="ermisUiGlobalAvatarBorderColor" format="reference|color" />
+        <attr name="ermisUiGlobalAvatarTextColor" format="reference|color" />
+        <attr name="ermisUiGlobalAvatarOnlineIndicatorColor" format="reference|color" />
+        <attr name="ermisUiChannelActionsDialogStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryAvatarStyle" format="reference" />
+        <attr name="ermisUiSearchResultAvatarStyle" format="reference" />
+        <attr name="ermisUiMessageOptionsAvatarStyle" format="reference" />
+        <attr name="ermisUiReplyAvatarStyle" format="reference" />
+        <attr name="ermisUiThreadAvatarStyle" format="reference" />
+        <attr name="ermisUiMessageListHeaderStyle" format="reference" />
+        <attr name="ermisUiSearchInputViewStyle" format="reference" />
+        <attr name="ermisUiSearchResultListViewStyle" format="reference" />
+        <attr name="ermisUiSuggestionListViewStyle" format="reference" />
+        <attr name="ermisUiSuggestionListViewMentionAvatarStyle" format="reference" />
+        <attr name="ermisUiTypingIndicatorView" format="reference" />
+        <attr name="ermisUiPinnedMessageListStyle" format="reference" />
+        <attr name="ermisUiMessageComposerViewStyle" format="reference" />
+        <attr name="ermisUiAudioRecordPlayerViewStyle" format="reference" />
+    </declare-styleable>
+</resources>

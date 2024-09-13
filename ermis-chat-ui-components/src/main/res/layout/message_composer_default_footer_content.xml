@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/alsoSendToChannelCheckBox"
+        style="@style/ermisUiTextAppearance.Body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/ui_spacing_small"
+        android:buttonTint="@color/ermis_ui_checkbox_color_selector"
+        android:text="@string/ermis_ui_message_composer_send_to_channel"
+        android:textAppearance="@style/ermisUiTextAppearance.Body"
+        android:textColor="@color/ui_text_color_secondary"
+        android:visibility="gone"
+        />
+
+</merge>

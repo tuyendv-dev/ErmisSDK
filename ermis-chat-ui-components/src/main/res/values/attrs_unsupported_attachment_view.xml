@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- FileAttachmentsView -->
+    <declare-styleable name="UnsupportedAttachmentView">
+        <!-- Unsupported attachment background color -->
+        <attr name="ermisUiUnsupportedAttachmentBackgroundColor" format="color|reference" />
+        <!-- Unsupported attachment stroke color -->
+        <attr name="ermisUiUnsupportedAttachmentStrokeColor" format="color|reference" />
+        <!-- Unsupported attachment stroke width -->
+        <attr name="ermisUiUnsupportedAttachmentStrokeWidth" format="dimension" />
+        <!-- Unsupported attachment corner radius -->
+        <attr name="ermisUiUnsupportedAttachmentCornerRadius" format="dimension" />
+
+        <!-- Text size of the unsupported attachment title -->
+        <attr name="ermisUiUnsupportedAttachmentTitleTextSize" format="dimension|reference" />
+        <!-- The color of the unsupported attachment title -->
+        <attr name="ermisUiUnsupportedAttachmentTitleTextColor" format="color|reference" />
+        <!-- The font of the unsupported attachment title -->
+        <attr name="ermisUiUnsupportedAttachmentTitleTextFont" format="reference" />
+        <!-- Font assets reference for the unsupported attachment title -->
+        <attr name="ermisUiUnsupportedAttachmentTitleFontAssets" format="string" />
+        <!-- Text style of the unsupported attachment title: "normal", "bold", and "italic". -->
+        <attr name="ermisUiUnsupportedAttachmentTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

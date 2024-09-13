@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/memberContainer"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/add_channel_member_item_background"
+    android:orientation="horizontal"
+    >
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:ermisUiAvatarBorderWidth="0dp"
+        />
+
+    <TextView
+        android:id="@+id/memberNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="12dp"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textSize="@dimen/ui_text_medium"
+        />
+
+</LinearLayout>

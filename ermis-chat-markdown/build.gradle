@@ -1,0 +1,47 @@
+import network.ermis.Dependencies
+import network.ermis.Configuration
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'de.mannodermaus.android-junit5'
+
+ext {
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
+    PUBLISH_ARTIFACT_ID = 'ermis-chat-markdown'
+    PUBLISH_VERSION = rootVersionName
+}
+
+apply from: "${rootDir}/scripts/publish-module.gradle"
+apply from: "${rootDir}/scripts/android.gradle"
+
+android {
+    namespace "network.ermis.ui.markdown"
+    sourceSets {
+        all {
+            it.java.srcDir "src/$it.name/kotlin"
+        }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += [
+                '-Xexplicit-api=strict',
+                '-opt-in=network.ermis.core.internal.InternalErmisChatApi',
+        ]
+    }
+}
+
+dependencies {
+    implementation project(":ermis-chat-ui-components")
+
+    implementation Dependencies.androidxCoreKtx
+
+    // Markdown
+    implementation Dependencies.markwonCore
+    implementation Dependencies.markwonLinkify
+    implementation Dependencies.markwonextStrikethrough
+    implementation Dependencies.markwonImage
+
+    detektPlugins(Dependencies.detektFormatting)
+}

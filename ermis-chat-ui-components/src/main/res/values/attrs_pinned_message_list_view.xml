@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="PinnedMessageListView">
+        <attr name="ermisUiPinnedMessageListBackground" format="color|reference"/>
+        <attr name="ermisUiPinnedMessageListEmptyStateDrawable" format="reference"/>
+        <attr name="ermisUiPinnedMessageListSenderNameTextColor" format="color|reference"/>
+        <attr name="ermisUiPinnedMessageListSenderNameTextSize" format="dimension"/>
+        <attr name="ermisUiPinnedMessageListSenderNameTextFontAssets" format="string"/>
+        <attr name="ermisUiPinnedMessageListSenderNameTextFont" format="reference"/>
+        <attr name="ermisUiPinnedMessageListSenderNameTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="ermisUiPinnedMessageListMessageTextColor" format="color|reference"/>
+        <attr name="ermisUiPinnedMessageListMessageTextSize" format="dimension"/>
+        <attr name="ermisUiPinnedMessageListMessageTextFontAssets" format="string"/>
+        <attr name="ermisUiPinnedMessageListMessageTextFont" format="reference"/>
+        <attr name="ermisUiPinnedMessageListMessageTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="ermisUiPinnedMessageListMessageTimeTextColor" format="color|reference"/>
+        <attr name="ermisUiPinnedMessageListMessageTimeTextSize" format="dimension"/>
+        <attr name="ermisUiPinnedMessageListMessageTimeTextFontAssets" format="string"/>
+        <attr name="ermisUiPinnedMessageListMessageTimeTextFont" format="reference"/>
+        <attr name="ermisUiPinnedMessageListMessageTimeTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

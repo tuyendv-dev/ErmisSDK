@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ermisUiBaseAvatarStyle">
+        <item name="ermisUiAvatarBorderWidth">0dp</item>
+        <item name="ermisUiAvatarBorderColor">@color/ui_black</item>
+        <item name="ermisUiAvatarTextColor">@color/ui_white</item>
+        <item name="ermisUiAvatarTextStyle">bold</item>
+    </style>
+
+    <style name="ermisUiGalleryAvatarStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_tiny</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_tiny</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_tiny</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+        <item name="ermisUiAvatarBorderWidth">0dp</item>
+    </style>
+
+    <style name="ermisUiBottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ermisUiBottomSheetStyle</item>
+    </style>
+
+    <style name="ermisUiBottomSheetStyle" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/ermisUiBottomSheetShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="ermisUiBottomSheetShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ermisUiChannelActionsButtonStyle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:paddingStart">@dimen/ui_spacing_medium</item>
+        <item name="android:paddingEnd">@dimen/ui_spacing_medium</item>
+        <item name="android:drawablePadding">@dimen/ui_spacing_medium</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/ui_channel_actions_item_height</item>
+        <item name="android:textSize">@dimen/ui_text_medium</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="ermisUiAttachmentBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/ui_literal_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="ermisUiAttachmentsCardViewStyle" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ermisUiAttachmentsShapeAppearanceOverlay</item>
+    </style>
+
+    <style name="ermisUiAttachmentsShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="ermisUiBadgeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:background">@drawable/badge_bg</item>
+        <item name="android:backgroundTint">@color/ui_accent_red</item>
+        <item name="android:minWidth">16dp</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ui_white</item>
+    </style>
+
+    <style name="ermisUiCooldownBadgeStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:background">@drawable/cooldown_badge_background</item>
+        <item name="android:backgroundTint">@color/ui_grey</item>
+        <item name="android:minWidth">24dp</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ui_literal_white</item>
+    </style>
+
+    <style name="ermisUiMessageOptionItem">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:background">?selectableItemBackground</item>
+        <item name="android:textAppearance">@style/ermisUiTextAppearance.Body</item>
+    </style>
+
+    <!-- Typography -->
+    <style name="ermisUiTextAppearance" parent="TextAppearance.AppCompat.Body2" />
+
+    <style name="ermisUiTextAppearance.Footnote">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Description_Small_Reg</item>
+        <item name="android:textColor">@color/ui_text_color_secondary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.FootnoteBold">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Description_Small_SemiBold</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.Caption1Bold">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Description_Small_SemiBold</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.Body">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Body_Normal14_Reg</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.BodyBold">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Body_Normal14_SemiBold</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.Headline">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Body_Normal16_Reg</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.HeadlineBold">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_Body_Normal16_SemiBold</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.Title">
+        <item name="android:textAppearance">@style/TextAppearance_Belo_H3_SemiBold</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTextAppearance.MediaActivityHeaderTitle" parent="ermisUiTextAppearance.BodyBold">
+        <item name="android:textColor">@color/ui_literal_white</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="ermisUiTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="ermisUiValidTheme">true</item>
+        <item name="ermisUiAttachmentActivityProgressBarStyle">@style/ermisUi.AttachmentActivity.ProgressBar</item>
+        <item name="ermisUiAttachmentActivityImageStyle">@style/ermisUi.AttachmentActivity.Image</item>
+        <item name="ermisUiAttachmentActivityWebViewStyle">@style/ermisUi.AttachmentActivity.WebView</item>
+        <item name="ermisUiMediaActivityIconStyle">@style/ermisUi.MediaActivity.Icon</item>
+        <item name="ermisUiMediaActivityHeader">@style/ermisUi.MediaActivity.Header</item>
+        <item name="ermisUiMediaActivityHeaderLeftActionButtonStyle">@style/ermisUi.MediaActivity.HeaderLeftActionButton</item>
+        <item name="ermisUiMediaActivityHeaderTitleStyle">@style/ermisUi.MediaActivity.HeaderTitle</item>
+        <item name="ermisUiMediaActivityProgressBarStyle">@style/ermisUi.MediaActivity.ProgressBar</item>
+        <item name="ermisUiAttachmentGalleryOptionsStyle">@style/ermisUi.AttachmentGallery.Options</item>
+        <item name="ermisUiAttachmentGalleryCloseButtonStyle">@style/ermisUi.AttachmentGallery.CloseButton</item>
+        <item name="ermisUiAttachmentGalleryTitleStyle">@style/ermisUi.AttachmentGallery.Title</item>
+        <item name="ermisUiAttachmentGalleryDateStyle">@style/ermisUi.AttachmentGallery.Date</item>
+        <item name="ermisUiAttachmentGalleryActionsMenuStyle">@style/ermisUi.AttachmentGallery.ActionsMenu</item>
+        <item name="ermisUiAttachmentGalleryBottomBarImageCountStyle">@style/ermisUi.AttachmentGallery.BottomBar.ImageCount</item>
+        <item name="ermisUiAttachmentGalleryBottomBarLeftIconStyle">@style/ermisUi.AttachmentGallery.BottomBar.LeftIcon</item>
+        <item name="ermisUiAttachmentGalleryBottomBarRightIconStyle">@style/ermisUi.AttachmentGallery.BottomBar.RightIcon</item>
+        <item name="ermisUiGlobalAvatarBorderColor">@color/ui_black</item>
+        <item name="ermisUiGlobalAvatarOnlineIndicatorColor">@color/ui_accent_green</item>
+        <item name="ermisUiGlobalAvatarTextColor">@color/ui_white</item>
+        <item name="ermisUiMessageListItemAvatarStyle">@style/ermisUi.MessageList.Item.Avatar</item>
+        <item name="ermisUiMessageListHeaderAvatarStyle">@style/ermisUi.MessageList.Header.Avatar</item>
+        <item name="ermisUiChannelListViewStyle">@style/ermisUi.ChannelListView</item>
+        <item name="ermisUiChannelListItemAvatarStyle">@style/ermisUi.ChannelList.Item.Avatar</item>
+        <item name="ermisUiChannelListHeaderAvatarStyle">@style/ermisUi.ChannelListHeader.Avatar</item>
+        <item name="ermisUiMentionPreviewItemAvatarStyle">@style/ermisUi.MentionPreview.Item.Avatar</item>
+        <item name="ermisUiChannelActionsDialogAvatarStyle">@style/ermisUi.ChannelActions.Dialog.Avatar</item>
+        <item name="ermisUiAttachmentGalleryAvatarStyle">@style/ermisUi.AttachmentGallery.Avatar</item>
+        <item name="ermisUiSuggestionListViewMentionAvatarStyle">@style/ermisUi.SuggestionListView.Mention.Avatar</item>
+        <item name="ermisUiSearchResultAvatarStyle">@style/ermisUi.SearchResult.Avatar</item>
+        <item name="ermisUiThreadAvatarStyle">@style/ermisUi.Thread.Avatar</item>
+        <item name="ermisUiReplyAvatarStyle">@style/ermisUi.Reply.Avatar</item>
+        <item name="ermisUiMessageOptionsAvatarStyle">@style/ermisUi.MessageOptions.Avatar</item>
+        <item name="ermisUiMediaAttachmentGridViewStyle">@style/ermisUi.MediaAttachmentGridView</item>
+        <item name="ermisUiAttachmentGalleryVideoAttachmentsStyle">@style/ermisUi.AttachmentGallery.VideoAttachments</item>
+        <item name="ermisUiMessageComposerViewStyle">@style/ermisUi.MessageComposerView</item>
+        <item name="ermisUiAudioRecordPlayerViewStyle">@style/ermisUi.AudioRecordPlayerView</item>
+    </style>
+
+    <style name="ermisUi">
+        <!--Common styles properties-->
+    </style>
+
+    <style name="ermisUi.BaseAvatar">
+        <!--Common styles properties for BaseAvatar-->
+        <item name="ermisUiAvatarBorderColor">?attr/ermisUiGlobalAvatarBorderColor</item>
+        <item name="ermisUiAvatarTextColor">?attr/ermisUiGlobalAvatarTextColor</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+        <item name="ermisUiAvatarOnlineIndicatorPosition">topRight</item>
+        <item name="ermisUiAvatarBorderWidth">0dp</item>
+        <item name="ermisUiAvatarOnlineIndicatorColor">?attr/ermisUiGlobalAvatarOnlineIndicatorColor</item>
+        <item name="ermisUiAvatarOnlineIndicatorBorderColor">@color/ui_white</item>
+        <item name="ermisUiAvatarShape">circle</item>
+    </style>
+
+    <style name="ermisUi.MessageList" parent="ermisUi">
+        <!-- Scroll button-->
+        <item name="ermisUiScrollButtonEnabled">true</item>
+        <item name="ermisUiScrollButtonUnreadEnabled">true</item>
+        <item name="ermisUiScrollButtonColor">@color/ui_white</item>
+        <item name="ermisUiScrollButtonRippleColor">@color/ui_white_smoke</item>
+        <item name="ermisUiScrollButtonBadgeElevation">3dp</item>
+        <item name="ermisUiScrollButtonInternalMargin">2dp</item>
+        <item name="ermisUiScrollButtonEndMargin">6dp</item>
+        <item name="ermisUiScrollButtonBottomMargin">6dp</item>
+        <item name="ermisUiScrollButtonIcon">@drawable/ic_down</item>
+        <item name="ermisUiScrollButtonElevation">3dp</item>
+        <item name="ermisUiScrollButtonBadgeTextSize">@dimen/ermis_ui_scroll_button_unread_badge_text_size</item>
+        <item name="ermisUiScrollButtonBadgeTextColor">@color/ui_literal_white</item>
+        <item name="ermisUiScrollButtonBadgeTextStyle">normal</item>
+
+        <item name="ermisUiLoadMoreThreshold">10</item>
+        <item name="ermisUiNewMessagesBehaviour">count_new_messages</item>
+        <item name="ermisUiRetryOptionIcon">@drawable/ic_send</item>
+
+        <item name="ermisUiBackgroundColor">@color/ui_white_snow</item>
+
+        <!-- Message background color -->
+        <item name="ermisUiMessageBackgroundColorMine">@color/ui_grey_gainsboro</item>
+        <item name="ermisUiMessageBackgroundColorTheirs">@color/ui_white</item>
+
+        <!-- Message link -->
+        <item name="ermisUiMessageLinkColorMine">@color/ui_accent_blue</item>
+        <item name="ermisUiMessageLinkColorTheirs">@color/ui_accent_blue</item>
+        <item name="ermisUiLinkDescriptionMaxLines">5</item>
+        <item name="ermisUiReactionsEnabled">true</item>
+        <item name="ermisUiMessageLinkBackgroundColorMine">@color/ui_blue_alice</item>
+        <item name="ermisUiMessageLinkBackgroundColorTheirs">@color/ui_blue_alice</item>
+
+        <!-- Message text style link title -->
+        <item name="ermisUiMessageTextSizeLinkTitle">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageTextColorLinkTitle">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageTextStyleLinkTitle">normal</item>
+        <item name="ermisUiMessageTextSizeLinkDescription">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorLinkDescription">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleLinkDescription">normal</item>
+        <item name="ermisUiMessageTextSizeLinkLabel">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorLinkLabel">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleLinkLabel">normal</item>
+
+        <!-- Message text style mine -->
+        <item name="ermisUiMessageTextSizeMine">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageTextColorMine">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageTextStyleMine">normal</item>
+
+        <!-- Message text style theirs -->
+        <item name="ermisUiMessageTextSizeTheirs">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageTextColorTheirs">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageTextStyleTheirs">normal</item>
+
+        <!-- Message text style user name in footer -->
+        <item name="ermisUiMessageTextSizeUserName">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorUserName">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleUserName">normal</item>
+
+        <!-- Message text style date in footer -->
+        <item name="ermisUiMessageTextSizeDate">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorDate">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleDate">normal</item>
+
+        <!-- Message text style language in footer -->
+        <item name="ermisUiMessageTextSizeLanguage">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorLanguage">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleLanguage">normal</item>
+
+        <!-- Message text style thread counter in footer -->
+        <item name="ermisUiMessageTextSizeThreadCounter">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorThreadCounter">@color/ui_accent_blue</item>
+        <item name="ermisUiMessageTextStyleThreadCounter">normal</item>
+
+        <!-- Message text style read counter in footer -->
+        <item name="ermisUiMessageTextSizeReadCounter">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorReadCounter">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleReadCounter">normal</item>
+
+        <!-- Message text style thread separator -->
+        <item name="ermisUiMessageTextSizeThreadSeparator">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorThreadSeparator">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleThreadSeparator">normal</item>
+
+        <!-- Message Reply background color -->
+        <item name="ermisUiMessageReplyBackgroundColorMine">@color/ui_grey_gainsboro</item>
+        <item name="ermisUiMessageReplyBackgroundColorTheirs">@color/ui_bars_background</item>
+
+        <!-- Message Reply text style mine -->
+        <item name="ermisUiMessageReplyTextSizeMine">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageReplyTextColorMine">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageReplyTextStyleMine">normal</item>
+
+        <!-- Message Reply text style theirs -->
+        <item name="ermisUiMessageReplyTextSizeTheirs">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageReplyTextColorTheirs">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageReplyTextStyleTheirs">normal</item>
+
+        <!-- Message Reply link -->
+        <item name="ermisUiMessageReplyLinkColorMine">@color/ui_accent_blue</item>
+        <item name="ermisUiMessageReplyLinkColorTheirs">@color/ui_accent_blue</item>
+        <item name="ermisUiMessageReplyLinkBackgroundColorMine">@color/ui_blue_alice</item>
+        <item name="ermisUiMessageReplyLinkBackgroundColorTheirs">@color/ui_blue_alice</item>
+
+        <!-- Message Reply stroke -->
+        <item name="ermisUiMessageReplyStrokeColorMine">@color/ui_literal_transparent</item>
+        <item name="ermisUiMessageReplyStrokeWidthMine">0dp</item>
+        <item name="ermisUiMessageReplyStrokeColorTheirs">@color/ui_grey_whisper</item>
+        <item name="ermisUiMessageReplyStrokeWidthTheirs">1dp</item>
+
+        <!-- Date separator -->
+        <item name="ermisUiDateSeparatorBackgroundColor">@color/ui_overlay_dark</item>
+
+        <item name="ermisUiMessageTextSizeDateSeparator">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageTextColorDateSeparator">@color/ui_white</item>
+        <item name="ermisUiMessageTextStyleDateSeparator">normal</item>
+
+        <!-- Message reactions view style -->
+        <item name="ermisUiMessageReactionsBubbleColorMine">@color/ui_grey_whisper</item>
+        <item name="ermisUiMessageReactionsBubbleColorTheirs">@color/ui_grey_gainsboro</item>
+        <item name="ermisUiMessageReactionsBubbleBorderColorMine">@color/ui_grey_whisper</item>
+
+        <!-- Message edit reactions view style -->
+        <item name="ermisUiEditReactionsBubbleColorMine">@color/ui_white</item>
+        <item name="ermisUiEditReactionsBubbleColorTheirs">@color/ui_white</item>
+        <item name="ermisUiEditReactionsColumns">5</item>
+
+        <!-- Indicator icons -->
+        <item name="ermisUiShowMessageDeliveryStatusIndicator">true</item>
+        <item name="ermisUiIconIndicatorSent">@drawable/ic_check_single</item>
+        <item name="ermisUiIconIndicatorRead">@drawable/ic_check_double</item>
+        <item name="ermisUiIconIndicatorPendingSync">@drawable/ic_clock</item>
+        <item name="ermisUiIconOnlyVisibleToYou">@drawable/ic_icon_eye_off</item>
+
+        <!-- Message deleted style -->
+        <item name="ermisUiDeletedMessageBackgroundColor">@color/ui_grey_whisper</item>
+        <item name="ermisUiMessageTextSizeMessageDeleted">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageTextColorMessageDeleted">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextStyleMessageDeleted">italic</item>
+
+        <!-- System message text style -->
+        <item name="ermisUiSystemMessageTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiSystemMessageTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiSystemMessageTextStyle">bold</item>
+
+        <!-- Error message text style -->
+        <item name="ermisUiErrorMessageTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiErrorMessageTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiErrorMessageTextStyle">bold</item>
+
+        <item name="ermisUiMessageStrokeColorMine">@color/ui_literal_transparent</item>
+        <item name="ermisUiMessageStrokeWidthMine">0dp</item>
+        <item name="ermisUiMessageStrokeColorTheirs">@color/ui_grey_whisper</item>
+        <item name="ermisUiMessageStrokeWidthTheirs">1dp</item>
+
+        <!-- Message options -->
+        <item name="ermisUiReplyOptionIcon">@drawable/ic_arrow_curve_left_grey</item>
+        <item name="ermisUiReplyEnabled">true</item>
+        <item name="ermisUiCopyMessageActionEnabled">true</item>
+        <item name="ermisUiRetryMessageEnabled">true</item>
+        <item name="ermisUiCopyOptionIcon">@drawable/ic_copy</item>
+        <item name="ermisUiEditOptionIcon">@drawable/ic_edit</item>
+        <item name="ermisUiEditMessageEnabled">true</item>
+        <item name="ermisUiFlagOptionIcon">@drawable/ic_flag</item>
+        <item name="ermisUiFlagMessageEnabled">true</item>
+        <item name="ermisUiFlagMessageConfirmationEnabled">false</item>
+        <item name="ermisUiPinOptionIcon">@drawable/ic_pin</item>
+        <item name="ermisUiUnpinOptionIcon">@drawable/ic_unpin</item>
+        <item name="ermisUiPinMessageEnabled">false</item>
+        <item name="ermisUiDeleteOptionIcon">@drawable/ic_delete</item>
+        <item name="ermisUiDeleteConfirmationEnabled">true</item>
+        <item name="ermisUiDeleteMessageEnabled">true</item>
+        <item name="ermisUiThreadsEnabled">true</item>
+        <item name="ermisUiThreadReplyOptionIcon">@drawable/ic_thread_reply</item>
+        <item name="ermisUiMessageOptionBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiMessageOptionsTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageOptionsTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageOptionsTextStyle">normal</item>
+        <item name="ermisUiWarningMessageOptionsTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiWarningMessageOptionsTextColor">@color/ui_accent_red</item>
+        <item name="ermisUiWarningMessageOptionsTextStyle">normal</item>
+
+        <!-- User reactions card -->
+        <item name="ermisUiUserReactionsBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiUserReactionsTitleTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiUserReactionsTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiUserReactionsTitleTextStyle">bold</item>
+
+        <!-- Options overly dialog -->
+        <item name="ermisUiOptionsOverlayDimColor">@color/ui_literal_transparent</item>
+        <item name="ermisUiShowReactionsForUnsentMessages">false</item>
+
+        <!-- Giphy view holder -->
+        <item name="ermisUiGiphyCardBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiGiphyCardElevation">@dimen/ui_elevation_small</item>
+        <item name="ermisUiGiphyCardButtonDividerColor">@color/ui_border</item>
+        <item name="ermisUiGiphyIcon">@drawable/ic_giphy</item>
+
+        <item name="ermisUiGiphyLabelTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiGiphyLabelTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiGiphyLabelTextStyle">normal</item>
+
+        <item name="ermisUiGiphyQueryTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiGiphyQueryTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiGiphyQueryTextStyle">normal</item>
+
+        <item name="ermisUiGiphyCancelButtonTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiGiphyCancelButtonTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiGiphyCancelButtonTextStyle">normal</item>
+
+        <item name="ermisUiGiphyShuffleButtonTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiGiphyShuffleButtonTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiGiphyShuffleButtonTextStyle">normal</item>
+
+        <item name="ermisUiGiphySendButtonTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiGiphySendButtonTextColor">@color/ui_accent_blue</item>
+        <item name="ermisUiGiphySendButtonTextStyle">normal</item>
+
+        <item name="ermisUiMessageListLoadingView">@layout/default_loading_view</item>
+        <item name="ermisUiEmptyStateTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiEmptyStateTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiEmptyStateTextStyle">normal</item>
+
+        <item name="ermisUiMessagesStart">bottom</item>
+        <item name="ermisUiThreadMessagesStart">bottom</item>
+
+        <!-- Pinned message -->
+        <item name="ermisUiPinnedMessageIndicatorTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiPinnedMessageIndicatorTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiPinnedMessageIndicatorTextStyle">normal</item>
+        <item name="ermisUiPinnedMessageIndicatorIcon">@drawable/ic_pin</item>
+        <item name="ermisUiPinnedMessageBackgroundColor">@color/ui_highlight</item>
+
+        <!-- Margin for messages -->
+        <item name="ermisUiMessageStartMargin">@dimen/ermis_ui_message_viewholder_avatar_missing_margin</item>
+        <item name="ermisUiMessageEndMargin">0dp</item>
+
+        <!-- Message max possible factors -->
+        <item name="ermisUiMessageMaxWidthFactorMine">75%</item>
+        <item name="ermisUiMessageMaxWidthFactorTheirs">75%</item>
+
+        <!-- Audio record player view style -->
+        <item name="ermisUiMessageListAudioRecordPlayerViewStyleOwn">@style/ermisUi.AudioRecordPlayerView</item>
+        <item name="ermisUiMessageListAudioRecordPlayerViewStyleTheirs">@style/ermisUi.AudioRecordPlayerView</item>
+    </style>
+
+    <style name="ermisUi.MessageList.MediaAttachment" parent="ermisUi">
+        <item name="ermisUiMediaAttachmentProgressIcon">@drawable/rotating_indeterminate_progress_gradient</item>
+        <item name="ermisUiMediaAttachmentPlaceHolderIcon">@drawable/picture_placeholder</item>
+        <item name="ermisUiMediaAttachmentMediaPreviewBackgroundColor">@color/ui_message_list_image_attachment_background</item>
+        <item name="ermisUiMediaAttachmentMoreCountOverlayColor">@color/ui_overlay</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIcon">@drawable/ic_play</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconElevation">3dp</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconPaddingTop">2dp</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconPaddingBottom">2dp</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconPaddingStart">3dp</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconPaddingEnd">2dp</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconCornerRadius">24dp</item>
+        <item name="ermisUiMediaAttachmentPlayVideoIconBackgroundColor">@color/ui_literal_white</item>
+
+        <item name="ermisUiMediaAttachmentMoreCountTextSize">@dimen/ermis_ui_message_image_attachment_more_count_text_size</item>
+        <item name="ermisUiMediaAttachmentMoreCountTextColor">@color/ui_literal_white</item>
+        <item name="ermisUiMediaAttachmentMoreCountTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUi.MessageList.GiphyMediaAttachment" parent="ermisUi">
+        <item name="ermisUiGiphyMediaAttachmentProgressIcon">@drawable/rotating_indeterminate_progress_gradient</item>
+        <item name="ermisUiGiphyMediaAttachmentGiphyIcon">@drawable/giphy_label</item>
+        <item name="ermisUiGiphyMediaAttachmentPlaceHolderIcon">@drawable/picture_placeholder</item>
+        <item name="ermisUiGiphyMediaAttachmentImageBackgroundColor">@color/ui_literal_transparent</item>
+        <item name="ermisUiGiphyMediaAttachmentGiphyType">fixedHeight</item>
+        <item name="ermisUiGiphyMediaAttachmentScaleType">fitCenter</item>
+        <item name="ermisUiGiphyMediaAttachmentSizingMode">adaptive</item>
+    </style>
+
+    <style name="ermisUi.MessageList.FileAttachment" parent="ermisUi">
+        <item name="ermisUiFileAttachmentProgressBarDrawable">@drawable/rotating_indeterminate_progress_gradient</item>
+        <item name="ermisUiFileAttachmentBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiFileAttachmentActionButton">@drawable/ic_icon_download</item>
+        <item name="ermisUiFileAttachmentFailedAttachmentIcon">@drawable/ic_warning</item>
+        <item name="ermisUiFileAttachmentStrokeColor">@color/ui_grey_whisper</item>
+        <item name="ermisUiFileAttachmentStrokeWidth">1dp</item>
+        <item name="ermisUiFileAttachmentCornerRadius">12dp</item>
+
+        <!-- File title text style -->
+        <item name="ermisUiFileAttachmentTitleTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiFileAttachmentTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiFileAttachmentTitleTextStyle">normal</item>
+
+        <!-- File size text style -->
+        <item name="ermisUiFileAttachmentFileSizeTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiFileAttachmentFileSizeTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiFileAttachmentFileSizeTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUi.MessageList.UnsupportedAttachment" parent="ermisUi">
+        <item name="ermisUiUnsupportedAttachmentBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiUnsupportedAttachmentStrokeColor">@color/ui_grey_whisper</item>
+        <item name="ermisUiUnsupportedAttachmentStrokeWidth">1dp</item>
+        <item name="ermisUiUnsupportedAttachmentCornerRadius">12dp</item>
+
+        <!-- File title text style -->
+        <item name="ermisUiUnsupportedAttachmentTitleTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiUnsupportedAttachmentTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiUnsupportedAttachmentTitleTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUi.MessageList.Item.Avatar" parent="ermisUi.BaseAvatar">
+        <!--Style properties for Avatar inside of MessageList Item-->
+        <item name="android:layout_width">@dimen/ui_avatar_size_small</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_small</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_initials</item>
+    </style>
+
+    <style name="ermisUi.MessageList.Header.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUi.ChannelListHeader" parent="ermisUi">
+        <item name="ermisUiOnlineTitleTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiOnlineTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiOnlineTitleTextStyle">bold</item>
+        <item name="ermisUiOfflineTitleTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiOfflineTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiOfflineTitleTextStyle">bold</item>
+        <item name="ermisUiShowOfflineProgressBar">true</item>
+        <item name="ermisUiOfflineProgressBarTint">@color/ui_accent_blue</item>
+        <item name="ermisUiShowActionButton">true</item>
+        <item name="ermisUiActionButtonIcon">@drawable/ic_pen</item>
+        <item name="ermisUiActionBackgroundTint">@color/ermis_ui_icon_button_background_selector</item>
+        <item name="ermisUiMessageListHeaderSeparatorBackgroundDrawable">@drawable/divider</item>
+    </style>
+
+    <style name="ermisUi.ChannelListHeader.Avatar" parent="ermisUi.BaseAvatar">
+        <!--Style properties for Avatar inside of ChannelListHeaderView Item-->
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+    <style name="ermisUi.ChannelList.Item.Avatar" parent="ermisUi.BaseAvatar">
+        <!--Style properties for Avatar inside of MessageList Item-->
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+        <item name="android:layout_marginStart">@dimen/ui_channel_list_item_margin_start</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <style name="ermisUi.ChannelListView" parent="ermisUi">
+        <item name="ermisUiChannelHeight">@dimen/ui_channel_list_item_height</item>
+        <item name="ermisUiChannelsItemSeparatorDrawable">@drawable/divider</item>
+
+        <!--Background layout-->
+        <item name="ermisUiChannelOptionsIcon">@drawable/ic_more</item>
+        <item name="ermisUiChannelDeleteIcon">@drawable/ic_delete</item>
+        <item name="ermisUiChannelOptionsEnabled">false</item>
+        <item name="ermisUiChannelDeleteEnabled">true</item>
+        <item name="ermisUiSwipeEnabled">true</item>
+        <item name="ermisUiReadCountEnabled">true</item>
+        <item name="ermisUiBackgroundLayoutColor">@color/ui_white_smoke</item>
+
+        <!--Foreground layout-->
+        <item name="ermisUiChannelMarginStart">@dimen/ui_channel_list_item_margin_start</item>
+        <item name="ermisUiChannelMarginEnd">@dimen/ui_channel_list_item_margin_end</item>
+        <item name="ermisUiChannelTitleMarginStart">@dimen/ui_channel_list_item_title_margin_start</item>
+        <item name="ermisUiChannelVerticalSpacerHeight">@dimen/ermis_ui_channel_list_item_vertical_spacer_height</item>
+        <item name="ermisUiChannelVerticalSpacerPosition">@dimen/ermis_ui_channel_list_item_vertical_spacer_position</item>
+        <item name="ermisUiChannelTitleTextSize">@dimen/ermis_ui_channel_item_title</item>
+        <item name="ermisUiChannelTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiChannelTitleTextStyle">bold</item>
+
+        <item name="ermisUiLastMessageTextSize">@dimen/ermis_ui_channel_item_message</item>
+        <item name="ermisUiLastMessageTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiLastMessageTextStyle">normal</item>
+
+        <item name="ermisUiLastMessageDateTextSize">@dimen/ermis_ui_channel_item_message_date</item>
+        <item name="ermisUiLastMessageDateTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiLastMessageDateTextStyle">normal</item>
+
+        <item name="ermisUiShowChannelDeliveryStatusIndicator">true</item>
+        <item name="ermisUiIndicatorSentIcon">@drawable/ic_check_single</item>
+        <item name="ermisUiIndicatorReadIcon">@drawable/ic_check_double</item>
+        <item name="ermisUiIndicatorPendingSyncIcon">@drawable/ic_clock</item>
+        <item name="ermisUiForegroundLayoutColor">@color/ui_white_snow</item>
+
+        <item name="ermisUiUnreadMessageCounterTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiUnreadMessageCounterTextColor">@color/ui_literal_white</item>
+        <item name="ermisUiUnreadMessageCounterTextStyle">normal</item>
+
+        <item name="ermisUiUnreadMessageCounterBackgroundColor">@color/ui_accent_red</item>
+
+        <item name="ermisUiMutedChannelIcon">@drawable/ic_mute_black</item>
+
+        <item name="ermisUiLoadingView">@layout/default_loading_view</item>
+        <item name="ermisUiLoadingMoreView">@layout/channel_list_loading_more_view</item>
+        <item name="ermisUiEmptyStateView">@layout/channel_list_empty_state_view</item>
+    </style>
+
+    <style name="ermisUi.MentionList" parent="ermisUi">
+        <item name="ermisUiBackground">@color/ui_white_snow</item>
+        <item name="ermisUiEmptyStateDrawable">@drawable/ic_mentions_empty</item>
+        <item name="ermisUiSenderNameTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiSenderNameTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiSenderNameTextStyle">normal</item>
+        <item name="ermisUiMessageTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageTextStyle">normal</item>
+        <item name="ermisUiMessageTimeTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageTimeTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageTimeTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUi.MentionPreview.Item.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUi.ChannelActions.Dialog.Avatar" parent="ermisUi.BaseAvatar">
+        <!--Style properties for Avatar inside of GroupActions Item-->
+        <item name="android:layout_width">@dimen/ui_avatar_size_large</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_large</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_large</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_tiny</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_tiny</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_tiny</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+        <item name="ermisUiAvatarBorderWidth">0dp</item>
+    </style>
+
+    <style name="ermisUi.SuggestionListView.Mention.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUi.SearchResult.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUi.MessageOptions.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_large</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_large</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_large</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+    <style name="ermisUi.Reply.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_tiny</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_tiny</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_tiny</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+    <style name="ermisUi.Thread.Avatar" parent="ermisUi.BaseAvatar">
+        <item name="android:layout_width">@dimen/ui_avatar_size_extra_tiny</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_extra_tiny</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_tiny</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+    <style name="ermisUi.ChannelList.ActionsDialog" parent="ermisUi">
+        <!-- Channel actions dialog title with member names -->
+        <item name="ermisUiChannelActionsMemberNamesTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiChannelActionsMemberNamesTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiChannelActionsMemberNamesTextStyle">bold</item>
+
+        <!-- Channel actions dialog subtitle with member info -->
+        <item name="ermisUiChannelActionsMemberInfoTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiChannelActionsMemberInfoTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiChannelActionsMemberInfoTextStyle">normal</item>
+
+        <!-- Channel action item text style -->
+        <item name="ermisUiChannelActionsItemTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiChannelActionsItemTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiChannelActionsItemTextStyle">bold</item>
+
+        <item name="ermisUiChannelActionsViewInfoIcon">@drawable/ic_single_user</item>
+        <item name="ermisUiChannelActionsViewInfoEnabled">false</item>
+        <item name="ermisUiChannelActionsLeaveGroupIcon">@drawable/ic_leave_group</item>
+        <item name="ermisUiChannelActionsLeaveGroupEnabled">true</item>
+        <item name="ermisUiChannelActionsDeleteConversationIcon">@drawable/ic_delete</item>
+        <item name="ermisUiChannelActionsDeleteConversationEnabled">true</item>
+        <item name="ermisUiChannelActionsCancelIcon">@drawable/ic_clear</item>
+        <item name="ermisUiChannelActionsCancelEnabled">true</item>
+        <item name="ermisUiChannelActionsMarkAsReadIcon">@drawable/ic_check_double</item>
+        <item name="ermisUiChannelActionsMarkAsReadEnabled">true</item>
+    </style>
+
+    <style name="ermisUi.MessageListHeader" parent="ermisUi">
+        <!-- Title text style -->
+        <item name="ermisUiMessageListHeaderTitleTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiMessageListHeaderTitleTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageListHeaderTitleTextStyle">bold</item>
+
+        <!-- Offline text style -->
+        <item name="ermisUiMessageListHeaderOfflineLabelTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageListHeaderOfflineLabelTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageListHeaderOfflineLabelTextStyle">normal</item>
+
+        <!-- Searching for network text style -->
+        <item name="ermisUiMessageListHeaderSearchingForNetworkLabelTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageListHeaderSearchingForNetworkLabelColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageListHeaderSearchingForNetworkLabelTextStyle">normal</item>
+
+        <!-- Online text style -->
+        <item name="ermisUiMessageListHeaderDefaultLabelTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageListHeaderDefaultLabelTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageListHeaderDefaultLabelTextStyle">normal</item>
+
+        <item name="ermisUiMessageListHeaderShowUserAvatar">true</item>
+        <item name="ermisUiMessageListHeaderBackButtonIcon">@drawable/arrow_left</item>
+        <item name="ermisUiMessageListHeaderShowBackButton">true</item>
+        <item name="ermisUiMessageListHeaderShowBackButtonBadge">false</item>
+        <item name="ermisUiMessageListHeaderBackButtonBadgeBackgroundColor">@color/ui_accent_red</item>
+        <item name="ermisUiMessageListHeaderShowSearchingForNetworkProgressBar">true</item>
+        <item name="ermisUiMessageListHeaderSearchingForNetworkProgressBarTint">@color/ui_accent_blue</item>
+
+        <item name="ermisUiMessageListHeaderSeparatorBackgroundDrawable">@drawable/divider</item>
+    </style>
+
+    <style name="ermisUi.SearchInputView" parent="ermisUi">
+        <item name="ermisUiSearchInputViewHintText">@string/ermis_ui_search_input_hint</item>
+        <item name="ermisUiSearchInputViewSearchIcon">@drawable/ic_search</item>
+        <item name="ermisUiSearchInputViewClearInputIcon">@drawable/ic_clear</item>
+        <item name="ermisUiSearchInputViewBackground">@drawable/shape_search_view_background</item>
+        <item name="ermisUiSearchInputViewBackgroundOutlineColor">@color/ui_search_input_background_outline_color</item>
+        <item name="ermisUiSearchInputViewBackgroundOutlineWidth">@dimen/ui_search_input_background_outline_width</item>
+        <item name="ermisUiSearchInputViewTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiSearchInputViewHintColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiSearchInputViewTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiSearchInputViewHeight">@dimen/ui_search_input_height</item>
+        <item name="ermisUiSearchInputViewTextMarginStart">@dimen/ui_search_input_text_margin_start</item>
+        <item name="ermisUiSearchInputViewTextMarginEnd">@dimen/ui_search_input_text_margin_end</item>
+        <item name="ermisUiSearchInputViewIconSearchWidth">@dimen/ui_search_input_icon_search_width</item>
+        <item name="ermisUiSearchInputViewIconSearchHeight">@dimen/ui_search_input_icon_search_height</item>
+        <item name="ermisUiSearchInputViewIconSearchMarginStart">@dimen/ui_search_input_icon_search_margin_start</item>
+        <item name="ermisUiSearchInputViewIconClearWidth">@dimen/ui_search_input_icon_clear_width</item>
+        <item name="ermisUiSearchInputViewIconClearHeight">@dimen/ui_search_input_icon_clear_height</item>
+        <item name="ermisUiSearchInputViewIconClearMarginEnd">@dimen/ui_search_input_icon_clear_margin_end</item>
+    </style>
+
+    <style name="ermisUi.SearchResultListView" parent="ermisUi">
+        <item name="ermisUiSearchResultListSearchInfoBarBackground">@drawable/bg_gradient</item>
+        <item name="ermisUiSearchResultListSearchInfoBarTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiSearchResultListSearchInfoBarTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiSearchResultListSearchInfoBarTextStyle">normal</item>
+
+        <item name="ermisUiSearchResultListEmptyStateIcon">@drawable/ic_search_empty</item>
+        <item name="ermisUiSearchResultListEmptyStateTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiSearchResultListEmptyStateTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiSearchResultListEmptyStateTextStyle">normal</item>
+
+        <item name="ermisUiSearchResultListProgressBarIcon">@drawable/rotating_indeterminate_progress_gradient</item>
+
+        <item name="ermisUiSearchResultListSenderNameTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiSearchResultListSenderNameTextSize">@dimen/ermis_ui_channel_item_title</item>
+        <item name="ermisUiSearchResultListSenderNameTextStyle">normal</item>
+
+        <item name="ermisUiSearchResultListMessageTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiSearchResultListMessageTextSize">@dimen/ermis_ui_channel_item_message</item>
+        <item name="ermisUiSearchResultListMessageTextStyle">normal</item>
+
+        <item name="ermisUiSearchResultListMessageTimeTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiSearchResultListMessageTimeTextSize">@dimen/ermis_ui_channel_item_message</item>
+        <item name="ermisUiSearchResultListMessageTimeTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.Options">
+        <item name="ermisUiAttachmentOptionTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiAttachmentOptionTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiAttachmentOptionTextFont">@font/roboto_medium</item>
+        <item name="ermisUiAttachmentOptionTextStyle">normal</item>
+        <item name="ermisUiAttachmentOptionsBackgroundColor">@color/ui_white_snow</item>
+        <item name="ermisUiAttachmentReplyEnabled">true</item>
+        <item name="ermisUiReplyIcon">@drawable/ic_arrow_curve_left_grey</item>
+        <item name="ermisUiShowInChatEnabled">true</item>
+        <item name="ermisUiShowInChatIcon">@drawable/ic_show_in_chat</item>
+        <item name="ermisUiSaveMediaEnabled">true</item>
+        <item name="ermisUiSaveMediaIcon">@drawable/ic_download</item>
+        <item name="ermisUiDeleteEnabled">true</item>
+        <item name="ermisUiDeleteIcon">@drawable/ic_delete</item>
+        <item name="ermisUiDeleteTextTint">@color/ui_accent_red</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.VideoAttachments">
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoButtonIcon">@drawable/ic_play</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconElevation">3dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingTop">2dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingBottom">2dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingStart">3dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingEnd">2dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconCornerRadius">24dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayVideoIconBackgroundColor">@color/ui_literal_white</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayIconWidth">45dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaPlayIconHeight">45dp</item>
+        <item name="ermisUiAttachmentGalleryViewMediaImagePlaceholder">@drawable/picture_placeholder</item>
+    </style>
+
+    <style name="ermisUi.MediaAttachmentGridView">
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoButtonIcon">@drawable/ic_play</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconElevation">3dp</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingTop">2dp</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingBottom">2dp</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingStart">3dp</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingEnd">2dp</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconCornerRadius">24dp</item>
+        <item name="ermisUiMediaAttachmentGridViewPlayVideoIconBackgroundColor">@color/ui_literal_white</item>
+        <item name="ermisUiMediaAttachmentGridViewImagePlaceholder">@drawable/picture_placeholder</item>
+    </style>
+
+    <style name="ermisUi.AttachmentActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="ermisUiTheme">@style/ermisUiTheme</item>
+    </style>
+
+    <style name="ermisUi.AttachmentActivity.ProgressBar" parent="ermisUi">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ermisUi.AttachmentActivity.Image" parent="ermisUi">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ermisUi.AttachmentActivity.WebView" parent="ermisUi">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.CloseButton" parent="ermisUi">
+        <item name="android:src">@drawable/ic_close</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/ui_spacing_small</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.Title" parent="ermisUi">
+        <item name="android:textAppearance">@style/ermisUiTextAppearance.HeadlineBold</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.Date" parent="ermisUi">
+        <item name="android:textAppearance">@style/ermisUiTextAppearance.Footnote</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.ActionsMenu" parent="ermisUi">
+        <item name="android:layout_marginEnd">@dimen/ui_spacing_small</item>
+        <item name="android:src">@drawable/ic_three_dots_menu</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.BottomBar.ImageCount" parent="ermisUi">
+        <item name="android:textAppearance">@style/ermisUiTextAppearance.HeadlineBold</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.BottomBar.LeftIcon" parent="ermisUi">
+        <item name="android:layout_marginStart">@dimen/ui_spacing_small</item>
+        <item name="android:src">@drawable/ic_share</item>
+    </style>
+
+    <style name="ermisUi.AttachmentGallery.BottomBar.RightIcon" parent="ermisUi">
+        <item name="android:layout_marginEnd">@dimen/ui_spacing_small</item>
+        <item name="android:src">@drawable/ic_grid_menu</item>
+    </style>
+
+    <style name="ermisUi.MediaActivity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="ermisUiTheme">@style/ermisUiTheme</item>
+    </style>
+
+    <style name="ermisUi.MediaActivity.Icon" parent="ermisUi">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:src">@drawable/ic_audio</item>
+    </style>
+
+    <style name="ermisUi.MediaActivity.Header" parent="ermisUi">
+        <item name="android:background">@color/ui_literal_black</item>
+    </style>
+
+    <style name="ermisUi.MediaActivity.HeaderLeftActionButton" parent="ermisUi">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:src">@drawable/arrow_left_white</item>
+    </style>
+
+    <style name="ermisUi.MediaActivity.HeaderTitle" parent="ermisUi">
+        <item name="android:textAppearance">@style/ermisUiTextAppearance.MediaActivityHeaderTitle</item>
+    </style>
+
+    <style name="ermisUi.MediaActivity.ProgressBar" parent="ermisUi">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="ermisUi.TypingIndicatorView" parent="ermisUi">
+        <item name="ermisUiTypingIndicatorAnimationView">@layout/typing_indicator_animation_view</item>
+        <item name="ermisUiTypingIndicatorUsersTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiTypingIndicatorUsersTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiTypingIndicatorUsersTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUi.PinnedMessageList" parent="ermisUi">
+        <item name="ermisUiPinnedMessageListBackground">@color/ui_white_snow</item>
+        <item name="ermisUiPinnedMessageListEmptyStateDrawable">@drawable/ic_pinned_messages_empty</item>
+        <item name="ermisUiPinnedMessageListSenderNameTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiPinnedMessageListSenderNameTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiPinnedMessageListSenderNameTextStyle">normal</item>
+        <item name="ermisUiPinnedMessageListMessageTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiPinnedMessageListMessageTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiPinnedMessageListMessageTextStyle">normal</item>
+        <item name="ermisUiPinnedMessageListMessageTimeTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiPinnedMessageListMessageTimeTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiPinnedMessageListMessageTimeTextStyle">normal</item>
+    </style>
+
+    <style name="ermisUiTheme.ChannelListScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="ermisUiChannelActionsDialogStyle">@style/ermisUi.ChannelListScreen.ActionsDialog</item>
+        <item name="ermisUiChannelListHeaderStyle">@style/ermisUi.ChannelListScreen.ChannelListHeader</item>
+        <item name="ermisUiTheme">@style/ermisUiTheme</item>
+    </style>
+
+    <style name="ermisUi.ChannelListScreen.ActionsDialog" parent="ermisUi.ChannelList.ActionsDialog">
+        <item name="ermisUiChannelActionsViewInfoEnabled">false</item>
+    </style>
+
+    <style name="ermisUi.ChannelListScreen.ChannelListHeader" parent="ermisUi.ChannelListHeader">
+        <item name="ermisUiShowActionButton">false</item>
+    </style>
+
+    <style name="ermisUi.ViewReactions" parent="ermisUi">
+        <item name="ermisUiMessageOptionsUserReactionOrientation">by_user</item>
+    </style>
+
+    <style name="ermisUi.MessageComposerView" parent="ermisUi">
+        <item name="ermisUiMessageComposerDividerBackgroundDrawable">@drawable/divider</item>
+        <item name="ermisUiMessageComposerIconDrawableTintColor">@null</item>
+
+        <!-- Command suggestions content -->
+        <item name="ermisUiMessageComposerCommandSuggestionsTitleText">@string/ermis_ui_message_composer_instant_commands</item>
+        <item name="ermisUiMessageComposerCommandSuggestionsTitleTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerCommandSuggestionsTitleTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageComposerCommandSuggestionsTitleIconDrawable">@drawable/ic_command_blue</item>
+        <item name="ermisUiMessageComposerCommandSuggestionsTitleIconDrawableTintColor">@null</item>
+        <item name="ermisUiMessageComposerCommandSuggestionsBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionText">@string/ermis_ui_message_composer_command_template</item>
+        <item name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextColor">@color/ui_text_color_primary</item>
+
+        <!-- Mention suggestions content -->
+        <item name="ermisUiMessageComposerMentionSuggestionsBackgroundColor">@color/ui_white</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemIconDrawable">@drawable/ic_mention</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemIconDrawableTintColor">@null</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemUsernameTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemUsernameTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemMentionText">@string/ermis_ui_message_composer_mention_template</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemMentionTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerMentionSuggestionItemMentionTextColor">@color/ui_text_color_secondary</item>
+
+        <!-- Center content -->
+        <item name="ermisUiMessageComposerCommandsHandlingEnabled">true</item>
+        <item name="ermisUiMessageComposerMentionsHandlingEnabled">true</item>
+        <item name="ermisUiMessageComposerMessageInputTextSize">@dimen/ui_text_size_input</item>
+        <item name="ermisUiMessageComposerMessageInputTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageComposerMessageInputHintColor">@color/ui_text_color_hint</item>
+        <item name="ermisUiMessageComposerMessageInputHintText">@string/ermis_ui_message_composer_hint_normal</item>
+        <item name="ermisUiMessageComposerMessageInputBackgroundDrawable">@drawable/shape_edit_text_round</item>
+        <item name="ermisUiMessageComposerMessageInputCursorDrawable">@null</item>
+        <item name="ermisUiMessageComposerScrollbarEnabled">false</item>
+        <item name="ermisUiMessageComposerScrollbarFadingEnabled">false</item>
+        <item name="ermisUiMessageComposerMessageInputMaxLines">7</item>
+        <item name="ermisUiMessageComposerMessageInputCannotSendHintText">@string/ermis_ui_message_composer_hint_cannot_send_message</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawable">@drawable/ic_play</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconBackgroundColor">@color/ui_literal_white</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconElevation">3dp</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingTop">2dp</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingBottom">2dp</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingStart">2dp</item>
+        <item name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingEnd">2dp</item>
+
+        <!-- Center overlap content -->
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordText">@string/ermis_ui_message_composer_hold_to_record</item>
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordTextColor">@color/ui_white_snow</item>
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordTextStyle">bold</item>
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordTextFont">@font/roboto_medium</item>
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordBackgroundDrawable">@drawable/message_composer_audio_record_hold_background</item>
+        <item name="ermisUiMessageComposerAudioRecordingHoldToRecordBackgroundDrawableTint">@null</item>
+        <item name="ermisUiMessageComposerAudioRecordingSlideToCancelText">@string/ermis_ui_message_composer_slide_to_cancel</item>
+        <item name="ermisUiMessageComposerAudioRecordingSlideToCancelTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerAudioRecordingSlideToCancelTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageComposerAudioRecordingSlideToCancelTextStyle">normal</item>
+        <item name="ermisUiMessageComposerAudioRecordingSlideToCancelTextFont">@font/roboto_medium</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingButtonIconDrawable">@drawable/ic_mic</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingButtonIconDrawableTint">@color/ui_accent_blue</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingButtonBackgroundDrawable">@drawable/message_composer_audio_record_mic_background</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingButtonBackgroundDrawableTint">@null</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingLockIconDrawable">@drawable/ic_mic_lock</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingLockIconDrawableTint">@null</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingLockedIconDrawable">@drawable/ic_mic_locked</item>
+        <item name="ermisUiMessageComposerAudioRecordingFloatingLockedIconDrawableTint">@null</item>
+        <item name="ermisUiMessageComposerAudioRecordingWaveformColor">@color/ui_accent_blue</item>
+
+        <!-- Leading content -->
+        <item name="ermisUiMessageComposerAttachmentsButtonVisible">true</item>
+        <item name="ermisUiMessageComposerAttachmentsButtonIconDrawable">@drawable/ic_attach</item>
+        <item name="ermisUiMessageComposerAttachmentsButtonIconTintList">@null</item>
+        <item name="ermisUiMessageComposerAttachmentsButtonRippleColor">@null</item>
+        <item name="ermisUiMessageComposerCommandsButtonVisible">true</item>
+        <item name="ermisUiMessageComposerCommandsButtonIconDrawable">@drawable/ic_command</item>
+        <item name="ermisUiMessageComposerCommandsButtonIconTintList">@null</item>
+        <item name="ermisUiMessageComposerCommandsButtonRippleColor">@null</item>
+
+        <!-- Footer content -->
+        <item name="ermisUiMessageComposerAlsoSendToChannelCheckboxVisible">true</item>
+        <item name="ermisUiMessageComposerAlsoSendToChannelCheckboxDrawable">@null</item>
+        <item name="ermisUiMessageComposerAlsoSendToChannelCheckboxText">@null</item>
+        <item name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextColor">@color/ui_text_color_secondary</item>
+
+        <!-- Header content -->
+        <item name="ermisUiMessageComposerEditModeText">@string/ermis_ui_message_composer_mode_edit</item>
+        <item name="ermisUiMessageComposerEditModeIconDrawable">@drawable/ic_edit</item>
+        <item name="ermisUiMessageComposerReplyModeText">@string/ermis_ui_message_composer_mode_reply</item>
+        <item name="ermisUiMessageComposerReplyModeIconDrawable">@drawable/ic_arrow_curve_left_grey</item>
+        <item name="ermisUiMessageComposerDismissModeIconDrawable">@drawable/ic_clear</item>
+
+        <!-- Trailing content -->
+        <item name="ermisUiMessageComposerSendMessageButtonEnabled">true</item>
+        <item name="ermisUiMessageComposerSendMessageButtonIconDrawable">@drawable/ic_send_message</item>
+        <item name="ermisUiMessageComposerSendMessageButtonIconTintList">@null</item>
+        <item name="ermisUiMessageComposerSendMessageButtonWidth">@dimen/ui_message_composer_trailing_content_button_send_message_width</item>
+        <item name="ermisUiMessageComposerSendMessageButtonHeight">@dimen/ui_message_composer_trailing_content_button_send_message_height</item>
+        <item name="ermisUiMessageComposerSendMessageButtonPadding">@dimen/ui_message_composer_trailing_content_button_send_message_padding</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonVisible">false</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonEnabled">true</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonPreferred">false</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonIconDrawable">@drawable/ic_mic</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonIconTintList">@null</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonWidth">@dimen/ui_message_composer_trailing_content_button_record_audio_width</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonHeight">@dimen/ui_message_composer_trailing_content_button_record_audio_height</item>
+        <item name="ermisUiMessageComposerAudioRecordingButtonPadding">@dimen/ui_message_composer_trailing_content_button_record_audio_padding</item>
+        <item name="ermisUiMessageComposerCooldownTimerTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiMessageComposerCooldownTimerTextColor">@color/ui_literal_white</item>
+        <item name="ermisUiMessageComposerCooldownTimerBackgroundDrawable">@drawable/cooldown_badge_background</item>
+
+        <item name="ermisUiMessageComposerAttachmentsPickerBackgroundColor">@color/ui_white_smoke</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextColor">@color/ui_accent_blue</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerSubmitAttachmentsButtonIconDrawable">@drawable/ic_next</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAttachmentTabToggleButtonStateList">@color/ermis_ui_attachment_tab_button</item>
+
+        <!-- Media attachments tab -->
+        <item name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentsTabIconDrawable">@drawable/attachment_permission_media</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessToMediaButtonText">@string/ermis_ui_message_composer_gallery_access</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessToMediaIconDrawable">@drawable/attachment_permission_media</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextVisible">true</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextColor">@color/ui_black</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerVideoIconVisible">true</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerVideoIconDrawable">@drawable/ic_video</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerVideoIconDrawableTint">@color/ui_black</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaText">@string/ermis_ui_message_composer_no_files</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextColor">@color/ui_text_color_primary</item>
+
+        <!-- File attachments tab -->
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsTabIconDrawable">@drawable/attachment_permission_file</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessToFilesButtonText">@string/ermis_ui_message_composer_files_access</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessToFilesIconDrawable">@drawable/attachment_permission_file</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerRecentFilesText">@string/ermis_ui_message_composer_recent_files</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextSize">@dimen/ui_spacing_medium</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextColor">@color/ui_black</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileManagerIconDrawable">@drawable/ic_file_manager</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesText">@string/ermis_ui_message_composer_no_files</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextSize">@dimen/ui_text_large</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextColor">@color/ui_text_color_primary</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextSize">@dimen/ui_text_medium</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextColor">@color/ui_black</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextSize">@dimen/ui_text_small</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextColor">@color/ui_text_color_secondary</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemCheckboxSelectedDrawable">@drawable/circle_blue</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemCheckboxDeselectedDrawable">@drawable/ic_file_manager</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemCheckboxTextColor">@color/ui_literal_white</item>
+
+        <!-- Camera attachments tab -->
+        <item name="ermisUiMessageComposerAttachmentsPickerCameraAttachmentsTabIconDrawable">@drawable/attachment_permission_camera</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessToCameraButtonText">@string/ermis_ui_message_composer_camera_access</item>
+        <item name="ermisUiMessageComposerAttachmentsPickerAllowAccessToCameraIconDrawable">@drawable/attachment_permission_camera</item>
+
+        <!-- Audio record player view style -->
+        <item name="ermisUiMessageComposerAudioRecordPlayerViewStyle">@style/ermisUi.AudioRecordPlayerView</item>
+    </style>
+
+
+    <style name="ermisUi.AudioRecordPlayerView" parent="ermisUi">
+        <item name="ermisUiAudioRecordPlayerHeight">@dimen/ui_audio_record_player_height</item>
+        <item name="ermisUiAudioRecordPlayerPaddingStart">@dimen/ui_audio_record_player_padding_start</item>
+        <item name="ermisUiAudioRecordPlayerPaddingTop">@dimen/ui_audio_record_player_padding_top</item>
+        <item name="ermisUiAudioRecordPlayerPaddingEnd">@dimen/ui_audio_record_player_padding_end</item>
+        <item name="ermisUiAudioRecordPlayerPaddingBottom">@dimen/ui_audio_record_player_padding_bottom</item>
+        <item name="ermisUiAudioRecordPlayerBackgroundDrawable">@drawable/audio_record_player_background</item>
+        <item name="ermisUiAudioRecordPlayerBackgroundDrawableTint">@null</item>
+
+        <!-- Playback Progress Container -->
+        <item name="ermisUiAudioRecordPlayerPlaybackProgressContainerWidth">@dimen/ui_audio_record_player_playback_progress_container_width</item>
+        <item name="ermisUiAudioRecordPlayerPlaybackProgressContainerHeight">@dimen/ui_audio_record_player_playback_progress_container_height</item>
+
+        <!-- Playback Button -->
+        <item name="ermisUiAudioRecordPlayerPlaybackButtonWidth">@dimen/ui_audio_record_player_playback_button_width</item>
+        <item name="ermisUiAudioRecordPlayerPlaybackButtonHeight">@dimen/ui_audio_record_player_playback_button_height</item>
+        <item name="ermisUiAudioRecordPlayerPlaybackButtonElevation">@dimen/ui_audio_record_player_playback_button_elevation</item>
+        <item name="ermisUiAudioRecordPlayerPlaybackButtonPadding">@dimen/ui_audio_record_player_playback_button_padding</item>
+        <item name="ermisUiAudioRecordPlayerPlaybackButtonBackground">@drawable/white_shape_circular</item>
+        <item name="ermisUiAudioRecordPlayerPlaybackButtonBackgroundTint">@null</item>
+        <item name="ermisUiAudioRecordPlayerPlayIconDrawable">@drawable/ic_play</item>
+        <item name="ermisUiAudioRecordPlayerPlayIconDrawableTint">@null</item>
+        <item name="ermisUiAudioRecordPlayerPauseIconDrawable">@drawable/ic_pause</item>
+        <item name="ermisUiAudioRecordPlayerPauseIconDrawableTint">@null</item>
+
+        <!-- Progress Bar -->
+        <item name="ermisUiAudioRecordPlayerProgressBarWidth">@dimen/ui_audio_record_player_progress_bar_width</item>
+        <item name="ermisUiAudioRecordPlayerProgressBarHeight">@dimen/ui_audio_record_player_progress_bar_height</item>
+        <item name="ermisUiAudioRecordPlayerProgressBarDrawable">@drawable/rotating_indeterminate_progress_gradient</item>
+        <item name="ermisUiAudioRecordPlayerProgressBarDrawableTint">@null</item>
+
+        <!-- Duration Text -->
+        <item name="ermisUiAudioRecordPlayerDurationTextViewWidth">@dimen/ui_audio_record_player_duration_text_view_width</item>
+        <item name="ermisUiAudioRecordPlayerDurationTextViewHeight">@dimen/ui_audio_record_player_duration_text_view_height</item>
+        <item name="ermisUiAudioRecordPlayerDurationTextViewMarginStart">@dimen/ui_audio_record_player_duration_text_view_margin_start</item>
+        <item name="ermisUiAudioRecordPlayerDurationTextSize">@dimen/ui_audio_record_player_duration_text_size</item>
+        <item name="ermisUiAudioRecordPlayerDurationTextColor">@color/ui_audio_record_player_duration_text_color</item>
+        <item name="ermisUiAudioRecordPlayerDurationTextStyle">normal</item>
+
+        <!-- Wave Bar -->
+        <item name="ermisUiAudioRecordPlayerWaveBarHeight">@dimen/ui_audio_record_player_wave_bar_height</item>
+        <item name="ermisUiAudioRecordPlayerWaveBarMarginStart">@dimen/ui_audio_record_player_wave_bar_margin_start</item>
+        <item name="ermisUiAudioRecordPlayerWaveBarColorPlayed">@color/ui_accent_blue</item>
+        <item name="ermisUiAudioRecordPlayerWaveBarColorFuture">@color/ui_grey</item>
+
+        <!-- Scrubber -->
+        <item name="ermisUiAudioRecordPlayerScrubberWidthDefault">@dimen/ui_audio_record_player_scrubber_width_default</item>
+        <item name="ermisUiAudioRecordPlayerScrubberWidthPressed">@dimen/ui_audio_record_player_scrubber_width_pressed</item>
+        <item name="ermisUiAudioRecordPlayerScrubberDrawable">@drawable/share_rectangle</item>
+        <item name="ermisUiAudioRecordPlayerScrubberDrawableTint">@null</item>
+
+        <!-- File Icon Container -->
+        <item name="ermisUiAudioRecordPlayerFileIconContainerWidth">@dimen/ui_audio_record_player_file_icon_container_width</item>
+        <item name="ermisUiAudioRecordPlayerFileIconContainerVisible">@bool/ermis_ui_audio_record_player_file_icon_container_visible</item>
+        <item name="ermisUiAudioRecordPlayerAudioFileIconDrawable">@drawable/ic_file_aac</item>
+
+        <!-- Speed button -->
+        <item name="ermisUiAudioRecordPlayerSpeedButtonWidth">@dimen/ui_audio_record_player_speed_button_width</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonHeight">@dimen/ui_audio_record_player_speed_button_height</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonElevation">@dimen/ui_audio_record_player_speed_button_elevation</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonBackgroundDrawable">@drawable/literal_white_shape_16dp_corners</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonBackgroundDrawableTint">@null</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonTextSize">@dimen/ui_audio_record_player_speed_text_size</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonTextColor">@color/ui_audio_record_player_speed_text_color</item>
+        <item name="ermisUiAudioRecordPlayerSpeedButtonTextStyle">normal</item>
+
+    </style>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="network.ermis.sample.feature.projects.ProjectListFragment"
+    >
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/lineHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/project_from_sdk"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:layout_marginStart="14dp"
+        app:layout_constraintBottom_toTopOf="@id/lineHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvChain"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/reaction_not_me"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        tools:text="Network 1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/lineHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvSDK"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableEndCompat="@drawable/ic_icon_down"
+        app:drawableTint="@color/color_onSurface"
+        />
+
+    <network.ermis.ui.view.search.SearchInputView
+        android:id="@+id/searchProject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineHeader"
+        />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayoutProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchProject"
+        app:tabContentStart="32dp"
+        android:layout_marginTop="8dp"
+        app:tabMode="fixed"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewClient"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:listitem="@layout/item_client_ermis"
+        app:layout_constraintTop_toBottomOf="@id/tabLayoutProject"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

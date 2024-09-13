@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fileItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="?selectableItemBackground"
+    >
+
+    <ImageView
+        android:id="@+id/fileTypeImageView"
+        android:layout_width="34dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/ic_file_csv"
+        />
+
+    <TextView
+        android:id="@+id/fileNameTextView"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/ui_text_color_primary"
+        android:textSize="@dimen/ui_text_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/fileSizeTextView"
+        app:layout_constraintEnd_toStartOf="@id/ivDownload"
+        app:layout_constraintStart_toEndOf="@id/fileTypeImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="SlimAaron.pdf"
+        />
+
+    <TextView
+        android:id="@+id/fileSizeTextView"
+        style="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_medium"
+        android:textColor="@color/ui_text_color_secondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivDownload"
+        app:layout_constraintStart_toEndOf="@id/fileTypeImageView"
+        app:layout_constraintTop_toBottomOf="@id/fileNameTextView"
+        tools:text="123 KB"
+        />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ui_divider_height"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/ivDownload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_download"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

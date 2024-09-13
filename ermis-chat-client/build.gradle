@@ -1,0 +1,111 @@
+import network.ermis.Dependencies
+import network.ermis.Configuration
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.google.devtools.ksp'
+apply plugin: "de.mannodermaus.android-junit5"
+apply plugin: 'androidx.baselineprofile'
+
+ext {
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
+    PUBLISH_ARTIFACT_ID = 'ermis-chat-client'
+    PUBLISH_VERSION = rootVersionName
+}
+
+apply from: "${rootDir}/scripts/publish-module.gradle"
+apply from: "${rootDir}/scripts/android.gradle"
+
+android {
+    namespace "network.ermis.client"
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'STREAM_CHAT_VERSION', "\"$version\""
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            consumerProguardFiles 'consumer-proguard-rules.pro'
+        }
+        debug {
+            testCoverageEnabled false
+            consumerProguardFiles 'consumer-proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    lintOptions {
+        xmlReport false
+    }
+
+    testOptions.unitTests {
+        returnDefaultValues = true
+    }
+}
+
+baselineProfile {
+    baselineProfileOutputDir = "."
+    filter {
+        include("network.ermis.client.**")
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += [
+                '-progressive',
+                '-Xexplicit-api=strict',
+                '-opt-in=kotlin.RequiresOptIn',
+                '-opt-in=io.getstream.chat.android.core.internal.InternalErmisChatApi',
+        ]
+        jvmTarget = JavaVersion.VERSION_11.toString()
+    }
+}
+
+dependencies {
+    api project(':ermis-chat-core')
+    implementation 'com.google.firebase:firebase-messaging-directboot:24.0.0'
+    implementation Dependencies.firebaseMessaging
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation Dependencies.okhttp
+    implementation Dependencies.serverSentEvents
+
+    implementation Dependencies.kotlinReflect
+
+    implementation Dependencies.androidxAppCompat
+    implementation Dependencies.androidxCoreKtx
+    implementation Dependencies.androidxLifecycleProcess
+    implementation Dependencies.androidxLifecycleLiveDataKtx
+    implementation Dependencies.workRuntimeKtx
+    implementation Dependencies.constraintLayout
+    implementation Dependencies.coroutinesCore
+    implementation Dependencies.coroutinesAndroid
+    implementation Dependencies.streamLog
+    implementation Dependencies.streamLogAndroid
+    debugImplementation Dependencies.streamLogAndroidFile
+    implementation Dependencies.streamPushDelegate
+    api Dependencies.streamPushPermissions
+    implementation Dependencies.ituDate
+    implementation Dependencies.moshi
+    implementation Dependencies.retrofitMoshiConverter
+    ksp Dependencies.moshiCodegen
+    implementation Dependencies.retrofit
+    implementation Dependencies.okhttpLoggingInterceptor
+    implementation Dependencies.ok2curl
+    debugImplementation Dependencies.flipper
+    debugImplementation Dependencies.flipperNetwork
+    debugImplementation Dependencies.flipperLoader
+    implementation Dependencies.timber
+
+    // Instrumentation tests
+    androidTestImplementation Dependencies.junit4
+    androidTestImplementation Dependencies.espressoCore
+    androidTestImplementation Dependencies.androidxTestJunit
+
+    detektPlugins(Dependencies.detektFormatting)
+}

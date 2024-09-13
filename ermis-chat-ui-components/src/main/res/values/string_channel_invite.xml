@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="channel_invite_accept">Accept</string>
+    <string name="channel_invite_decline">Decline</string>
+    <string name="channel_invite_skip">Skip</string>
+    <string name="ui_invited_list_empty">There are no invitations</string>
+    <string name="accept_the_invite_of_channel">Accept the invite to see all messages of this channel</string>
+    <string name="accept_the_invite_of_conversation">Accept the invite to see all messages of this conversation</string>
+    <string name="invitation_sender_note_label">%s needs to accept your invitation to see the messages you\'ve sent</string>
+</resources>

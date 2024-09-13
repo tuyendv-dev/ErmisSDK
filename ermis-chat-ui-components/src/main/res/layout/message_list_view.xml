@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatMessagesRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/ui_spacing_small"
+        android:scrollbars="vertical"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llGoToUnreadMessages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_jump_to_unread"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:visibility="gone"
+        tools:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_jump_to_unread"
+            />
+
+        <TextView
+            android:id="@+id/unreadCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ermis_ui_scroll_button_unread_badge_size"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/shape_scroll_button_badge"
+            android:gravity="center"
+            android:minWidth="@dimen/ermis_ui_scroll_button_unread_badge_size"
+            android:minHeight="@dimen/ermis_ui_scroll_button_unread_badge_size"
+            android:paddingHorizontal="@dimen/ermis_ui_scroll_button_unread_badge_padding_horizontal"
+            android:singleLine="true"
+            android:textColor="@color/ui_literal_white"
+            android:textDirection="locale"
+            android:textSize="@dimen/ermis_ui_scroll_button_unread_badge_text_size"
+            android:textStyle="bold"
+            tools:text="0"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:paddingVertical="8dp"
+            android:text="@string/ermis_ui_message_jump_to_unread"
+            android:textColor="@color/color_primary"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCloseUnreadMessages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_close_white"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <network.ermis.ui.view.messages.internal.ScrollButtonView
+        android:id="@+id/scrollToBottomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        />
+
+    <FrameLayout
+        android:id="@+id/loadingViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ProgressBar
+            android:id="@+id/defaultLoadingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/emptyStateViewContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/defaultEmptyStateView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ermis_ui_message_list_empty"
+            android:textColor="@color/ui_text_color_primary"
+            android:textDirection="locale"
+            tools:text="No messages"
+            />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/blurLayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C000"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:id="@+id/messageOptionsScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/messageOptionsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:minHeight="200dp"
+            />
+
+    </ScrollView>
+
+    <network.ermis.ui.widgets.typing.TypingIndicatorView
+        android:id="@+id/typingIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</merge>

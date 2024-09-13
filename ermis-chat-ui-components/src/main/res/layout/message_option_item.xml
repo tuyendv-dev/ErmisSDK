@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ermisUiMessageOptionItem"
+    android:textDirection="locale"
+    tools:drawableStart="@drawable/ic_user_block"
+    tools:text="@string/ermis_ui_message_list_block_user"
+    tools:visibility="visible"
+    />

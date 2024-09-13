@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Notification-->
+    <string name="ermis_chat_notification_title">Chat message</string>
+    <string name="ermis_chat_notification_content">You\'ve received new message</string>
+    <string name="ermis_chat_notification_reply">Reply</string>
+    <string name="ermis_chat_notification_type_hint">Type message</string>
+    <string name="ermis_chat_notification_read">Mark as read</string>
+    <string name="ermis_chat_notification_channel_id" translatable="false">ermis_ErmisClient</string>
+    <string name="ermis_chat_notification_channel_name">New chat messages</string>
+    <string name="ermis_chat_other_notifications_channel_id" translatable="false">ermis_GetErmisClientOther</string>
+    <string name="ermis_chat_other_notifications_channel_name">Other notifications</string>
+    <string name="ermis_chat_load_notification_data_title">Loading notification data</string>
+    <string name="ermis_chat_notification_group_summary_content_text">You\'ve received new messages</string>
+    <string name="ermis_chat_error_notification_group_summary_title">Chat messages</string>
+    <string name="ermis_chat_error_notification_group_summary_content_text">You\'ve received new messages</string>
+    <string name="ermis_chat_notification_empty_username">message</string>
+    <string name="ermis_chat_notification_message_defaul">sent 1 message</string>
+    <string name="ermis_ui_message_input_permission_notifications_message">Notifications blocked</string>
+</resources>

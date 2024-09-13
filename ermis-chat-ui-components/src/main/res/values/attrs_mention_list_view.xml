@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="MentionListView">
+        <!-- A background color of the MentionListView -->
+        <attr name="ermisUiBackground" format="color|reference"/>
+        <!-- A drawable of the empty mention -->
+        <attr name="ermisUiEmptyStateDrawable" format="reference"/>
+
+        <!-- Text size of the sender name -->
+        <attr name="ermisUiSenderNameTextSize" format="dimension"/>
+        <!-- A color of the sender name -->
+        <attr name="ermisUiSenderNameTextColor" format="color|reference"/>
+        <!-- Font name of the sender name -->
+        <attr name="ermisUiSenderNameTextFont" format="reference"/>
+        <!-- Font assets reference for the sender name -->
+        <attr name="ermisUiSenderNameTextFontAssets" format="string"/>
+        <!-- Text style of the sender name: "normal", "bold", and "italic". -->
+        <attr name="ermisUiSenderNameTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Text size of the message preview -->
+        <attr name="ermisUiMessageTextSize" format="dimension"/>
+        <!-- A color of the message preview -->
+        <attr name="ermisUiMessageTextColor" format="color|reference"/>
+        <!-- Font name of the message preview -->
+        <attr name="ermisUiMessageTextFont" format="reference"/>
+        <!-- Font assets reference for the message preview -->
+        <attr name="ermisUiMessageTextFontAssets" format="string"/>
+        <!-- Text style of the message preview: "normal", "bold", and "italic". -->
+        <attr name="ermisUiMessageTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Text size of the message time label -->
+        <attr name="ermisUiMessageTimeTextSize" format="dimension"/>
+        <!-- A color of the message time label -->
+        <attr name="ermisUiMessageTimeTextColor" format="color|reference"/>
+        <!-- Font name of the message time label -->
+        <attr name="ermisUiMessageTimeTextFont" format="reference"/>
+        <!-- Font assets reference for the message time label -->
+        <attr name="ermisUiMessageTimeTextFontAssets" format="string"/>
+        <!-- Text style of the message time label: "normal", "bold", and "italic". -->
+        <attr name="ermisUiMessageTimeTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <network.ermis.ui.view.messages.header.MessageListHeaderView
+        android:id="@+id/messagesHeaderView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <network.ermis.ui.view.MessageListView
+        android:id="@+id/messageListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="0dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/tvInvitationSenderNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/messagesHeaderView"
+        app:ermisUiFlagMessageConfirmationEnabled="true"
+        app:ermisUiPinMessageEnabled="true"
+        app:ermisUiMessagesStart="top"
+        />
+
+    <network.ermis.ui.view.messages.composer.MessageComposerView
+        android:id="@+id/messageComposerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvInvitationSenderNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/invitation_sender_note_label"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@id/messageComposerView"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutInvite"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@color/color_surface"
+        app:layout_constraintTop_toBottomOf="@id/messagesHeaderView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoteInvite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accept_the_invite_of_channel"
+            android:layout_marginHorizontal="32dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDecline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_invite_decline"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteInvite"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnAccept"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/channel_invite_accept"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvNoteInvite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnDecline"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ermis_ui_channel_list_untitled_channel_plus_more">%1$s +%2$d more</string>
+</resources>

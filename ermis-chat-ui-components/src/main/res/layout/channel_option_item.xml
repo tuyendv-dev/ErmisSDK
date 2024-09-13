@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ermisUiChannelActionsButtonStyle"
+    android:textDirection="locale"
+    tools:drawableStart="@drawable/ic_delete"
+    tools:text="@string/ermis_ui_channel_list_delete_channel"
+    tools:visibility="visible"
+    />

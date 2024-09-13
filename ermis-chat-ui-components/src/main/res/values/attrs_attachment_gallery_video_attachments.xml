@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="AttachmentGalleryVideoAttachments">
+
+        <!-- The drawable for the play button icon displayed above videos in the main viewing
+         area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoButtonIcon" format="reference" />
+        <!-- Tints the icon overlaid above videos in the main viewing area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconTint"
+            format="reference|color" />
+        <!-- The background color of the View containing the play button overlaid above
+         the main viewing area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconBackgroundColor"
+            format="color|reference" />
+        <!-- The corner radius of the play button in the main viewing area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconCornerRadius"
+            format="dimension" />
+        <!-- The elevation of the play button in the main viewing area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconElevation"
+            format="dimension" />
+        <!-- Sets the top padding of the play video icon displayed above the main viewing
+         area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingTop"
+            format="dimension" />
+        <!-- Sets the bottom padding of the play video icon in the main viewing
+        area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingBottom"
+            format="dimension" />
+        <!-- Sets the start padding of the play video icon in the main viewing
+        area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingStart"
+            format="dimension" />
+        <!-- Sets the end padding of the play video icon in the main viewing
+        area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPaddingEnd"
+            format="dimension" />
+        <!-- Sets the padding of the play video icon in the main viewing
+        area of the gallery. Using this attribute overrides other padding attributes such as
+        padding top, bottom, start and end.-->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayVideoIconPadding"
+            format="dimension" />
+        <!-- Sets the width of the play video button in the main viewing area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayIconWidth" format="dimension">
+            <!-- The view should be as big as its parent (minus padding).
+                 Introduced in API Level 8. -->
+            <enum name="match_parent" value="-1" />
+            <!-- The view should be only big enough to enclose its content (plus padding). -->
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <!-- Sets the width of the play video button in the main viewing area of the gallery. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaPlayIconHeight" format="dimension">
+            <!-- The view should be as big as its parent (minus padding).
+                 Introduced in API Level 8. -->
+            <enum name="match_parent" value="-1" />
+            <!-- The view should be only big enough to enclose its content (plus padding). -->
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <!-- A placeholder drawable used before the image is loaded. -->
+        <attr name="ermisUiAttachmentGalleryViewMediaImagePlaceholder" format="reference" />
+
+    </declare-styleable>
+</resources>

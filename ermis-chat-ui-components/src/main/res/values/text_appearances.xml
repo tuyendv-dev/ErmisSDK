@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Font_Belo_SF_Bold">
+        <item name="fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:fontFamily">@font/sf_pro_display_bold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Font_Belo_SF_SemiBold">
+        <item name="fontFamily">@font/sf_pro_display_semibold</item>
+        <item name="android:fontFamily">@font/sf_pro_display_semibold</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Font_Belo_SF_Regular">
+        <item name="fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:fontFamily">@font/sf_pro_display_regular</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Font_Belo_SF_Light">
+        <item name="fontFamily">@font/sf_pro_display_light</item>
+        <item name="android:fontFamily">@font/sf_pro_display_light</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_48_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">48sp</item>
+        <item name="lineHeight">67dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_48_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">48sp</item>
+        <item name="lineHeight">67dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_48_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">48sp</item>
+        <item name="lineHeight">67dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_48_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">48sp</item>
+        <item name="lineHeight">67dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_32_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">32sp</item>
+        <item name="lineHeight">44dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_32_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">32sp</item>
+        <item name="lineHeight">44dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_32_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">32sp</item>
+        <item name="lineHeight">44dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Display_32_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">44sp</item>
+        <item name="lineHeight">44dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Normal_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">26sp</item>
+        <item name="lineHeight">36dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Normal_Semi" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">26sp</item>
+        <item name="lineHeight">36dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Normal_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">26sp</item>
+        <item name="lineHeight">36dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Normal_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">26sp</item>
+        <item name="lineHeight">36dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Large_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">39dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Large_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">39dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Large_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">39dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H1_Large_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">28sp</item>
+        <item name="lineHeight">39dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_H2_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">33dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H2_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">33dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H2_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">33dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H2_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">24sp</item>
+        <item name="lineHeight">33dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_H3_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H3_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H3_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H3_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_H4_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H4_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H4_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H4_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_H5_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H5_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H5_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_H5_Light" parent="Font_Belo_SF_Light">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Body_Large_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Large_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Large_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">20sp</item>
+        <item name="lineHeight">28dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Body_Medium_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Medium_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Medium_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">18sp</item>
+        <item name="lineHeight">25dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Body_Normal16_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Normal16_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Normal16_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">16sp</item>
+        <item name="lineHeight">22dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Body_Normal14_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">19dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Normal14_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">19dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Normal14_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">14sp</item>
+        <item name="lineHeight">19dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Body_Small_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Small_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Body_Small_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Description_Small_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Description_Small_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Description_Small_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Description_Xsmall_Bold" parent="Font_Belo_SF_Bold">
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">14dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Description_Xsmall_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">14dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Description_Xsmall_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">10sp</item>
+        <item name="lineHeight">14dp</item>
+    </style>
+
+
+    <style name="TextAppearance_Belo_Links_SemiBold" parent="Font_Belo_SF_SemiBold">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+    <style name="TextAppearance_Belo_Links_Reg" parent="Font_Belo_SF_Regular">
+        <item name="android:textSize">12sp</item>
+        <item name="lineHeight">16dp</item>
+    </style>
+
+</resources>

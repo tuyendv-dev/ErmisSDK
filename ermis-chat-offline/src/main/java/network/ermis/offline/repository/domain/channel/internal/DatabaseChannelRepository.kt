@@ -1,0 +1,247 @@
+package network.ermis.offline.repository.domain.channel.internal
+
+import android.util.LruCache
+import network.ermis.client.utils.extensions.syncUnreadCountWithReads
+import network.ermis.client.persistance.ChannelRepository
+import network.ermis.core.utils.maxOf
+import network.ermis.core.utils.minOf
+import network.ermis.core.models.Channel
+import network.ermis.core.models.Member
+import network.ermis.core.models.Message
+import network.ermis.core.models.User
+import network.ermis.offline.extensions.launchWithMutex
+import io.getstream.log.taggedLogger
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import java.util.Date
+
+/**
+ * Repository to read and write [Channel] data.
+ */
+@SuppressWarnings("TooManyFunctions")
+internal class DatabaseChannelRepository(
+    private val scope: CoroutineScope,
+    private val channelDao: ChannelDao,
+    private val getUser: suspend (userId: String) -> User,
+    private val getMessage: suspend (messageId: String) -> Message?,
+    cacheSize: Int = 1000,
+) : ChannelRepository {
+
+    private val logger by taggedLogger("Chat:ChannelRepository")
+    private val channelCache = LruCache<String, Channel>(cacheSize)
+    private val dbMutex = Mutex()
+
+    override suspend fun insertChannel(channel: Channel) {
+        insertChannels(listOf(channel))
+    }
+
+    /**
+     * Inserts many [Channel]s.
+     *
+     * @param channels collection of [Channel]
+     */
+    override suspend fun insertChannels(channels: Collection<Channel>) {
+        if (channels.isEmpty()) return
+        val updatedChannels = channels
+            .map { channelCache[it.cid]?.let { cachedChannel -> it.combine(cachedChannel) } ?: it }
+        val channelToInsert = updatedChannels
+            .filter { channelCache[it.cid] != it }
+            .map { it.toEntity() }
+        cacheChannel(updatedChannels)
+        scope.launchWithMutex(dbMutex) {
+            logger.v {
+                "[insertChannels] inserting ${channelToInsert.size} entities on DB, " +
+                    "updated ${updatedChannels.size} on cache"
+            }
+            channelToInsert
+                .takeUnless { it.isEmpty() }
+                ?.let { channelDao.insertMany(it) }
+        }
+    }
+
+    private fun cacheChannel(vararg channels: Channel) {
+        channels.forEach { channelCache.put(it.cid, it) }
+    }
+
+    private fun cacheChannel(channels: Collection<Channel>) {
+        channels.forEach { channelCache.put(it.cid, it) }
+    }
+
+    /**
+     * Deletes a [Channel] by the cid.
+     *
+     * @param cid String
+     */
+    override suspend fun deleteChannel(cid: String) {
+        logger.v { "[deleteChannel] cid: $cid" }
+        channelCache.remove(cid)
+        scope.launchWithMutex(dbMutex) { channelDao.delete(cid) }
+    }
+
+    override suspend fun deleteChannelMessage(message: Message) {
+        channelCache[message.cid]?.let { cachedChannel ->
+            val updatedChannel = cachedChannel.copy(messages = cachedChannel.messages.filter { it.id != message.id })
+            cacheChannel(updatedChannel)
+        }
+    }
+
+    /**
+     * Select a channel by cid.
+     *
+     * @param cid String
+     */
+    override suspend fun selectChannel(cid: String): Channel? =
+        channelCache[cid] ?: channelDao.select(cid = cid)?.toModel(getUser, getMessage)
+            ?.also { cacheChannel(it) }
+
+    /**
+     * Select a list of channels by cid.
+     *
+     * @param cids List<String>
+     */
+    override suspend fun selectChannels(cids: List<String>): List<Channel> {
+        val cachedChannels = cids.mapNotNull { channelCache[it] }
+        val missingChannelIds = cids.minus(cachedChannels.map(Channel::cid).toSet())
+        return cachedChannels +
+            channelDao.select(missingChannelIds)
+                .map { it.toModel(getUser, getMessage) }
+                .also { cacheChannel(it) }
+    }
+
+    /**
+     * Selects all channels' cids.
+     *
+     * @return A list of channels' cids stored in the repository.
+     */
+    override suspend fun selectAllCids(): List<String> = channelDao.selectAllCids()
+
+    /**
+     * Read which channel cids need sync.
+     */
+    override suspend fun selectChannelCidsBySyncNeeded(limit: Int): List<String> {
+        return channelDao.selectCidsBySyncNeeded(limit = limit)
+    }
+
+    /**
+     * Read which channels need sync.
+     */
+    override suspend fun selectChannelsSyncNeeded(limit: Int): List<Channel> {
+        return channelDao.selectSyncNeeded(limit = limit).map { it.toModel(getUser, getMessage) }
+    }
+
+    /**
+     * Sets the Channel.deleteAt for a channel.
+     *
+     * @param cid String.
+     * @param deletedAt Date.
+     */
+    override suspend fun setChannelDeletedAt(cid: String, deletedAt: Date) {
+        channelCache[cid]?.let { cachedChannel ->
+            cacheChannel(listOf(cachedChannel.copy(deletedAt = deletedAt)))
+        }
+        scope.launchWithMutex(dbMutex) { channelDao.setDeletedAt(cid, deletedAt) }
+    }
+
+    /**
+     * Sets the Channel.hidden for a channel.
+     *
+     * @param cid String.
+     * @param hidden Date.
+     * @param hideMessagesBefore Date.
+     */
+    override suspend fun setHiddenForChannel(cid: String, hidden: Boolean, hideMessagesBefore: Date) {
+        channelCache[cid]?.let { cachedChannel ->
+            cacheChannel(
+                cachedChannel.copy(
+                    hidden = hidden,
+                    hiddenMessagesBefore = hideMessagesBefore,
+                ),
+            )
+        }
+        scope.launchWithMutex(dbMutex) { channelDao.setHidden(cid, hidden, hideMessagesBefore) }
+    }
+
+    /**
+     * Sets the Channel.hidden for a channel.
+     *
+     * @param cid String.
+     * @param hidden Date.
+     */
+    override suspend fun setHiddenForChannel(cid: String, hidden: Boolean) {
+        channelCache[cid]?.let { cachedChannel ->
+            cacheChannel(listOf(cachedChannel.copy(hidden = hidden)))
+        }
+        scope.launchWithMutex(dbMutex) { channelDao.setHidden(cid, hidden) }
+    }
+
+    /**
+     * Reads the member list of a channel.
+     *
+     * @param cid String.
+     */
+    override suspend fun selectMembersForChannel(cid: String): List<Member> =
+        selectChannel(cid)?.members ?: emptyList()
+
+    /**
+     * Updates the members of a [Channel]
+     *
+     * @param cid String.
+     * @param members list of [Member]
+     */
+    override suspend fun updateMembersForChannel(cid: String, members: List<Member>) {
+        selectChannel(cid)?.let {
+            insertChannel(it.copy(members = (members + it.members).distinctBy(Member::getUserId)))
+        }
+    }
+
+    /**
+     * Updates the last message for a [Channel]
+     *
+     * @param cid String.
+     * @param lastMessage [Message].
+     */
+    override suspend fun updateLastMessageForChannel(cid: String, lastMessage: Message) {
+        selectChannel(cid)?.let {
+            insertChannel(
+                it.copy(
+                    messages = listOf(lastMessage),
+                    lastMessageAt = lastMessage.createdAt ?: lastMessage.createdLocallyAt ?: Date(0),
+                ),
+            )
+        }
+    }
+
+    private fun Channel.combine(cachedChannel: Channel): Channel {
+        val hideMessagesBefore = minOf(this.hiddenMessagesBefore, cachedChannel.hiddenMessagesBefore)
+        val messages = (
+            messages.filter { it.after(hideMessagesBefore) } +
+                cachedChannel.messages.filter { it.after(hideMessagesBefore) }
+            )
+            .distinctBy { it.id }
+            .sortedBy { it.createdAt ?: it.createdLocallyAt ?: Date(0) }
+        val read = (read + cachedChannel.read).distinctBy { it.getUserId() }
+        return copy(
+            messages = messages,
+            lastMessageAt = maxOf(
+                lastMessageAt,
+                cachedChannel.lastMessageAt,
+                messages.lastOrNull()?.let { it.createdAt ?: it.createdLocallyAt ?: Date(0) },
+            ),
+            hiddenMessagesBefore = hideMessagesBefore,
+            members = members,
+            read = read,
+        ).syncUnreadCountWithReads()
+    }
+    private fun Message.after(date: Date?): Boolean =
+        date?.let { (createdAt ?: createdLocallyAt ?: Date(0)).after(it) } ?: true
+
+    override suspend fun evictChannel(cid: String) {
+        logger.v { "[evictChannel] cid: $cid" }
+        channelCache.remove(cid)
+    }
+
+    override suspend fun clear() {
+        dbMutex.withLock { channelDao.deleteAll() }
+    }
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <style name="LoginEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:textColor">@color/ui_text_color_primary</item>
+        <item name="android:textColorHint">@color/ui_text_color_hint</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="LoginEditTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.Dense">
+        <item name="boxCornerRadiusTopStart">@dimen/login_input_field_corner_radius</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/login_input_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/login_input_field_corner_radius</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/login_input_field_corner_radius</item>
+        <item name="errorEnabled">false</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxBackgroundColor">@color/color_surfaceContainer</item>
+        <item name="hintTextColor">@color/color_onSurfaceVariant</item>
+        <item name="android:textColor">@color/color_onSurface</item>
+        <item name="errorTextColor">@color/color_error</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="hintTextAppearance">@style/TextAppearance_Belo_Body_Normal16_Reg</item>
+    </style>
+
+    <style name="ComponentBrowserSeparator">
+        <item name="android:background">@color/ui_grey_whisper</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="ComponentBrowserLabel">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+    </style>
+
+    <style name="BottomNavigationItemTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/ui_text_small</item>
+    </style>
+
+
+    <style name="ermisUiMessageListAvatarStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_small</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_small</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_small</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+    <style name="ermisUiUserAvatarStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+    <style name="ermisUiChannelListAvatarStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_medium</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_medium</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_medium</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUiGroupActionsAvatarStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_large</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_large</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_large</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+    </style>
+
+    <style name="ermisUiSelectedGroupMembersStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_large</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_large</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_large</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">true</item>
+        <item name="ermisUiAvatarOnlineIndicatorPosition">bottomRight</item>
+    </style>
+
+    <style name="ermisUiChatInfoAvatarStyle" parent="ermisUiBaseAvatarStyle">
+        <item name="android:layout_width">@dimen/ui_avatar_size_extra_large</item>
+        <item name="android:layout_height">@dimen/ui_avatar_size_extra_large</item>
+        <item name="ermisUiAvatarTextSize">@dimen/ui_avatar_text_size_extra_large</item>
+        <item name="ermisUiAvatarOnlineIndicatorEnabled">false</item>
+    </style>
+
+</resources>

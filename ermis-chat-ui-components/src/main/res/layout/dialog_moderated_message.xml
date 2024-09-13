@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:id="@+id/container"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="24dp"
+        android:background="@drawable/white_shape_8dp_corners"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_flag"
+            app:tint="@color/ui_accent_blue"
+            />
+
+        <TextView
+            style="@style/ermisUiTextAppearance.HeadlineBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/ermis_ui_moderation_dialog_title"
+            />
+
+        <TextView
+            style="@style/ermisUiTextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="@string/ermis_ui_moderation_dialog_description"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/divider"
+            />
+
+        <TextView
+            android:id="@+id/sendAnyway"
+            style="@style/ermisUiTextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/ermis_ui_moderation_dialog_send"
+            android:textColor="@color/ui_accent_blue"
+            android:background="?attr/selectableItemBackground"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider"
+            />
+
+        <TextView
+            android:id="@+id/editMessage"
+            style="@style/ermisUiTextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/ermis_ui_moderation_dialog_edit"
+            android:textColor="@color/ui_accent_blue"
+            android:background="?attr/selectableItemBackground"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/divider"
+            />
+
+        <TextView
+            android:id="@+id/deleteMessage"
+            style="@style/ermisUiTextAppearance.Body"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="@string/ermis_ui_moderation_dialog_delete"
+            android:textColor="@color/ui_accent_blue"
+            android:background="?attr/selectableItemBackground"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

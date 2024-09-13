@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_primary">@color/primary_20</color>
+    <color name="color_primary_container">@color/primary_80</color>
+    <color name="color_onPrimary">@color/primary_90</color>
+    <color name="color_onPrimaryContainer">@color/primary_10</color>
+    <color name="color_primaryLight">@color/primary_10</color>
+    <color name="color_primaryDark">@color/primary_30</color>
+    <color name="color_primaryContainerLight">@color/primary_70</color>
+    <color name="color_primaryContaineDark">@color/primary_90</color>
+    <color name="color_surfaceContainerHigh">@color/neutral_70</color>
+    <color name="color_surfaceContainerHighest">@color/neutral_50</color>
+    <color name="color_surfaceContainer">@color/neutral_75</color>
+    <color name="color_surfaceContainerLow">@color/neutral_80</color>
+    <color name="color_surfaceContainerLowest">@color/neutral_90</color>
+    <color name="color_error">@color/red_10</color>
+    <color name="color_errorContainer">@color/red_70</color>
+    <color name="color_onError">@color/red_95</color>
+    <color name="color_onErrorContainer">@color/red_6</color>
+    <color name="color_errorLight">@color/red_6</color>
+    <color name="color_errorHigh">@color/red_20</color>
+    <color name="color_success">@color/green_40</color>
+    <color name="color_successContainer">@color/green_70</color>
+    <color name="color_onSuccess">@color/green_90</color>
+    <color name="color_onSuccessContainer">@color/green_6</color>
+    <color name="color_onSurfaceVariantLow">@color/neutral_60</color>
+    <color name="color_onSurfaceVariant">@color/neutral_50</color>
+    <color name="color_onSurfaceVariantHigh">@color/neutral_40</color>
+    <color name="color_onSurface">@color/neutral_30</color>
+    <color name="color_onSurfaceHigh">@color/neutral_20</color>
+    <color name="color_outline">@color/neutral_60</color>
+    <color name="color_outlineVariantHigh">@color/neutral_50</color>
+    <color name="color_outlineVariant">@color/neutral_70</color>
+    <color name="color_surfaceBright">@color/black</color>
+    <color name="color_surface">@color/neutral_95</color>
+    <color name="color_info">@color/blue_30</color>
+    <color name="color_infoContainer">@color/blue_80</color>
+    <color name="color_onInfo">@color/blue_95</color>
+    <color name="color_onInfoContainer">@color/blue_3</color>
+    <color name="color_inverseSurface">@color/neutral_20</color>
+    <color name="color_inverseOnSurface">@color/neutral_80</color>
+
+    <!-- Greys -->
+    <color name="ui_black">#FFFFFF</color>
+    <color name="ui_black_50">#80FFFFFF</color>
+    <color name="ui_black_85">#D9FFFFFF</color>
+    <color name="ui_grey">#7A7A7A</color>
+    <color name="ui_grey_gainsboro">#2D2F2F</color>
+    <color name="ui_grey_whisper">#1C1E22</color>
+    <color name="ui_white_smoke">#13151B</color>
+    <color name="ui_white_snow">#070A0D</color>
+    <color name="ui_white">#101418</color>
+    <color name="ui_blue_alice">#00193D</color>
+
+    <!-- Specials -->
+    <color name="ui_overlay">#66000000</color>
+    <color name="ui_overlay_dark">#99FFFFFF</color>
+    <color name="ui_background_gradient_start">#101214</color>
+    <color name="ui_background_gradient_end">#070A0D</color>
+    <color name="ui_message_list_image_attachment_background">#1C1E22</color>
+    <color name="ui_message_list_video_attachment_background">#1C1E22</color>
+    <color name="ui_unread_label_background_color">#1C1E22</color>
+    <color name="ui_unread_label_text_color">#747881</color>
+
+    <!-- Other -->
+    <color name="ui_button_background_color">#FFFFFF</color>
+    <color name="ui_button_text_color">#005AFF</color>
+    <color name="ui_border">#141924</color>
+    <color name="ui_highlight">#302D22</color>
+
+    <!-- Message replies -->
+    <color name="ui_bars_background">#121416</color>
+
+    <!-- Make status bar icons light -->
+    <bool name="ui_light_status_bar">false</bool>
+</resources>

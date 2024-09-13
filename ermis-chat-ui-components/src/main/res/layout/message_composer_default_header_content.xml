@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <FrameLayout
+        android:id="@+id/inputModeHeaderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ui_message_composer_header_content_height"
+        android:paddingHorizontal="@dimen/ui_spacing_small"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/inputModeImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_arrow_curve_left"
+            tools:ignore="ContentDescription"
+            />
+
+        <TextView
+            android:id="@+id/inputModeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/ermis_ui_message_composer_mode_reply"
+            android:textAppearance="@style/ermisUiTextAppearance.BodyBold"
+            />
+
+        <ImageView
+            android:id="@+id/dismissInputModeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:src="@drawable/ic_clear"
+            tools:ignore="ContentDescription"
+            />
+
+    </FrameLayout>
+
+</merge>

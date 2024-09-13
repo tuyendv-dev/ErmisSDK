@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userReactionsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/ui_white"
+    app:cardCornerRadius="@dimen/ermis_ui_options_menu_corner_radius"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/ui_spacing_medium"
+        >
+
+        <TextView
+            android:id="@+id/userReactionsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:singleLine="true"
+            android:textAppearance="@style/ermisUiTextAppearance.HeadlineBold"
+            android:textDirection="locale"
+            tools:text="12 Message reactions"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/ui_spacing_small"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/ui_spacing_small"
+            android:paddingEnd="@dimen/ui_spacing_small"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/item_user_reaction"
+            tools:spanCount="4"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

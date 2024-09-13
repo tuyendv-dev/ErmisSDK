@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="MessageComposerView">
+        <attr name="ermisUiMessageComposerDividerBackgroundDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerIconDrawableTintColor" format="reference|color" />
+
+        <!-- Command suggestions content -->
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleText" format="string" />
+
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleTextFont" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerCommandSuggestionsTitleIconDrawableTintColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerCommandSuggestionsBackgroundColor" format="reference|color" />
+
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextFont" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandNameTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionText" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextFont" format="string" />
+        <attr name="ermisUiMessageComposerCommandSuggestionItemCommandDescriptionTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <!-- Mention suggestions content -->
+        <attr name="ermisUiMessageComposerMentionSuggestionsBackgroundColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemIconDrawableTintColor" format="reference|color" />
+
+        <attr name="ermisUiMessageComposerMentionSuggestionItemUsernameTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemUsernameTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemUsernameTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemUsernameTextFont" format="string" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemUsernameTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerMentionSuggestionItemMentionText" format="string" />
+
+        <attr name="ermisUiMessageComposerMentionSuggestionItemMentionTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemMentionTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemMentionTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemMentionTextFont" format="string" />
+        <attr name="ermisUiMessageComposerMentionSuggestionItemMentionTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <!-- Center content -->
+        <attr name="ermisUiMessageComposerCommandsHandlingEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerMentionsHandlingEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerMessageInputTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerMessageInputTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerMessageInputTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerMessageInputTextFont" format="string" />
+        <attr name="ermisUiMessageComposerMessageInputTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+        <attr name="ermisUiMessageComposerMessageInputHintText" format="string" />
+        <attr name="ermisUiMessageComposerMessageInputHintColor" format="color|reference" />
+
+        <attr name="ermisUiMessageComposerMessageInputBackgroundDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerMessageInputCursorDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerScrollbarEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerScrollbarFadingEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerMessageInputMaxLines" format="integer" />
+        <attr name="ermisUiMessageComposerMessageInputCannotSendHintText" format="string" />
+        <attr name="android:inputType" />
+
+        <!-- Overlays a drawable above video attachments. By default, used to display a play button,
+        signaling to the user that it's a video attachment. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawable" format="reference" />
+        <!-- Sets the tint of the drawable overlaid above video attachments. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawableTint" format="reference|color" />
+        <!-- Sets the background color of the icon overlaid above video attachments. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconBackgroundColor" format="reference|color" />
+        <!-- Sets the corner radius of the parent card containing the video icon. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoCornerRadius" format="dimension" />
+        <!-- Sets the elevation of the icon overlaid above video attachments. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconElevation" format="dimension" />
+        <!-- Sets the top padding between the video attachment drawable and its parent card. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingTop" format="dimension" />
+        <!-- Sets the bottom padding between the video attachment drawable and its parent card. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingBottom" format="dimension" />
+        <!-- Sets the start padding between the video attachment drawable and its parent card. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingStart" format="dimension" />
+        <!-- Sets the end padding between the video attachment drawable and its parent card. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePaddingEnd" format="dimension" />
+        <!-- Sets the padding between the video attachment drawable and its parent card, on all
+        sides. Using this attribute will override other padding attributes such as start the padding
+        set on top, bottom, start and end sides of the icon. -->
+        <attr name="ermisUiMessageComposerMessageInputVideoAttachmentIconDrawablePadding" format="dimension" />
+
+        <!-- Center overlap content -->
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordText" format="reference|string" />
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordTextSize" format="reference|dimension" />
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordBackgroundDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingHoldToRecordBackgroundDrawableTint" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelText" format="reference|string" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelTextSize" format="reference|dimension" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelStartDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingSlideToCancelStartDrawableTint" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingButtonIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingButtonIconDrawableTint" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingButtonBackgroundDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingButtonBackgroundDrawableTint" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingLockIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingLockIconDrawableTint" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingLockedIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingFloatingLockedIconDrawableTint" format="reference|color" />
+        <attr name="ermisUiMessageComposerAudioRecordingWaveformColor" format="reference|color" />
+
+        <!-- Leading content -->
+        <attr name="ermisUiMessageComposerAttachmentsButtonVisible" format="boolean" />
+        <attr name="ermisUiMessageComposerAttachmentsButtonIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsButtonIconTintList" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsButtonRippleColor" format="color|reference" />
+        <attr name="ermisUiMessageComposerCommandsButtonVisible" format="boolean" />
+        <attr name="ermisUiMessageComposerCommandsButtonIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerCommandsButtonIconTintList" format="reference" />
+        <attr name="ermisUiMessageComposerCommandsButtonRippleColor" format="color|reference" />
+
+        <!-- Footer content -->
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxVisible" format="boolean" />
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxText" format="string" />
+
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAlsoSendToChannelCheckboxTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <!-- Header content -->
+        <attr name="ermisUiMessageComposerEditModeText" format="string" />
+        <attr name="ermisUiMessageComposerEditModeIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerReplyModeText" format="string" />
+        <attr name="ermisUiMessageComposerReplyModeIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerDismissModeIconDrawable" format="reference" />
+
+        <!-- Trailing content -->
+        <attr name="ermisUiMessageComposerSendMessageButtonEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerSendMessageButtonIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerSendMessageButtonIconTintList" format="reference" />
+        <attr name="ermisUiMessageComposerSendMessageButtonWidth" format="dimension|reference" />
+        <attr name="ermisUiMessageComposerSendMessageButtonHeight" format="dimension|reference" />
+        <attr name="ermisUiMessageComposerSendMessageButtonPadding" format="dimension|reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonVisible" format="boolean" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonPreferred" format="boolean" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonIconTintList" format="reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonWidth" format="dimension|reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonHeight" format="dimension|reference" />
+        <attr name="ermisUiMessageComposerAudioRecordingButtonPadding" format="dimension|reference" />
+
+        <attr name="ermisUiMessageComposerCooldownTimerTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerCooldownTimerTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerCooldownTimerTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerCooldownTimerTextFont" format="string" />
+        <attr name="ermisUiMessageComposerCooldownTimerTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerCooldownTimerBackgroundDrawable" format="reference" />
+
+        <attr name="ermisUiMessageComposerShowMessageReplyView" format="boolean" />
+
+        <!-- Sets the background color of the quoted message bubble visible in the input when
+         replying to a message. Applied both when replying to messages owned by the currently
+         logged-in user and messages owned by other users. -->
+        <attr name="ermisUiMessageComposerMessageReplyBackgroundColor" format="color" />
+        <!-- Sets the size of the text inside the quoted message bubble visible in the input
+         when replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextSizeMine" format="dimension|reference" />
+        <!-- Sets the color of the text inside the quoted message bubble visible in the input
+        when replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextColorMine" format="color" />
+        <!-- Sets the font of the text inside the quoted message bubble visible in the input
+        when replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextFontMine" format="reference" />
+        <!-- Sets the font assets of the text inside the quoted message bubble visible in the
+        input when replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextFontAssetsMine" format="string" />
+        <!-- Sets the style of the text inside the quoted message bubble visible in the input
+        when replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextStyleMine">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- Sets the color of the stroke of the quoted message bubble visible in the input when
+         replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyStrokeColorMine" format="color" />
+        <!-- Sets the width of the stroke of the quoted message bubble visible in the input when
+        replying to a message. Applied when replying to messages owned by the currently logged-in
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyStrokeWidthMine" format="dimension|reference" />
+
+        <!-- Sets the size of the text inside the quoted message bubble visible in the input
+         when replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextSizeTheirs" format="dimension|reference" />
+        <!-- Sets the color of the text inside the quoted message bubble visible in the input
+        when replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextColorTheirs" format="color" />
+        <!-- Sets the font of the text inside the quoted message bubble visible in the input
+        when replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextFontTheirs" format="reference" />
+        <!-- Sets the font assets of the text inside the quoted message bubble visible in the
+        input when replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextFontAssetsTheirs" format="string" />
+        <!-- Sets the style of the text inside the quoted message bubble visible in the input
+        when replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyTextStyleTheirs">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- Sets the color of the stroke of the quoted message bubble visible in the input when
+         replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyStrokeColorTheirs" format="color" />
+        <!-- Sets the width of the stroke of the quoted message bubble visible in the input when
+        replying to a message. Applied when replying to messages owned by other users
+         user. -->
+        <attr name="ermisUiMessageComposerMessageReplyStrokeWidthTheirs" format="dimension|reference" />
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerBackgroundColor" format="reference|color" />
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessButtonTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerSubmitAttachmentsButtonIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAttachmentTabToggleButtonStateList" format="color|reference" />
+
+        <!-- Media attachments tab -->
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentsTabEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaMode" format="enum">
+            <enum name="photo" value="0" />
+            <enum name="video" value="1" />
+            <enum name="photo_and_video" value="2" />
+        </attr>
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentsTabIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessToMediaButtonText" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessToMediaIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextVisible" format="boolean" />
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoLengthTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoIconVisible" format="boolean" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoIconDrawable" format="reference" />
+        <!-- The tint of the icon used for video files. -->
+        <attr name="ermisUiMessageComposerAttachmentsPickerVideoIconDrawableTint" format="reference|color"/>
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaText" format="string" />
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerMediaAttachmentNoMediaTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <!-- File attachments tab -->
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsTabEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsTabIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessToFilesButtonText" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessToFilesIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerRecentFilesText" format="string" />
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerRecentFilesTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileManagerIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesText" format="string" />
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentsNoFilesTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemNameTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextSize" format="dimension" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextColor" format="reference|color" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextFontAssets" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextFont" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemSizeTextStyle" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemCheckboxSelectedDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemCheckboxDeselectedDrawable" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerFileAttachmentItemCheckboxTextColor" format="reference|color" />
+
+        <!-- Camera attachments tab -->
+        <attr name="ermisUiMessageComposerAttachmentsPickerCameraAttachmentsTabEnabled" format="boolean" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerCameraAttachmentsTabIconDrawable" format="reference" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessToCameraButtonText" format="string" />
+        <attr name="ermisUiMessageComposerAttachmentsPickerAllowAccessToCameraIconDrawable" format="reference" />
+
+        <!-- Audio record player view style -->
+        <attr name="ermisUiMessageComposerAudioRecordPlayerViewStyle" format="reference" />
+    </declare-styleable>
+</resources>

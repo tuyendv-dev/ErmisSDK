@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/memberContainer"
+    android:layout_width="64dp"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/spacing_small"
+    android:orientation="vertical"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <network.ermis.ui.widgets.avatar.UserAvatarView
+            android:id="@+id/userAvatarView"
+            style="@style/ermisUiSelectedGroupMembersStyle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageButton
+            android:id="@+id/deleteMemberButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/shape_circle_white_snow"
+            android:cropToPadding="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_close"
+            android:tint="@color/ui_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/memberNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:gravity="center|top"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textSize="@dimen/ui_text_small"
+        android:textStyle="bold"
+        />
+
+</LinearLayout>

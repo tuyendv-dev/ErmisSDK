@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:layout_height="wrap_content"
+    tools:layout_width="match_parent"
+    tools:parentTag="android.widget.FrameLayout"
+    >
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/suggestionsCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ui_spacing_small"
+        android:descendantFocusability="blocksDescendants"
+        android:visibility="gone"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        tools:visibility="visible"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:id="@+id/commandsTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/ui_spacing_small"
+                android:gravity="start|center_vertical"
+                android:paddingStart="12dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp"
+                android:text="@string/ermis_ui_message_composer_instant_commands"
+                android:textAppearance="@style/ermisUiTextAppearance.Body"
+                android:textColor="@color/ui_text_color_secondary"
+                android:textDirection="locale"
+                android:visibility="gone"
+                app:drawableStartCompat="@drawable/ic_command_blue"
+                app:layout_constraintBottom_toTopOf="@id/suggestionsRecyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/suggestionsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:maxHeight="@dimen/ui_suggestion_max_height"
+                android:orientation="vertical"
+                android:overScrollMode="never"
+                android:paddingTop="@dimen/ui_spacing_small"
+                android:paddingBottom="@dimen/ui_spacing_small"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHeight_max="@dimen/ui_suggestion_max_height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/commandsTitleTextView"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</merge>

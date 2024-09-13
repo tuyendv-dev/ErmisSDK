@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/ermis_ui_attachment_dialog_button_size"
+    android:layout_height="@dimen/ermis_ui_attachment_dialog_button_size"
+    android:layout_marginHorizontal="@dimen/ui_spacing_tiny"
+    android:padding="@dimen/ui_spacing_small"
+    >
+
+    <CheckedTextView
+        android:id="@+id/checkedTextView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:backgroundTint="@color/ermis_ui_attachment_tab_button"
+        android:textOff=""
+        android:textOn=""
+        />
+
+</FrameLayout>

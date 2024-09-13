@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ui_default_header_height"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/backButtonContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/ui_spacing_small"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/ermis_ui_message_list_header_back_button_content_description"
+            android:padding="@dimen/ui_spacing_tiny"
+            android:src="@drawable/arrow_left"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/backButtonBadge"
+            style="@style/ermisUiBadgeStyle"
+            android:layout_marginStart="22dp"
+            android:layout_marginBottom="20dp"
+            android:textDirection="locale"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/backButton"
+            app:layout_constraintStart_toStartOf="@+id/backButton"
+            tools:text="2"
+            tools:visibility="visible"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_spacing_small"
+        android:layout_marginEnd="@dimen/ui_spacing_small"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="5sp"
+        android:maxLines="1"
+        android:textAppearance="@style/ermisUiTextAppearance.HeadlineBold"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toTopOf="@+id/subtitleContainer"
+        app:layout_constraintEnd_toStartOf="@+id/channelAvatarView"
+        app:layout_constraintStart_toEndOf="@+id/backButtonContainer"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="User"
+        />
+
+    <FrameLayout
+        android:id="@+id/subtitleContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ui_spacing_small"
+        android:layout_marginEnd="@dimen/ui_spacing_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/channelAvatarView"
+        app:layout_constraintStart_toEndOf="@+id/backButtonContainer"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintVertical_chainStyle="packed"
+        >
+
+        <LinearLayout
+            android:id="@+id/connectingContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <ProgressBar
+                android:id="@+id/connectingProgressBar"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                />
+
+            <TextView
+                android:id="@+id/connectingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ermis_ui_message_list_header_disconnected"
+                android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+                android:textDirection="locale"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/offlineContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:id="@+id/offlineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ermis_ui_message_list_header_offline"
+                android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+                android:textDirection="locale"
+                />
+
+            <TextView
+                android:id="@+id/offlineRetryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="@string/ermis_ui_message_list_header_retry"
+                android:textColor="@color/ui_accent_blue"
+                android:textDirection="locale"
+                android:visibility="gone"
+                />
+        </LinearLayout>
+
+
+        <network.ermis.ui.widgets.typing.TypingIndicatorView
+            android:id="@+id/typingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/onlineTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+            android:textDirection="locale"
+            tools:text="Online for 10 mins"
+            />
+
+    </FrameLayout>
+
+    <network.ermis.ui.widgets.avatar.ChannelAvatarView
+        android:id="@+id/channelAvatarView"
+        style="?attr/ermisUiMessageListHeaderAvatarStyle"
+        android:layout_marginEnd="@dimen/ui_spacing_small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ui_divider_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:background="@color/ui_border"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

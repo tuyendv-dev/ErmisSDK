@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/optionsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/ui_white_snow"
+    app:cardCornerRadius="@dimen/ermis_ui_options_menu_corner_radius"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        >
+
+        <TextView
+            android:id="@+id/reply"
+            style="@style/ermisUiMessageOptionItem"
+            android:text="@string/ermis_ui_attachment_gallery_reply"
+            android:textDirection="locale"
+            tools:drawableStart="@drawable/ic_arrow_curve_left_grey"
+            />
+
+        <TextView
+            android:id="@+id/showInChat"
+            style="@style/ermisUiMessageOptionItem"
+            android:text="@string/ermis_ui_attachment_gallery_show_in_chat"
+            android:textDirection="locale"
+            tools:drawableStart="@drawable/ic_show_in_chat"
+            />
+
+        <TextView
+            android:id="@+id/saveMedia"
+            style="@style/ermisUiMessageOptionItem"
+            android:text="@string/ermis_ui_attachment_gallery_save_media"
+            android:textDirection="locale"
+            tools:drawableStart="@drawable/ic_download"
+            />
+
+        <TextView
+            android:id="@+id/delete"
+            style="@style/ermisUiMessageOptionItem"
+            android:text="@string/ermis_ui_attachment_gallery_delete"
+            android:textDirection="locale"
+            tools:drawableStart="@drawable/ic_delete"
+            />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

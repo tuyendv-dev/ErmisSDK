@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mediaAttachmentContent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/ui_spacing_tiny"
+    >
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/replyAvatarView"
+        style="?attr/ermisUiReplyAvatarStyle"
+        android:layout_marginHorizontal="@dimen/ui_spacing_tiny"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/replyContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/replyContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/ui_spacing_tiny"
+        android:padding="@dimen/ui_spacing_tiny"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/replyAvatarView"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <FrameLayout
+            android:id="@+id/attachmentContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/ui_spacing_tiny"
+            android:padding="@dimen/ui_spacing_tiny"
+            app:layout_constraintEnd_toStartOf="@+id/replyText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/replyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ui_spacing_tiny"
+            android:textAppearance="@style/ermisUiTextAppearance.Body"
+            android:textColorLink="@color/ui_accent_blue"
+            android:textDirection="locale"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintStart_toEndOf="@+id/attachmentContainer"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lineHeight="14sp"
+            tools:text="@tools:sample/lorem/random"
+            />
+
+        <TextView
+            android:id="@+id/additionalInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/replyText"
+            app:layout_constraintStart_toStartOf="@+id/replyText"
+            android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+            android:paddingStart="@dimen/ui_spacing_tiny"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

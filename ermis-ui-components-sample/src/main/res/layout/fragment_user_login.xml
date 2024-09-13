@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    tools:ignore="MissingConstraints"
+    tools:visibility="visible"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/ui_white"
+        android:elevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/user_login_custom_title"
+            android:textAppearance="@style/ermisUiTextAppearance.HeadlineBold"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ui_divider_height"
+        android:background="@drawable/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        />
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_logo_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/separator"
+        />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/ui_button_background_color"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/custom_login_button_text"
+        android:textAllCaps="false"
+        android:textColor="@color/ui_button_text_color"
+        android:textSize="16sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@id/loginWalletButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/loginWalletButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/ui_button_background_color"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/custom_login_wallet_button_text"
+        android:textAllCaps="false"
+        android:textColor="@color/ui_button_text_color"
+        android:textSize="16sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toTopOf="@id/goRegisterButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/goRegisterButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:layout_marginEnd="@dimen/spacing_medium"
+        android:layout_marginBottom="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:text="@string/custom_register_button_text"
+        android:textAllCaps="false"
+        android:textColor="@color/color_primary"
+        android:textSize="16sp"
+        app:cornerRadius="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ProgressBar
+        android:id="@+id/loadingProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutSelectPlatform"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_surface"
+        android:visibility="gone"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvSelectSdkTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="1dp"
+                >
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:gravity="center"
+                        android:text="@string/user_select_a_flatform"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginHorizontal="16dp"
+                        android:gravity="center"
+                        android:text="@string/user_select_a_flatform_des"
+                        android:textSize="15sp"
+                        />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="52dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/cvSelectSdkTitle"
+                >
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvSdk"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="2dp"
+                    app:strokeWidth="1dp"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/ermis_ic_notification"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/user_select_sdk"
+                            android:textSize="15sp"
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnGotoSdk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/user_go_to_sdk"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvErmis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="2dp"
+                    app:strokeWidth="1dp"
+                    >
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="240dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        >
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="85dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/ermis_ic_notification"
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginHorizontal="24dp"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center"
+                            android:text="@string/user_select_ermis"
+                            android:textSize="15sp"
+                            />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnGotoErmis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:text="@string/user_go_to_ermis"
+                            />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

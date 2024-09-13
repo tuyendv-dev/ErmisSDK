@@ -1,0 +1,40 @@
+package network.ermis.client.parser.adapters
+
+import com.squareup.moshi.FromJson
+import com.squareup.moshi.JsonAdapter
+import com.squareup.moshi.JsonReader
+import com.squareup.moshi.JsonWriter
+import com.squareup.moshi.ToJson
+import network.ermis.client.api.model.dto.DownstreamUserDto
+import network.ermis.client.api.model.dto.UpstreamUserDto
+
+internal object DownstreamUserDtoAdapter :
+    CustomObjectDtoAdapter<DownstreamUserDto>(DownstreamUserDto::class) {
+
+    @FromJson
+    fun fromJson(
+        jsonReader: JsonReader,
+        mapAdapter: JsonAdapter<MutableMap<String, Any>>,
+        messageAdapter: JsonAdapter<DownstreamUserDto>,
+    ): DownstreamUserDto? = parseWithExtraData(jsonReader, mapAdapter, messageAdapter)
+
+    @ToJson
+    @Suppress("UNUSED_PARAMETER")
+    fun toJson(jsonWriter: JsonWriter, value: DownstreamUserDto): Unit = error("Can't convert this to Json")
+}
+
+internal object UpstreamUserDtoAdapter :
+    CustomObjectDtoAdapter<UpstreamUserDto>(UpstreamUserDto::class) {
+
+    @FromJson
+    @Suppress("UNUSED_PARAMETER")
+    fun fromJson(jsonReader: JsonReader): UpstreamUserDto = error("Can't parse this from Json")
+
+    @ToJson
+    fun toJson(
+        jsonWriter: JsonWriter,
+        message: UpstreamUserDto?,
+        mapAdapter: JsonAdapter<MutableMap<String, Any?>>,
+        messageAdapter: JsonAdapter<UpstreamUserDto>,
+    ) = serializeWithExtraData(jsonWriter, message, mapAdapter, messageAdapter)
+}

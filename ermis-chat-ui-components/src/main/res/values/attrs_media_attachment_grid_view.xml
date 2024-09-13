@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="MediaAttachmentGridView">
+        <!-- Should show users avatars in media attachment grid view -->
+        <attr name="ermisUiMediaAttachmentGridViewShowUserAvatars" format="boolean" />
+        <!-- The drawable for the play button icon overlaid above video attachments in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoButtonIcon" format="reference" />
+        <!-- Tints the icon overlaid on top of video attachment previews in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconTint" format="reference|color" />
+        <!-- The background color of the View containing the play button in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconBackgroundColor" format="color|reference" />
+        <!-- The corner radius of the play button in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconCornerRadius" format="dimension" />
+        <!-- The elevation of the play button in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconElevation" format="dimension" />
+        <!-- Sets the top padding of the play video icon in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingTop" format="dimension" />
+        <!-- Sets the bottom padding of the play video icon in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingBottom" format="dimension" />
+        <!-- Sets the start padding of the play video icon in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingStart" format="dimension" />
+        <!-- Sets the end padding of the play video icon in the media
+        overview segment of the gallery. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconPaddingEnd" format="dimension" />
+        <!-- Sets the padding of the play video icon in the media
+        overview segment of the gallery. Using this attribute overrides other padding attributes
+        such as adding top, bottom, start and end. -->
+        <attr name="ermisUiMediaAttachmentGridViewPlayVideoIconPadding" format="dimension" />
+        <!-- A placeholder drawable used before the image is loaded. -->
+        <attr name="ermisUiMediaAttachmentGridViewImagePlaceholder" format="reference" />
+
+    </declare-styleable>
+</resources>

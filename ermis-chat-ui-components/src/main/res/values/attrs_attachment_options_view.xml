@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="AttachmentOptionsView">
+        <!-- Text size of the option text -->
+        <attr name="ermisUiAttachmentOptionTextSize" format="dimension|reference" />
+        <!-- A color of the option text -->
+        <attr name="ermisUiAttachmentOptionTextColor" format="color|reference" />
+        <!-- Font name of the option text -->
+        <attr name="ermisUiAttachmentOptionTextFont" format="reference" />
+        <!-- Font assets reference for the option text -->
+        <attr name="ermisUiAttachmentOptionTextFontAssets" format="string" />
+        <!-- Text style of the option text: "normal", "bold", and "italic". -->
+        <attr name="ermisUiAttachmentOptionTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Background color of the options dialog -->
+        <attr name="ermisUiAttachmentOptionsBackgroundColor" format="color|reference" />
+        <!-- "Reply to attachment" enabled/disabled -->
+        <attr name="ermisUiAttachmentReplyEnabled" format="boolean" />
+        <!-- Reply icon drawable -->
+        <attr name="ermisUiReplyIcon" format="reference" />
+        <!-- "Show in chat" enabled/disabled -->
+        <attr name="ermisUiShowInChatEnabled" format="boolean" />
+        <!-- "Show in chat" icon drawable -->
+        <attr name="ermisUiShowInChatIcon" format="reference" />
+        <!-- "Save media" enabled/disabled -->
+        <attr name="ermisUiSaveMediaEnabled" format="boolean" />
+        <!-- "Save" icon drawable -->
+        <attr name="ermisUiSaveMediaIcon" format="reference" />
+        <!-- "Delete" enabled/disabled -->
+        <attr name="ermisUiDeleteEnabled" format="boolean" />
+        <!-- "Delete" icon drawable -->
+        <attr name="ermisUiDeleteIcon" format="reference" />
+        <!-- "Delete" text tint -->
+        <attr name="ermisUiDeleteTextTint" format="reference" />
+    </declare-styleable>
+</resources>

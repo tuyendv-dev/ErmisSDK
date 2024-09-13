@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!--ChannelListView-->
+    <declare-styleable name="ChannelListView">
+        <!-- Channel list items separator drawable -->
+        <attr name="ermisUiChannelsItemSeparatorDrawable" format="reference" />
+
+        <!--Background layout-->
+        <!-- Channel list items separator drawable -->
+        <attr name="ermisUiChannelOptionsIcon" format="reference" />
+        <!-- Delete icon drawable -->
+        <attr name="ermisUiChannelDeleteIcon" format="reference" />
+        <!-- Delete icon drawable -->
+        <attr name="ermisUiChannelOptionsEnabled" format="boolean" />
+        <!-- Shows or hides channel delete option -->
+        <attr name="ermisUiChannelDeleteEnabled" format="boolean" />
+        <!-- Enables or disables channel item swiping -->
+        <attr name="ermisUiSwipeEnabled" format="boolean" />
+        <!-- Enabled count of reads of message of the current user. -->
+        <attr name="ermisUiReadCountEnabled" format="boolean" />
+        <attr name="ermisUiChannelListBackgroundColor" format="color|reference" />
+        <!-- Background color of channel item layout -->
+        <attr name="ermisUiBackgroundLayoutColor" format="color|reference" />
+
+        <!--Foreground layout-->
+        <!-- Text size of the channel title text -->
+        <attr name="ermisUiChannelTitleTextSize" format="dimension|reference" />
+        <!-- A color of the channel title text -->
+        <attr name="ermisUiChannelTitleTextColor" format="color|reference" />
+        <!-- Font name of the channel title text -->
+        <attr name="ermisUiChannelTitleTextFont" format="reference" />
+        <!-- Font assets reference for the channel title text -->
+        <attr name="ermisUiChannelTitleFontAssets" format="string" />
+        <!-- Text style of the channel title text: "normal", "bold", and "italic". -->
+        <attr name="ermisUiChannelTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Text size of the last message text -->
+        <attr name="ermisUiLastMessageTextSize" format="dimension|reference" />
+        <!-- A color of the last message text -->
+        <attr name="ermisUiLastMessageTextColor" format="color|reference" />
+        <!-- Font name of the last message text -->
+        <attr name="ermisUiLastMessageTextFont" format="reference" />
+        <!-- Font assets reference for the last message text -->
+        <attr name="ermisUiLastMessageFontAssets" format="string" />
+        <!-- Text style of the last message text: "normal", "bold", and "italic". -->
+        <attr name="ermisUiLastMessageTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Text size of the date text -->
+        <attr name="ermisUiLastMessageDateTextSize" format="dimension|reference" />
+        <!-- A color of the date text -->
+        <attr name="ermisUiLastMessageDateTextColor" format="color|reference" />
+        <!-- Font name of the date text -->
+        <attr name="ermisUiLastMessageDateTextFont" format="reference" />
+        <!-- Font assets reference for the date text -->
+        <attr name="ermisUiLastMessageDateFontAssets" format="string" />
+        <!-- Text style of the date text: "normal", "bold", and "italic". -->
+        <attr name="ermisUiLastMessageDateTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Drawable of the message sent state indicator -->
+        <attr name="ermisUiShowChannelDeliveryStatusIndicator" format="boolean" />
+        <attr name="ermisUiIndicatorSentIcon" format="reference" />
+        <!-- Drawable of the message read state indicator -->
+        <attr name="ermisUiIndicatorReadIcon" format="reference" />
+        <!-- Drawable of the message pending sync indicator  -->
+        <attr name="ermisUiIndicatorPendingSyncIcon" format="reference" />
+        <!-- Foreground color of channel list item  -->
+        <attr name="ermisUiForegroundLayoutColor" format="color|reference" />
+
+        <!-- Text size of the unread message count text -->
+        <attr name="ermisUiUnreadMessageCounterTextSize" format="dimension|reference" />
+        <!-- A color of the unread message count text -->
+        <attr name="ermisUiUnreadMessageCounterTextColor" format="color|reference" />
+        <!-- Font name of the unread message count text -->
+        <attr name="ermisUiUnreadMessageCounterTextFont" format="reference" />
+        <!-- Font assets reference for the unread message count text -->
+        <attr name="ermisUiUnreadMessageCounterFontAssets" format="string" />
+        <!-- Text style of the unread message count text: "normal", "bold", and "italic". -->
+        <attr name="ermisUiUnreadMessageCounterTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- Background color of the unread message counter -->
+        <attr name="ermisUiUnreadMessageCounterBackgroundColor" format="color|reference" />
+
+        <!-- Drawable of the muted channel icon -->
+        <attr name="ermisUiMutedChannelIcon" format="reference" />
+
+        <!-- Reference to layout resource of the channel list "loading" view -->
+        <attr name="ermisUiLoadingView" format="reference" />
+        <!-- Reference to layout resource of the channel list empty state view -->
+        <attr name="ermisUiEmptyStateView" format="reference" />
+        <!-- Reference to layout resource of the channel list "loading more" view -->
+        <attr name="ermisUiLoadingMoreView" format="reference" />
+        <!-- A color of the "edge overscroll" effect -->
+        <attr name="ermisUiEdgeEffectColor" format="color|reference" />
+
+        <attr name="ermisUiChannelActionsDialogStyle" />
+
+        <attr name="ermisUiChannelHeight" format="dimension|reference" />
+        <attr name="ermisUiChannelMarginStart" format="dimension|reference" />
+        <attr name="ermisUiChannelMarginEnd" format="dimension|reference" />
+        <attr name="ermisUiChannelTitleMarginStart" format="dimension|reference" />
+        <attr name="ermisUiChannelVerticalSpacerHeight" format="dimension|reference" />
+        <attr name="ermisUiChannelVerticalSpacerPosition" format="float|dimension|reference" />
+    </declare-styleable>
+</resources>

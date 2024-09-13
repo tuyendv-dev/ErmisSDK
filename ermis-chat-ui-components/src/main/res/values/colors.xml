@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">@color/primary_40</color>
+    <color name="color_primary_container">@color/primary_10</color>
+    <color name="color_onPrimary">@color/white</color>
+    <color name="color_onPrimaryContainer">@color/primary_70</color>
+    <color name="color_primaryLight">@color/primary_30</color>
+    <color name="color_primaryDark">@color/primary_50</color>
+    <color name="color_primaryContainerLight">@color/primary_6</color>
+    <color name="color_primaryContaineDark">@color/primary_20</color>
+    <color name="color_surfaceContainerHigh">@color/neutral_20</color>
+    <color name="color_surfaceContainerHighest">@color/neutral_30</color>
+    <color name="color_surfaceContainer">@color/neutral_10</color>
+    <color name="color_surfaceContainerLow">@color/neutral_6</color>
+    <color name="color_surfaceContainerLowest">@color/neutral_3</color>
+    <color name="color_error">@color/red_50</color>
+    <color name="color_errorContainer">@color/red_10</color>
+    <color name="color_onError">@color/white</color>
+    <color name="color_onErrorContainer">@color/red_80</color>
+    <color name="color_errorLight">@color/red_40</color>
+    <color name="color_errorHigh">@color/red_60</color>
+    <color name="color_success">@color/green_50</color>
+    <color name="color_successContainer">@color/green_6</color>
+    <color name="color_onSuccess">@color/white</color>
+    <color name="color_onSuccessContainer">@color/green_90</color>
+    <color name="color_onSurfaceVariantLow">@color/neutral_40</color>
+    <color name="color_onSurfaceVariant">@color/neutral_50</color>
+    <color name="color_onSurfaceVariantHigh">@color/neutral_70</color>
+    <color name="color_onSurface">@color/neutral_80</color>
+    <color name="color_onSurfaceHigh">@color/neutral_90</color>
+    <color name="color_outline">@color/neutral_30</color>
+    <color name="color_outlineVariantHigh">@color/neutral_40</color>
+    <color name="color_outlineVariant">@color/neutral_20</color>
+    <color name="color_surfaceBright">@color/white</color>
+    <color name="color_surface">@color/neutral_3</color>
+    <color name="color_info">@color/blue_50</color>
+    <color name="color_infoContainer">@color/blue_6</color>
+    <color name="color_onInfo">@color/white</color>
+    <color name="color_onInfoContainer">@color/blue_95</color>
+    <color name="color_inverseSurface">@color/neutral_80</color>
+    <color name="color_inverseOnSurface">@color/neutral_3</color>
+
+
+    <!-- Text -->
+    <color name="ui_text_color_primary">@color/color_onSurface</color>
+    <color name="ui_text_color_secondary">@color/color_onSurfaceVariant</color>
+    <color name="ui_text_color_hint">@color/color_onSurfaceVariant</color>
+
+    <!-- Accents -->
+    <color name="ui_accent_blue">@color/color_primary</color>
+    <color name="ui_accent_red">@color/color_error</color>
+    <color name="ui_accent_green">@color/color_success</color>
+
+    <!-- Greys -->
+    <color name="ui_black">#000000</color>
+    <color name="ui_black_50">#80000000</color>
+    <color name="ui_black_85">#D9000000</color>
+    <color name="ui_grey">#7A7A7A</color>
+    <color name="ui_grey_gainsboro">#DBDBDB</color>
+    <color name="ui_grey_whisper">#ECEBEB</color>
+    <color name="ui_white_smoke">#F2F2F2</color>
+    <color name="ui_white_snow">#FCFCFC</color>
+    <color name="ui_white">#FFFFFF</color>
+    <color name="ui_blue_alice">#E9F2FF</color>
+
+    <!-- Specials -->
+    <color name="ui_overlay">#33000000</color>
+    <color name="ui_overlay_dark">#99000000</color>
+    <color name="ui_background_gradient_start">#F7F7F7</color>
+    <color name="ui_background_gradient_end">#FCFCFC</color>
+    <color name="ui_message_list_image_attachment_background">#E9EAED</color>
+    <color name="ui_message_list_video_attachment_background">#E9EAED</color>
+    <color name="ui_unread_label_background_color">#E9EAED</color>
+    <color name="ui_unread_label_text_color">#747881</color>
+
+    <!-- Other -->
+    <color name="ui_icon_button_background">#FFFFFF</color>
+    <color name="ui_button_background_color">#005AFF</color>
+    <color name="ui_button_text_color">#FFFFFF</color>
+    <color name="ui_border">#E8E8E8</color>
+    <color name="ui_highlight">#FBF4DD</color>
+
+    <color name="ui_avatar_gradient_defauls">#B694F9</color>
+    <!-- Avatar gradient colors -->
+    <array name="ui_avatar_gradient_colors_start">
+        <item>#FF5733</item>
+        <item>#85C1E9</item>
+        <item>#DAF7A6</item>
+        <item>#FFC0CB</item>
+        <item>#8E44AD</item>
+        <item>#F39C12</item>
+        <item>#AED6F1</item>
+        <item>#58D68D</item>
+        <item>#F4D03F</item>
+        <item>#EB984E</item>
+        <item>#A569BD</item>
+        <item>#F5B041</item>
+        <item>#76D7C4</item>
+        <item>#85929E</item>
+        <item>#FF5733</item>
+        <item>#5DADE2</item>
+        <item>#ABEBC6</item>
+        <item>#FAD7A0</item>
+        <item>#D7DBDD</item>
+        <item>#B2BABB</item>
+        <item>#D2B4DE</item>
+        <item>#C39BD3</item>
+        <item>#BB8FCE</item>
+        <item>#F7DC6F</item>
+        <item>#52BE80</item>
+        <item>#1ABC9C</item>
+        <item>#00FF00</item>
+        <item>#FFFF00</item>
+        <item>#FF0000</item>
+        <item>#E6E6FA</item>
+        <item>#0000FF</item>
+        <item>#800080</item>
+        <item>#BADA55</item>
+        <item>#8B4513</item>
+        <item>#1E90FF</item>
+        <item>#996633</item>
+        <item>#B694F9</item>
+    </array>
+
+    <array name="ui_avatar_gradient_colors_end">
+        <item>#C70039</item>
+        <item>#21618C</item>
+        <item>#FFC300</item>
+        <item>#FF1493</item>
+        <item>#2980B9</item>
+        <item>#D35400</item>
+        <item>#2E86C1</item>
+        <item>#28B463</item>
+        <item>#F39C12</item>
+        <item>#CB4335</item>
+        <item>#8E44AD</item>
+        <item>#DC7633</item>
+        <item>#48C9B0</item>
+        <item>#34495E</item>
+        <item>#900C3F</item>
+        <item>#2E86C1</item>
+        <item>#239B56</item>
+        <item>#E59866</item>
+        <item>#566573</item>
+        <item>#626567</item>
+        <item>#8E44AD</item>
+        <item>#7D3C98</item>
+        <item>#8E44AD</item>
+        <item>#F1C40F</item>
+        <item>#27AE60</item>
+        <item>#16A085</item>
+        <item>#006600</item>
+        <item>#FFD700</item>
+        <item>#8B0000</item>
+        <item>#D8BFD8</item>
+        <item>#00008B</item>
+        <item>#4B0082</item>
+        <item>#8CBF3F</item>
+        <item>#A0522D</item>
+        <item>#4169E1</item>
+        <item>#663300</item>
+        <item>#6C61DF</item>
+    </array>
+
+    <!-- Literals -->
+    <!-- Fixed values that do not change in dark mode -->
+    <color name="ui_literal_transparent">#00000000</color>
+    <color name="ui_literal_white">#FFFFFF</color>
+    <color name="ui_literal_black">#000000</color>
+
+    <!-- Message replies -->
+    <color name="ui_bars_background">#FFFFFF</color>
+
+    <!-- Make status bar icons dark -->
+    <bool name="ui_light_status_bar">true</bool>
+
+    <!-- Search Input -->
+    <color name="ui_search_input_background_outline_color">@color/ui_grey_whisper</color>
+
+    <!-- Audio Record Player -->
+    <color name="ui_audio_record_player_speed_text_color">#080707</color>
+    <color name="ui_audio_record_player_duration_text_color">#747881</color>
+</resources>

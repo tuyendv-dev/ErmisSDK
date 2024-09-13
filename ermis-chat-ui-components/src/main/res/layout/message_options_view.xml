@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/messageOptionsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/ui_white"
+    app:cardCornerRadius="@dimen/ermis_ui_options_menu_corner_radius"
+    >
+
+    <LinearLayout
+        android:id="@+id/optionListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        />
+
+</androidx.cardview.widget.CardView>

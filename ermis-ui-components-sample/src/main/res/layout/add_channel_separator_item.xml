@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:background="@color/ui_white_smoke"
+    android:paddingStart="@dimen/spacing_small"
+    android:paddingEnd="@dimen/spacing_small"
+    >
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_small"
+        android:textStyle="bold"
+        />
+
+</FrameLayout>

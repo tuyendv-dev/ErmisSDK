@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_bottom_sheet"
+    >
+
+    <TextView
+        android:id="@+id/userNameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:textAppearance="@style/ermisUiTextAppearance.HeadlineBold"
+        android:textColor="@color/ui_text_color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Notandi"
+        />
+
+    <TextView
+        android:id="@+id/lastSeenTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+        android:textColor="@color/ui_text_color_secondary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameTextView"
+        tools:text="Last seen a year ago"
+        />
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lastSeenTextView"
+        app:ermisUiAvatarBorderWidth="0dp"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <network.ermis.sample.feature.chat.group.member.GroupChatInfoMemberOptionView
+        android:id="@+id/optionViewInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userAvatarView"
+        app:optionIcon="@drawable/ic_member"
+        app:optionText="@string/chat_group_info_user_option_view_info"
+        tools:visibility="visible"
+        />
+
+    <network.ermis.sample.feature.chat.group.member.GroupChatInfoMemberOptionView
+        android:id="@+id/optionMessage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionViewInfo"
+        app:optionIcon="@drawable/ic_chats"
+        app:optionText="@string/chat_group_info_user_option_message"
+        tools:visibility="visible"
+        />
+
+    <network.ermis.sample.feature.chat.group.member.GroupChatInfoMemberOptionView       android:id="@+id/optionRemove"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionMessage"
+        app:optionIcon="@drawable/ic_leave_group"
+        app:optionIconTint="@color/red"
+        app:optionText="@string/chat_group_info_user_option_remove"
+        app:optionTextColor="@color/red"
+        />
+
+    <network.ermis.sample.feature.chat.group.member.GroupChatInfoMemberOptionView
+        android:id="@+id/optionCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/optionRemove"
+        app:optionIcon="@drawable/ic_cancel"
+        app:optionText="@string/cancel"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

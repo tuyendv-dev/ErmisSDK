@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="MediaActivity">
+        <attr name="ermisUiMediaActivityIconStyle" format="reference" />
+        <attr name="ermisUiMediaActivityHeader" format="reference" />
+        <attr name="ermisUiMediaActivityHeaderLeftActionButtonStyle" format="reference" />
+        <attr name="ermisUiMediaActivityHeaderTitleStyle" format="reference" />
+        <attr name="ermisUiMediaActivityProgressBarStyle" format="reference"/>
+    </declare-styleable>
+</resources>

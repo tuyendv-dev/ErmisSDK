@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/ui_message_composer_audio_attachment_width"
+    android:layout_height="56dp"
+    android:background="@drawable/borders_16dp_corners"
+    >
+
+    <network.ermis.ui.view.messages.adapter.view.internal.AudioRecordPlayerView
+        android:id="@+id/playerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        />
+
+    <ImageButton
+        android:id="@+id/removeButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/attachment_cancel_background"
+        android:cropToPadding="true"
+        android:src="@drawable/ic_close_white"
+        android:layout_gravity="top|end"
+        tools:ignore="ContentDescription"
+        />
+
+</FrameLayout>

@@ -1,0 +1,95 @@
+import network.ermis.Dependencies
+import network.ermis.Configuration
+import network.ermis.Versions
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'de.mannodermaus.android-junit5'
+apply plugin: 'androidx.baselineprofile'
+
+ext {
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
+    PUBLISH_ARTIFACT_ID = 'ermis-chat-ui-common'
+    PUBLISH_VERSION = rootVersionName
+}
+
+apply from: "${rootDir}/scripts/publish-module.gradle"
+apply from: "${rootDir}/scripts/android.gradle"
+
+android {
+    namespace "network.ermis.ui.common"
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+        consumerProguardFiles 'consumer-proguard-rules.pro'
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            unitTests.returnDefaultValues = true
+            // Show the result of every unit test, even if it passes.
+            all {
+                testLogging {
+                    events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+                }
+            }
+        }
+    }
+
+    sourceSets {
+        all {
+            it.java.srcDir "src/$it.name/kotlin"
+        }
+    }
+
+    buildFeatures {
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion Versions.ANDROIDX_COMPOSE_COMPILER
+    }
+}
+
+baselineProfile {
+    baselineProfileOutputDir = "."
+    filter {
+        include("network.ermis.ui.common.**")
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += [
+                '-progressive',
+                '-Xexplicit-api=strict',
+                '-opt-in=network.ermis.core.internal.InternalErmisChatApi'
+        ]
+    }
+}
+
+dependencies {
+    api project(":ermis-chat-state")
+    implementation project(":ermis-chat-ui-utils")
+
+    implementation Dependencies.streamLog
+    implementation Dependencies.streamPushPermissionsSnackbar
+    implementation Dependencies.streamResult
+    implementation Dependencies.composeCompiler
+    implementation Dependencies.composeRuntime
+
+    implementation Dependencies.androidxActivityKtx
+    implementation Dependencies.androidxAnnotations
+    implementation Dependencies.androidxAppCompat
+    implementation Dependencies.androidxRecyclerview
+    implementation Dependencies.androidxStartup
+    implementation Dependencies.constraintLayout
+    implementation Dependencies.materialComponents
+    implementation Dependencies.androidxLifecycleLiveDataKtx
+
+    implementation Dependencies.coil
+    implementation Dependencies.coilGif
+    implementation Dependencies.coilVideo
+
+    detektPlugins(Dependencies.detektFormatting)
+}

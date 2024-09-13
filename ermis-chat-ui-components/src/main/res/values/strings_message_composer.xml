@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ermis_ui_message_composer_send_to_channel">Also send to channel</string>
+    <string name="ermis_ui_message_composer_mode_reply">Reply to message</string>
+    <string name="ermis_ui_message_composer_mode_edit">Edit Message</string>
+    <string name="ermis_ui_message_composer_hint_normal">Write something here</string>
+    <string name="ermis_ui_message_composer_hint_cannot_send_message">You can\'t send messages in this channel</string>
+
+    <!-- Mentions Popup -->
+    <string name="ermis_ui_message_composer_mention_template" translatable="false">\@%1$s</string>
+
+    <!-- Commands Popup -->
+    <string name="ermis_ui_message_composer_instant_commands">Instant Commands</string>
+    <string name="ermis_ui_message_composer_command_template" translatable="false">/%1$s %2$s</string>
+
+    <!-- File Picker Dialog -->
+    <string name="ermis_ui_message_composer_gallery_access">Allow access to your Gallery</string>
+    <string name="ermis_ui_message_composer_files_access">Allow access to your Files</string>
+    <string name="ermis_ui_message_composer_camera_access">Allow access to your Camera</string>
+    <string name="ermis_ui_message_composer_recent_files">Recent Files</string>
+    <string name="ermis_ui_message_composer_no_files">There is no photo or video.</string>
+    <string name="ermis_ui_message_composer_file_not_supported">File type is not supported</string>
+
+    <!-- Validation Errors -->
+    <string name="ermis_ui_message_composer_error_message_length">Max message length (%d) exceeded.</string>
+    <string name="ermis_ui_message_composer_error_file_size">File is too large - max %s.</string>
+    <string name="ermis_ui_message_composer_error_attachment_count">Attachments count (%d) exceeded.</string>
+    <string name="ermis_ui_message_composer_sending_links_not_allowed">Sending links is not allowed in this conversation.</string>
+
+    <!-- Audio Recording -->
+    <string name="ermis_ui_message_composer_slide_to_cancel">Slide to cancel</string>
+    <string name="ermis_ui_message_composer_hold_to_record">Hold to start, release to send.</string>
+
+</resources>

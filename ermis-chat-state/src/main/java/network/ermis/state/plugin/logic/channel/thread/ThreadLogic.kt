@@ -1,0 +1,110 @@
+package network.ermis.state.plugin.logic.channel.thread
+
+import network.ermis.client.events.HasMessage
+import network.ermis.client.events.MessageDeletedEvent
+import network.ermis.client.events.MessageUpdatedEvent
+import network.ermis.client.events.NewMessageEvent
+import network.ermis.client.events.NotificationMessageNewEvent
+import network.ermis.client.events.ReactionDeletedEvent
+import network.ermis.client.events.ReactionNewEvent
+import network.ermis.client.events.ReactionUpdateEvent
+import network.ermis.client.plugin.listeners.ThreadQueryListener
+import network.ermis.core.models.Message
+import network.ermis.state.plugin.state.channel.thread.ThreadMutableState
+
+/** Logic class for thread state management. Implements [ThreadQueryListener] as listener for LLC requests. */
+internal class ThreadLogic(
+    private val threadStateLogic: ThreadStateLogic,
+) {
+
+    private val mutableState: ThreadMutableState = threadStateLogic.writeThreadState()
+
+    fun isLoadingOlderMessages(): Boolean = mutableState.loadingOlderMessages.value
+
+    fun isLoadingMessages(): Boolean = mutableState.loading.value
+
+    internal fun setLoading(isLoading: Boolean) {
+        mutableState.setLoading(isLoading)
+    }
+
+    internal fun setLoadingOlderMessages(isLoading: Boolean) {
+        mutableState.setLoadingOlderMessages(isLoading)
+    }
+
+    /**
+     * Returns message stored in [ThreadMutableState] if exists
+     *
+     * @param messageId The id of the message.
+     *
+     * @return [Message] if exists, null otherwise.
+     */
+    internal fun getMessage(messageId: String): Message? {
+        return mutableState.rawMessage.value[messageId]?.copy()
+    }
+
+    internal fun stateLogic(): ThreadStateLogic {
+        return threadStateLogic
+    }
+
+    internal fun deleteMessage(message: Message) {
+        threadStateLogic.deleteMessage(message)
+    }
+
+    internal fun upsertMessage(message: Message) = upsertMessages(listOf(message))
+
+    internal fun upsertMessages(messages: List<Message>) = threadStateLogic.upsertMessages(messages)
+
+    internal fun removeLocalMessage(message: Message) {
+        threadStateLogic.deleteMessage(message)
+    }
+
+    internal fun setEndOfOlderMessages(isEnd: Boolean) {
+        mutableState.setEndOfOlderMessages(isEnd)
+    }
+
+    internal fun updateOldestMessageInThread(messages: List<Message>) {
+        mutableState.setOldestInThread(
+            messages.sortedBy { it.createdAt }
+                .firstOrNull()
+                ?: mutableState.oldestInThread.value,
+        )
+    }
+
+    internal fun handleEvents(events: List<HasMessage>) {
+        val messages = events
+            .map { event ->
+                val ownReactions = getMessage(event.message.id)?.ownReactions ?: event.message.ownReactions
+                if (event is MessageUpdatedEvent) {
+                    event.message.copy(
+                        replyTo = mutableState.messages.value.firstOrNull { it.id == event.message.replyMessageId },
+                        ownReactions = ownReactions,
+                    )
+                } else {
+                    event.message.copy(
+                        ownReactions = ownReactions,
+                    )
+                }
+            }
+        upsertMessages(messages)
+    }
+
+    private fun handleEvent(event: HasMessage) {
+        when (event) {
+            is MessageUpdatedEvent -> {
+                event.message.copy(
+                    replyTo = mutableState.messages.value.firstOrNull { it.id == event.message.replyMessageId },
+                ).let(::upsertMessage)
+            }
+            is NewMessageEvent,
+            is MessageDeletedEvent,
+            is NotificationMessageNewEvent,
+            is ReactionNewEvent,
+            is ReactionUpdateEvent,
+            is ReactionDeletedEvent,
+            -> {
+                upsertMessage(event.message)
+            }
+            else -> Unit
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="AvatarView">
+        <!-- AvatarView border color -->
+        <attr name="ermisUiAvatarBorderColor" format="color|reference" />
+        <!-- Border width of AvatarView -->
+        <attr name="ermisUiAvatarBorderWidth" format="dimension|reference" />
+        <!-- Text size of the AvatarView's initials letters -->
+        <attr name="ermisUiAvatarTextSize" format="dimension|reference" />
+        <!-- A color of the AvatarView's initials letters -->
+        <attr name="ermisUiAvatarTextColor" format="color|reference" />
+        <!-- Font name of the AvatarView's initials letters -->
+        <attr name="ermisUiAvatarTextFont" format="reference" />
+        <!-- Font assets reference for the AvatarView's initials letters -->
+        <attr name="ermisUiAvatarTextFontAssets" format="string" />
+        <!-- Text style of the AvatarView's initials letters -->
+        <attr name="ermisUiAvatarTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- Text size of the AvatarView's initials letters in group avatar -->
+        <attr name="ermisUiGroupAvatarTextSize" format="dimension|reference" />
+        <!-- A color of the AvatarView's initials letters in group avatar -->
+        <attr name="ermisUiGroupAvatarTextColor" format="color|reference" />
+        <!-- Font name of the AvatarView's initials letters in group avatar -->
+        <attr name="ermisUiGroupAvatarTextFont" format="reference" />
+        <!-- Font assets reference for the AvatarView's initials letters in group avatar -->
+        <attr name="ermisUiGroupAvatarTextFontAssets" format="string" />
+        <!-- Text style of the AvatarView's initials letters in group avatar -->
+        <attr name="ermisUiGroupAvatarTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- Sets the visibility of the online indicator -->
+        <attr name="ermisUiAvatarOnlineIndicatorEnabled" format="boolean" />
+        <!-- Sets the position of the online indicator -->
+        <attr name="ermisUiAvatarOnlineIndicatorPosition" format="enum">
+            <enum name="topLeft" value="0" />
+            <enum name="topRight" value="1" />
+            <enum name="bottomLeft" value="2" />
+            <enum name="bottomRight" value="3" />
+        </attr>
+        <!-- Color of the online indicator -->
+        <attr name="ermisUiAvatarOnlineIndicatorColor" format="color|reference" />
+        <!-- Border color of the online indicator -->
+        <attr name="ermisUiAvatarOnlineIndicatorBorderColor" format="color|reference" />
+        <!-- Avatar shapes -->
+        <attr name="ermisUiAvatarShape" format="enum">
+            <enum name="circle" value="0"/>
+            <enum name="round_rect" value="1"/>
+        </attr>
+        <attr name="ermisUiAvatarBorderRadius" format="dimension|reference"/>
+    </declare-styleable>
+</resources>

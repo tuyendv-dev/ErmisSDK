@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!--ChannelsHeaderView-->
+    <declare-styleable name="ChannelListHeaderView">
+        <!-- Sets the visibility of user avatar -->
+        <attr name="ermisUiShowUserAvatar" format="boolean" />
+
+        <!-- Text size of the ChannelHeader's online state title -->
+        <attr name="ermisUiOnlineTitleTextSize" format="dimension|reference" />
+        <!-- A color of the ChannelHeader's online state title -->
+        <attr name="ermisUiOnlineTitleTextColor" format="color|reference" />
+        <!-- Font name of the ChannelHeader's online state title -->
+        <attr name="ermisUiOnlineTitleTextFont" format="reference" />
+        <!-- Font assets reference for the ChannelHeader's online state title -->
+        <attr name="ermisUiOnlineTitleFontAssets" format="string" />
+        <!-- Text style of the ChannelHeader's online state title: "normal", "bold", and "italic". -->
+        <attr name="ermisUiOnlineTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Text size of the ChannelHeader's offline state title -->
+        <attr name="ermisUiOfflineTitleTextSize" format="dimension|reference" />
+        <!-- A color of the ChannelHeader's offline state title -->
+        <attr name="ermisUiOfflineTitleTextColor" format="color|reference" />
+        <!-- Font name of the ChannelHeader's offline state title -->
+        <attr name="ermisUiOfflineTitleTextFont" format="reference" />
+        <!-- Font assets reference for the ChannelHeader's offline state title -->
+        <attr name="ermisUiOfflineTitleFontAssets" format="string" />
+        <!-- Text style of the ChannelHeader's offline state title: "normal", "bold", and "italic". -->
+        <attr name="ermisUiOfflineTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Sets the visibility of the offline state progressbar -->
+        <attr name="ermisUiShowOfflineProgressBar" format="boolean" />
+        <!-- A color of the offline state progressbar -->
+        <attr name="ermisUiOfflineProgressBarTint" format="color|reference" />
+        <!-- Sets the visibility of the action button -->
+        <attr name="ermisUiShowActionButton" format="boolean" />
+        <!-- Action button icon drawable -->
+        <attr name="ermisUiActionButtonIcon" format="reference" />
+        <!-- Action button background tint -->
+        <attr name="ermisUiActionBackgroundTint" format="color|reference" />
+        <!-- Separator background drawable -->
+        <attr name="ermisUiChannelListSeparatorBackgroundDrawable" format="reference" />
+
+    </declare-styleable>
+
+</resources>

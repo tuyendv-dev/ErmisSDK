@@ -1,0 +1,73 @@
+package network.ermis.sample.feature.chat.group.administrator
+
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.asLiveData
+import androidx.lifecycle.viewModelScope
+import network.ermis.client.ErmisClient
+import network.ermis.client.channel.ChannelClient
+import network.ermis.client.channel.state.ChannelState
+import network.ermis.client.setup.ClientState
+import network.ermis.core.models.Member
+import network.ermis.state.extensions.watchChannelAsState
+import network.ermis.state.utils.Event
+import io.getstream.log.taggedLogger
+import io.getstream.result.Result
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.launch
+
+class GroupChatAdminViewModel(
+    private val cid: String,
+    private val chatClient: ErmisClient = ErmisClient.instance(),
+    private val clientState: ClientState = chatClient.clientState,
+) : ViewModel() {
+
+    private val logger by taggedLogger("GroupChatAdminViewModel")
+
+    /**
+     * Holds information about the current channel and is actively updated.
+     */
+    private val channelState: Flow<ChannelState> =
+        chatClient.watchChannelAsState(cid, 0, viewModelScope).filterNotNull()
+
+    private val channelClient: ChannelClient = chatClient.channel(cid)
+    private val _events = MutableLiveData<Event<UiEvent>>()
+    private val _errorEvents: MutableLiveData<Event<ErrorEvent>> = MutableLiveData()
+    val events: LiveData<Event<UiEvent>> = _events
+    val errorEvents: LiveData<Event<ErrorEvent>> = _errorEvents
+
+    val members: LiveData<List<Member>> =
+        channelState.flatMapLatest { it.members }.asLiveData()
+
+    fun onAction(action: Action) {
+        viewModelScope.launch {
+            when (action) {
+                is Action.MemberClicked -> demoteMemberFromChannel(action.member)
+            }
+        }
+    }
+
+    private fun demoteMemberFromChannel(member: Member) {
+        viewModelScope.launch {
+            when (val result = chatClient.channel(cid).demoteMembersChannel(listOf(member.getUserId())).await()) {
+                is Result.Success -> _events.value = Event(UiEvent.DemoteMemberSuccess)
+                is Result.Failure -> _errorEvents.postValue(Event(ErrorEvent.DemoteMemberError(result.value.message)))
+            }
+        }
+    }
+
+    sealed class Action {
+        data class MemberClicked(val member: Member) : Action()
+    }
+
+    sealed class UiEvent {
+        data object DemoteMemberSuccess : UiEvent()
+    }
+
+    sealed class ErrorEvent {
+        data class DemoteMemberError(val error: String) : ErrorEvent()
+    }
+}

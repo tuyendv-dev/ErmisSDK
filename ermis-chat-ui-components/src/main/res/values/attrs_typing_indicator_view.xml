@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="TypingIndicatorView">
+        <!-- Layout reference to the typing indicator view -->
+        <attr name="ermisUiTypingIndicatorAnimationView" format="reference" />
+
+        <!-- Text size of the "typing users" text -->
+        <attr name="ermisUiTypingIndicatorUsersTextSize" format="dimension" />
+        <!-- A color of the "typing users" text -->
+        <attr name="ermisUiTypingIndicatorUsersTextColor" format="color|reference" />
+        <!-- Font name of the "typing users" text -->
+        <attr name="ermisUiTypingIndicatorUsersTextFont" format="reference" />
+        <!-- Font assets reference for the "typing users" text -->
+        <attr name="ermisUiTypingIndicatorUsersTextFontAssets" format="string" />
+        <!-- Text style of the "typing users" text: "normal", "bold", and "italic". -->
+        <attr name="ermisUiTypingIndicatorUsersTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

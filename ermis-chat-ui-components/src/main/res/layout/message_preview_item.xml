@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ermis_ui_message_preview_item_height"
+    android:background="?attr/selectableItemBackground"
+    >
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        style="?attr/ermisUiMentionPreviewItemAvatarStyle"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars"
+        />
+
+    <TextView
+        android:id="@+id/senderNameLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/ui_text_color_primary"
+        android:textSize="@dimen/ermis_ui_channel_item_title"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toTopOf="@+id/messageLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/userAvatarView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@tools:sample/full_names"
+        />
+
+    <TextView
+        android:id="@+id/messageLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ermis_ui_channel_item_message"
+        android:textDirection="locale"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/messageTimeLabel"
+        app:layout_constraintStart_toStartOf="@+id/senderNameLabel"
+        app:layout_constraintTop_toBottomOf="@+id/senderNameLabel"
+        tools:text="@tools:sample/lorem/random"
+        />
+
+    <TextView
+        android:id="@+id/messageTimeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/ermisUiTextAppearance.Footnote"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ermis_ui_channel_item_message_date"
+        android:textDirection="locale"
+        app:layout_constraintBaseline_toBaselineOf="@+id/messageLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="3:00PM"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

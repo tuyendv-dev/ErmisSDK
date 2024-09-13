@@ -1,0 +1,61 @@
+import network.ermis.Dependencies
+import network.ermis.Configuration
+
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'de.mannodermaus.android-junit5'
+
+ext {
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
+    PUBLISH_ARTIFACT_ID = 'ermis-chat-ui-utils'
+    PUBLISH_VERSION = rootVersionName
+}
+
+apply from: "${rootDir}/scripts/publish-module.gradle"
+apply from: "${rootDir}/scripts/android.gradle"
+
+android {
+    namespace "network.ermis.ui.utils"
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+            unitTests.returnDefaultValues = true
+            // Show the result of every unit test, even if it passes.
+            all {
+                testLogging {
+                    events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+                }
+            }
+        }
+    }
+
+    sourceSets {
+        all {
+            it.java.srcDir "src/$it.name/kotlin"
+        }
+    }
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
+    kotlinOptions {
+        freeCompilerArgs += [
+                '-progressive',
+                '-Xexplicit-api=strict',
+                '-opt-in=network.ermis.core.internal.InternalErmisChatApi'
+        ]
+    }
+}
+
+dependencies {
+    implementation project(':ermis-chat-client')
+    implementation project(':ermis-chat-state')
+
+    implementation Dependencies.androidxAnnotations
+    implementation Dependencies.coroutinesCore
+
+    detektPlugins(Dependencies.detektFormatting)
+}

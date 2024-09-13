@@ -1,0 +1,112 @@
+import network.ermis.Dependencies
+import network.ermis.command.changelog.plugin.ChangelogReleaseSectionPlugin
+import network.ermis.command.release.plugin.ReleasePlugin
+import network.ermis.command.unittest.plugin.UnitTestsPlugin
+import network.ermis.command.version.plugin.VersionBumpPlugin
+import network.ermis.command.version.plugin.MinorBumpPlugin
+import network.ermis.command.version.plugin.VersionPrintPlugin
+import network.ermis.command.changelog.plugin.ChangelogAddModelSectionPlugin
+
+apply plugin: "com.github.ben-manes.versions"
+apply plugin: 'io.github.gradle-nexus.publish-plugin'
+apply plugin: 'binary-compatibility-validator'
+apply plugin: 'org.jetbrains.dokka'
+apply from: "${rootDir}/scripts/sample-app-versioner.gradle"
+apply plugin: UnitTestsPlugin
+apply plugin: ReleasePlugin
+apply plugin: ChangelogReleaseSectionPlugin
+apply plugin: VersionBumpPlugin
+apply plugin: MinorBumpPlugin
+apply plugin: VersionPrintPlugin
+apply plugin: ChangelogAddModelSectionPlugin
+
+
+buildscript {
+    repositories {
+        maven { url "https://plugins.gradle.org/m2/" }
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath Dependencies.androidGradlePlugin
+        classpath Dependencies.kotlinGradlePlugin
+        classpath Dependencies.googleServicesPlugin
+        classpath Dependencies.androidJunit5GradlePlugin
+        classpath Dependencies.gitversionerPlugin
+        classpath Dependencies.firebaseCrashlyticsPlugin
+        classpath Dependencies.gradleVersionsPlugin
+        classpath Dependencies.navigationSafeArgsGradlePlugin
+        classpath Dependencies.gradleNexusPublishPlugin
+        classpath Dependencies.baselineProfilePlugin
+        classpath Dependencies.dokka
+        classpath Dependencies.kotlinBinaryValidator
+        classpath Dependencies.shot
+        classpath Dependencies.spotlessGradlePlugin
+        classpath Dependencies.ksp
+        classpath Dependencies.detektPlugin
+    }
+}
+
+subprojects {
+    if (it.buildFile.exists()) {
+        apply from: "${rootDir}/spotless/spotless.gradle"
+    }
+    apply plugin: "io.gitlab.arturbosch.detekt"
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+versionPrint {
+    printFilePath = "build/tmp/temp-version"
+}
+
+unitTestDebugScript {
+    outputPath = "build/tmp/unit-tests-command.sh"
+}
+
+releaseScript {
+    changelogPath = "CHANGELOG.md"
+}
+
+changelogReleaseSection {
+    changelogPath = "CHANGELOG.md"
+}
+
+changelogAddModelSection {
+    changelogPath = "CHANGELOG.md"
+    changelogModel = "CHANGELOG_MODEL.md"
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+dependencyUpdates {
+    rejectVersionIf {
+        Dependencies.isStable(it.currentVersion) && Dependencies.isNonStable(it.candidate.version)
+    }
+}
+
+apiValidation {
+    ignoredPackages += [
+            'com/getstream/sdk/chat/databinding',
+            'io/getstream/chat/android/ui/databinding',
+    ]
+
+    ignoredProjects += [
+            'ermis-ui-components-sample',
+    ]
+
+    nonPublicMarkers += [
+            'io.getstream.chat.android.core.internal.InternalStreamChatApi',
+    ]
+}
+
+apply from: "${rootDir}/scripts/publish-root.gradle"

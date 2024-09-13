@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/ui_white_snow"
+    >
+
+    <network.ermis.ui.widgets.avatar.UserAvatarView
+        android:id="@+id/userAvatarView"
+        style="@style/ermisUiChannelListAvatarStyle"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textSize="@dimen/ui_text_medium"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/ownerTextView"
+        app:layout_constraintEnd_toStartOf="@id/deleteMember"
+        app:layout_constraintStart_toEndOf="@id/userAvatarView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="An Amazing Guy"
+        />
+
+    <TextView
+        android:id="@+id/ownerTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_small"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toStartOf="@id/deleteMember"
+        app:layout_constraintStart_toEndOf="@id/userAvatarView"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="@string/chat_group_info_owner"
+        />
+
+    <TextView
+        android:id="@+id/deleteMember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/action_unban_member"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_small"
+        android:visibility="visible"
+        tools:visibility="visible"
+        android:padding="4dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableTopCompat="@drawable/ic_delete"
+        />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ui_divider_height"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

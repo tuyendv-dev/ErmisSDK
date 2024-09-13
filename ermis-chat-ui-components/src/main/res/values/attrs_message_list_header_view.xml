@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!--MessageListHeaderView-->
+    <declare-styleable name="MessageListHeaderView" parent="AvatarView">
+        <attr name="ermisUiMessageListHeaderBackground" format="color" />
+
+        <attr name="ermisUiMessageListHeaderShowUserAvatar" format="boolean" />
+
+        <attr name="ermisUiMessageListHeaderSeparatorBackgroundDrawable" format="reference" />
+
+        <attr name="ermisUiMessageListHeaderTitleTextSize" format="dimension|reference" />
+        <attr name="ermisUiMessageListHeaderTitleTextColor" format="color|reference" />
+        <attr name="ermisUiMessageListHeaderTitleTextFont" format="reference" />
+        <attr name="ermisUiMessageListHeaderTitleFontAssets" format="string" />
+        <attr name="ermisUiMessageListHeaderTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageListHeaderOfflineLabelTextSize" format="dimension|reference" />
+        <attr name="ermisUiMessageListHeaderOfflineLabelTextColor" format="color|reference" />
+        <attr name="ermisUiMessageListHeaderOfflineLabelTextFont" format="reference" />
+        <attr name="ermisUiMessageListHeaderOfflineLabelFontAssets" format="string" />
+        <attr name="ermisUiMessageListHeaderOfflineLabelTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageListHeaderSearchingForNetworkLabelTextSize" format="dimension|reference" />
+        <attr name="ermisUiMessageListHeaderSearchingForNetworkLabelColor" format="color|reference" />
+        <attr name="ermisUiMessageListHeaderSearchingForNetworkLabelTextFont" format="reference" />
+        <attr name="ermisUiMessageListHeaderSearchingForNetworkLabelFontAssets" format="string" />
+        <attr name="ermisUiMessageListHeaderSearchingForNetworkLabelTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageListHeaderShowSearchingForNetworkProgressBar" format="boolean" />
+        <attr name="ermisUiMessageListHeaderSearchingForNetworkProgressBarTint" format="color|reference" />
+
+        <attr name="ermisUiMessageListHeaderBackButtonIcon" format="reference" />
+        <attr name="ermisUiMessageListHeaderShowBackButton" format="boolean" />
+        <attr name="ermisUiMessageListHeaderShowBackButtonBadge" format="boolean" />
+        <attr name="ermisUiMessageListHeaderBackButtonBadgeBackgroundColor" format="color" />
+
+        <attr name="ermisUiMessageListHeaderDefaultLabelTextSize" format="dimension|reference" />
+        <attr name="ermisUiMessageListHeaderDefaultLabelTextColor" format="color|reference" />
+        <attr name="ermisUiMessageListHeaderDefaultLabelTextFont" format="reference" />
+        <attr name="ermisUiMessageListHeaderDefaultLabelFontAssets" format="string" />
+        <attr name="ermisUiMessageListHeaderDefaultLabelTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

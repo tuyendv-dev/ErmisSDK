@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1084678114039",
+    "project_id": "ermis-chat",
+    "storage_bucket": "ermis-chat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084678114039:android:7e5568d8f71d51f09b21f2",
+        "android_client_info": {
+          "package_name": "com.chat.ermis"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKiWISCShLra3l63TB2JPPhkTeL7Ab6Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084678114039:android:0b9ee5c3311197d09b21f2",
+        "android_client_info": {
+          "package_name": "com.chat.ermis.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAKiWISCShLra3l63TB2JPPhkTeL7Ab6Fs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

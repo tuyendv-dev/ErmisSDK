@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_navigation"
+    app:startDestination="@id/channels_fragment"
+    >
+
+    <fragment
+        android:id="@+id/channels_fragment"
+        android:name="network.ermis.sample.feature.channel.list.ChannelListFragment"
+        android:label="ChannelsFragment"
+        tools:layout="@layout/fragment_channels"
+        >
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/mentions_fragment"-->
+<!--        android:name="network.ermis.sample.feature.mentions.MentionsFragment"-->
+<!--        android:label="MentionsFragment"-->
+<!--        tools:layout="@layout/fragment_mentions"-->
+<!--        />-->
+
+    <fragment
+        android:id="@+id/invited_fragment"
+        android:name="network.ermis.sample.feature.invited.InvitedFragment"
+        android:label="InvitedFragment"
+        tools:layout="@layout/fragment_invited"
+        />
+</navigation>

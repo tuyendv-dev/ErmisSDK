@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="AttachmentGalleryActivity">
+        <attr name="ermisUiAttachmentGalleryStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryCloseButtonStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryTitleStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryDateStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryActionsMenuStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryBottomBarImageCountStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryBottomBarLeftIconStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryBottomBarRightIconStyle" format="reference" />
+        <attr name="ermisUiAttachmentGalleryOptionsStyle" format="reference"/>
+        <attr name="ermisUiAttachmentGalleryVideoAttachmentsStyle" format="reference"/>
+        <attr name="ermisUiMediaAttachmentGridViewStyle" format="reference"/>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="SearchInputView">
+        <!-- SearchInputView configuration -->
+        <attr name="ermisUiSearchInputViewHintText" format="string" />
+        <attr name="ermisUiSearchInputViewSearchIcon" format="reference" />
+        <attr name="ermisUiSearchInputViewClearInputIcon" format="reference" />
+        <attr name="ermisUiSearchInputViewBackground" format="reference" />
+        <attr name="ermisUiSearchInputViewBackgroundOutlineColor" format="reference|color" />
+        <attr name="ermisUiSearchInputViewBackgroundOutlineWidth" format="reference|dimension" />
+        <attr name="ermisUiSearchInputViewContainerBackground" format="reference" />
+        <attr name="ermisUiSearchInputViewTextColor" format="color|reference" />
+        <attr name="ermisUiSearchInputViewHintColor" format="color|reference" />
+        <attr name="ermisUiSearchInputViewTextSize" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewTextMarginStart" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewTextMarginEnd" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewHeight" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewIconSearchWidth" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewIconSearchHeight" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewIconSearchMarginStart" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewIconClearWidth" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewIconClearHeight" format="dimension|reference" />
+        <attr name="ermisUiSearchInputViewIconClearMarginEnd" format="dimension|reference" />
+    </declare-styleable>
+</resources>

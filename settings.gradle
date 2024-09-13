@@ -1,0 +1,60 @@
+plugins {
+	id("com.github.burrunan.s3-build-cache") version "1.2"
+	id("com.gradle.enterprise") version "3.7"
+}
+include (
+		':ermis-chat-ui-utils',
+		':ermis-chat-ui-common',
+		':ermis-chat-ui-components',
+		':ermis-ui-components-sample'
+        ,
+		':ermis-chat-state',
+		':ermis-chat-offline',
+        ':ermis-chat-client'
+		,
+		':ermis-chat-core'
+        ,
+		':ermis-chat-markdown'
+
+		,
+)
+
+buildCache {
+	local {
+		enabled = !System.getenv().containsKey("CI")
+		removeUnusedEntriesAfterDays = 7
+	}
+	Properties localProperties = new Properties()
+	File file = new File("local.properties")
+	if (file.exists()) {
+		file.newDataInputStream().withCloseable { localProperties.load(it) }
+	}
+	String streamAWSRegion = localProperties.get("buildCache.AWSRegion") ?: System.getenv("BUILD_CACHE_AWS_REGION") ?: ""
+	String streamAWSBucket = localProperties.get("buildCache.AWSBucket") ?: System.getenv("BUILD_CACHE_AWS_BUCKET") ?: ""
+	String streamAWSAccessKeyId = localProperties.get("buildCache.AWSAccessKeyId") ?: System.getenv("BUILD_CACHE_AWS_ACCESS_KEY_ID") ?: ""
+	String streamAWSSecretKey = localProperties.get("buildCache.AWSSecretKey") ?: System.getenv("BUILD_CACHE_AWS_SECRET_KEY") ?: ""
+	Boolean streamBuildCacheDisabled = Boolean.parseBoolean(localProperties.get("buildCache.disabled"))
+	if (!streamBuildCacheDisabled &&
+			!streamAWSRegion.isBlank() &&
+			!streamAWSBucket.isBlank() &&
+			!streamAWSAccessKeyId.isBlank() &&
+			!streamAWSSecretKey.isBlank()
+	) {
+		remote(com.github.burrunan.s3cache.AwsS3BuildCache) {
+			region = streamAWSRegion
+			bucket = streamAWSBucket
+			prefix = 'cache/'
+			awsAccessKeyId = streamAWSAccessKeyId
+			awsSecretKey = streamAWSSecretKey
+			push = System.getenv().containsKey("CI")
+
+		}
+	}
+}
+
+gradleEnterprise {
+	buildScan {
+		termsOfServiceUrl = "https://gradle.com/terms-of-service"
+		termsOfServiceAgree = "yes"
+	}
+}

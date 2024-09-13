@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/messageInputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_edit_text_round"
+        >
+
+        <network.ermis.ui.view.messages.adapter.view.MessageReplyView
+            android:id="@+id/messageReplyView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ui_spacing_medium"
+            android:visibility="gone"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@id/attachmentsRecyclerView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:ermisUiEllipsize="true"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/attachmentsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:layout_marginTop="@dimen/ui_spacing_medium"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:paddingHorizontal="@dimen/ui_spacing_tiny"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/messageEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/messageReplyView"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/ui_message_composer_center_content_height"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="@string/ermis_ui_message_composer_hint_normal"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="7"
+            android:paddingHorizontal="@dimen/ui_spacing_medium"
+            android:paddingVertical="18dp"
+            android:scrollbars="vertical"
+            android:textAppearance="@style/ermisUiTextAppearance.Body"
+            android:textColorHint="@color/ui_text_color_hint"
+            android:textCursorDrawable="@drawable/message_composer_cursor"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attachmentsRecyclerView"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</merge>

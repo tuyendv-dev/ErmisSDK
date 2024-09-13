@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <declare-styleable name="MessageListView">
+        <!-- Scroll button-->
+        <attr name="ermisUiScrollButtonEnabled" format="boolean" />
+        <attr name="ermisUiScrollButtonUnreadEnabled" format="boolean" />
+        <attr name="ermisUiScrollButtonColor" format="color|reference" />
+        <attr name="ermisUiScrollButtonRippleColor" format="color|reference" />
+        <attr name="ermisUiScrollButtonBadgeColor" format="color|reference" />
+        <attr name="ermisUiScrollButtonIcon" format="reference" />
+        <attr name="ermisUiScrollButtonElevation" format="dimension|reference" />
+        <!-- Sets the bottom margin of the scroll button inside MessageListView -->
+        <attr name="ermisUiScrollButtonBottomMargin" format="dimension|reference" />
+        <!-- Sets the end margin of the scroll button inside MessageListView -->
+        <attr name="ermisUiScrollButtonEndMargin" format="dimension|reference" />
+        <!-- Controls the internal margins of the scroll button with respect to its parent.
+
+         You should use this one if you want to adjust the distance of the unread count badge to the scroll button.-->
+        <attr name="ermisUiScrollButtonInternalMargin" format="dimension|reference" />
+        <attr name="ermisUiScrollButtonBadgeTextSize" format="dimension|reference" />
+        <attr name="ermisUiScrollButtonBadgeTextColor" format="color|reference" />
+        <attr name="ermisUiScrollButtonBadgeTextFont" format="reference" />
+        <attr name="ermisUiScrollButtonBadgeFontAssets" format="string" />
+        <attr name="ermisUiScrollButtonBadgeTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- Sets the background drawable of the unread count badge -->
+        <attr name="ermisUiScrollButtonBadgeIcon" format="reference" />
+        <!-- Sets the elevation of the unread count badge -->
+        <attr name="ermisUiScrollButtonBadgeElevation" format="dimension|reference" />
+        <!-- Adjusts the gravity of the scroll button badge.
+
+        These values are the same as standard Android values. -->
+        <attr name="ermisUiScrollButtonBadgeGravity">
+            <!-- Push object to the top of its container, not changing its size. -->
+            <flag name="top" value="0x30" />
+            <!-- Push object to the bottom of its container, not changing its size. -->
+            <flag name="bottom" value="0x50" />
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place object in the vertical center of its container, not changing its size. -->
+            <flag name="center_vertical" value="0x10" />
+            <!-- Grow the vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill_vertical" value="0x70" />
+            <!-- Place object in the horizontal center of its container, not changing its size. -->
+            <flag name="center_horizontal" value="0x01" />
+            <!-- Grow the horizontal size of the object if needed so it completely fills its container. -->
+            <flag name="fill_horizontal" value="0x07" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Grow the horizontal and vertical size of the object if needed so it completely fills its container. -->
+            <flag name="fill" value="0x77" />
+            <!-- Additional option that can be set to have the top and/or bottom edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the vertical gravity: a top gravity will clip the bottom
+                 edge, a bottom gravity will clip the top edge, and neither will clip both edges. -->
+            <flag name="clip_vertical" value="0x80" />
+            <!-- Additional option that can be set to have the left and/or right edges of
+                 the child clipped to its container's bounds.
+                 The clip will be based on the horizontal gravity: a left gravity will clip the right
+                 edge, a right gravity will clip the left edge, and neither will clip both edges. -->
+            <flag name="clip_horizontal" value="0x08" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+
+        <attr name="ermisUiLoadMoreThreshold" format="integer" />
+        <attr name="ermisUiNewMessagesBehaviour" format="enum">
+            <enum name="scroll_to_bottom" value="0" />
+            <enum name="count_new_messages" value="1" />
+        </attr>
+        <attr name="ermisUiRetryOptionIcon" format="reference" />
+
+        <!-- Message background color -->
+        <attr name="ermisUiMessageBackgroundColorMine" format="color" />
+        <attr name="ermisUiMessageBackgroundColorTheirs" format="color" />
+
+        <!-- Message link -->
+        <attr name="ermisUiMessageLinkColorMine" format="color" />
+        <attr name="ermisUiMessageLinkColorTheirs" format="color" />
+        <attr name="ermisUiLinkDescriptionMaxLines" format="integer" />
+
+        <attr name="ermisUiReactionsEnabled" format="boolean" />
+
+        <attr name="ermisUiBackgroundColor" format="color" />
+
+        <attr name="ermisUiMessageLinkBackgroundColorMine" format="color" />
+        <attr name="ermisUiMessageLinkBackgroundColorTheirs" format="color" />
+
+        <!-- Message text style mine -->
+        <attr name="ermisUiMessageTextSizeMine" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorMine" format="color" />
+        <attr name="ermisUiMessageTextFontMine" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsMine" format="string" />
+        <attr name="ermisUiMessageTextStyleMine">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style theirs -->
+        <attr name="ermisUiMessageTextSizeTheirs" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorTheirs" format="color" />
+        <attr name="ermisUiMessageTextFontTheirs" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsTheirs" format="string" />
+        <attr name="ermisUiMessageTextStyleTheirs">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style user name in footer -->
+        <attr name="ermisUiMessageTextSizeUserName" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorUserName" format="color" />
+        <attr name="ermisUiMessageTextFontUserName" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsUserName" format="string" />
+        <attr name="ermisUiMessageTextStyleUserName">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style date in footer -->
+        <attr name="ermisUiMessageTextSizeDate" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorDate" format="color" />
+        <attr name="ermisUiMessageTextFontDate" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsDate" format="string" />
+        <attr name="ermisUiMessageTextStyleDate">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style language in footer -->
+        <attr name="ermisUiMessageTextSizeLanguage" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorLanguage" format="color" />
+        <attr name="ermisUiMessageTextFontLanguage" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsLanguage" format="string" />
+        <attr name="ermisUiMessageTextStyleLanguage">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style thread counter in footer -->
+        <attr name="ermisUiMessageTextSizeThreadCounter" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorThreadCounter" format="color" />
+        <attr name="ermisUiMessageTextFontThreadCounter" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsThreadCounter" format="string" />
+        <attr name="ermisUiMessageTextStyleThreadCounter">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style read counter in footer -->
+        <attr name="ermisUiMessageTextSizeReadCounter" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorReadCounter" format="color" />
+        <attr name="ermisUiMessageTextFontReadCounter" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsReadCounter" format="string" />
+        <attr name="ermisUiMessageTextStyleReadCounter">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style thread separator -->
+        <attr name="ermisUiMessageTextSizeThreadSeparator" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorThreadSeparator" format="color" />
+        <attr name="ermisUiMessageTextFontThreadSeparator" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsThreadSeparator" format="string" />
+        <attr name="ermisUiMessageTextStyleThreadSeparator">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message text style link title -->
+        <attr name="ermisUiMessageTextSizeLinkTitle" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorLinkTitle" format="color" />
+        <attr name="ermisUiMessageTextFontLinkTitle" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsLinkTitle" format="string" />
+        <attr name="ermisUiMessageTextStyleLinkTitle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageTextSizeLinkDescription" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorLinkDescription" format="color" />
+        <attr name="ermisUiMessageTextFontLinkDescription" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsLinkDescription" format="string" />
+        <attr name="ermisUiMessageTextStyleLinkDescription">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageTextSizeLinkLabel" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorLinkLabel" format="color" />
+        <attr name="ermisUiMessageTextFontLinkLabel" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsLinkLabel" format="string" />
+        <attr name="ermisUiMessageTextStyleLinkLabel">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message Reply background color -->
+        <attr name="ermisUiMessageReplyBackgroundColorMine" format="color" />
+        <attr name="ermisUiMessageReplyBackgroundColorTheirs" format="color" />
+
+        <!-- Message Reply text style mine -->
+        <attr name="ermisUiMessageReplyTextSizeMine" format="dimension|reference" />
+        <attr name="ermisUiMessageReplyTextColorMine" format="color" />
+        <attr name="ermisUiMessageReplyTextFontMine" format="reference" />
+        <attr name="ermisUiMessageReplyTextFontAssetsMine" format="string" />
+        <attr name="ermisUiMessageReplyTextStyleMine">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message Reply text style theirs -->
+        <attr name="ermisUiMessageReplyTextSizeTheirs" format="dimension|reference" />
+        <attr name="ermisUiMessageReplyTextColorTheirs" format="color" />
+        <attr name="ermisUiMessageReplyTextFontTheirs" format="reference" />
+        <attr name="ermisUiMessageReplyTextFontAssetsTheirs" format="string" />
+        <attr name="ermisUiMessageReplyTextStyleTheirs">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message Reply link -->
+        <attr name="ermisUiMessageReplyLinkColorMine" format="color" />
+        <attr name="ermisUiMessageReplyLinkColorTheirs" format="color" />
+        <attr name="ermisUiMessageReplyLinkBackgroundColorMine" format="color" />
+        <attr name="ermisUiMessageReplyLinkBackgroundColorTheirs" format="color" />
+
+        <!-- Message Reply stroke -->
+        <attr name="ermisUiMessageReplyStrokeColorMine" format="color" />
+        <attr name="ermisUiMessageReplyStrokeWidthMine" format="dimension|reference" />
+        <attr name="ermisUiMessageReplyStrokeColorTheirs" format="color" />
+        <attr name="ermisUiMessageReplyStrokeWidthTheirs" format="dimension|reference" />
+
+        <!-- Date separator -->
+        <attr name="ermisUiDateSeparatorBackgroundColor" format="color" />
+
+        <attr name="ermisUiMessageTextSizeDateSeparator" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorDateSeparator" format="color" />
+        <attr name="ermisUiMessageTextFontDateSeparator" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsDateSeparator" format="string" />
+        <attr name="ermisUiMessageTextStyleDateSeparator">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message reactions view style -->
+        <attr name="ermisUiMessageReactionsBubbleColorMine" format="color" />
+        <attr name="ermisUiMessageReactionsBubbleColorTheirs" format="color" />
+        <attr name="ermisUiMessageReactionsBubbleBorderColorMine" format="color|reference" />
+        <attr name="ermisUiMessageReactionsBubbleBorderColorTheirs" format="color|reference" />
+        <attr name="ermisUiMessageReactionsBubbleBorderWidthMine" format="dimension|reference" />
+        <attr name="ermisUiMessageReactionsBubbleBorderWidthTheirs" format="dimension|reference" />
+
+        <!-- Message edit reactions view style -->
+        <attr name="ermisUiEditReactionsBubbleColorMine" format="color" />
+        <attr name="ermisUiEditReactionsBubbleColorTheirs" format="color" />
+        <attr name="ermisUiEditReactionsColumns" format="integer" />
+
+        <!-- Indicator icons -->
+        <attr name="ermisUiShowMessageDeliveryStatusIndicator" format="boolean" />
+        <attr name="ermisUiIconIndicatorSent" format="reference" />
+        <attr name="ermisUiIconIndicatorRead" format="reference" />
+        <attr name="ermisUiIconIndicatorPendingSync" format="reference" />
+        <attr name="ermisUiIconOnlyVisibleToYou" format="reference" />
+        <attr name="ermisUiIconFailedIndicator" format="reference" />
+        <attr name="ermisUiIconBannedIndicator" format="reference" />
+
+        <!-- Message deleted style -->
+        <attr name="ermisUiDeletedMessageBackgroundColor" format="color" />
+        <attr name="ermisUiMessageTextSizeMessageDeleted" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorMessageDeleted" format="color" />
+        <attr name="ermisUiMessageTextFontMessageDeleted" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsMessageDeleted" format="string" />
+        <attr name="ermisUiMessageTextStyleMessageDeleted">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message deleted style mine -->
+        <attr name="ermisUiDeletedMessageBackgroundColorMine" format="color" />
+        <attr name="ermisUiMessageTextSizeMessageDeletedMine" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorMessageDeletedMine" format="color" />
+        <attr name="ermisUiMessageTextFontMessageDeletedMine" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsMessageDeletedMine" format="string" />
+        <attr name="ermisUiMessageTextStyleMessageDeletedMine">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Message deleted style theirs -->
+        <attr name="ermisUiDeletedMessageBackgroundColorTheirs" format="color" />
+        <attr name="ermisUiMessageTextSizeMessageDeletedTheirs" format="dimension|reference" />
+        <attr name="ermisUiMessageTextColorMessageDeletedTheirs" format="color" />
+        <attr name="ermisUiMessageTextFontMessageDeletedTheirs" format="reference" />
+        <attr name="ermisUiMessageTextFontAssetsMessageDeletedTheirs" format="string" />
+        <attr name="ermisUiMessageTextStyleMessageDeletedTheirs">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- System message style -->
+        <attr name="ermisUiSystemMessageTextSize" format="dimension|reference" />
+        <attr name="ermisUiSystemMessageTextColor" format="color" />
+        <attr name="ermisUiSystemMessageTextFont" format="reference" />
+        <attr name="ermisUiSystemMessageTextFontAssets" format="string" />
+        <attr name="ermisUiSystemMessageTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <!-- System message alignment -->
+        <attr name="ermisUiSystemMessageAlignment">
+            <!-- Push object to the left of its container, not changing its size. -->
+            <flag name="left" value="0x03" />
+            <!-- Push object to the right of its container, not changing its size. -->
+            <flag name="right" value="0x05" />
+            <!-- Place the object in the center of its container in both the vertical and horizontal axis, not changing its size. -->
+            <flag name="center" value="0x11" />
+            <!-- Push object to the beginning of its container, not changing its size. -->
+            <flag name="start" value="0x00800003" />
+            <!-- Push object to the end of its container, not changing its size. -->
+            <flag name="end" value="0x00800005" />
+        </attr>
+
+
+        <!-- Unread Separator text style -->
+        <attr name="ermisUiUnreadSeparatorBackgroundColor" format="color" />
+        <attr name="ermisUiUnreadSeparatorTextSize" format="dimension|reference" />
+        <attr name="ermisUiUnreadSeparatorTextColor" format="color" />
+        <attr name="ermisUiUnreadSeparatorTextFont" format="reference" />
+        <attr name="ermisUiUnreadSeparatorTextFontAssets" format="string" />
+        <attr name="ermisUiUnreadSeparatorTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Error message text style -->
+        <attr name="ermisUiErrorMessageTextSize" format="dimension|reference" />
+        <attr name="ermisUiErrorMessageTextColor" format="color" />
+        <attr name="ermisUiErrorMessageTextFont" format="reference" />
+        <attr name="ermisUiErrorMessageTextFontAssets" format="string" />
+        <attr name="ermisUiErrorMessageTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageStrokeColorMine" format="color" />
+        <attr name="ermisUiMessageStrokeWidthMine" format="dimension|reference" />
+        <attr name="ermisUiMessageStrokeColorTheirs" format="color" />
+        <attr name="ermisUiMessageStrokeWidthTheirs" format="dimension|reference" />
+
+        <!-- Message options -->
+        <attr name="ermisUiReplyOptionIcon" format="reference" />
+        <attr name="ermisUiReplyEnabled" format="boolean" />
+        <attr name="ermisUiCopyMessageActionEnabled" format="boolean" />
+        <attr name="ermisUiMarkAsUnreadEnabled" format="boolean" />
+        <attr name="ermisUiRetryMessageEnabled" format="boolean" />
+        <attr name="ermisUiCopyOptionIcon" format="reference" />
+        <attr name="ermisUiMarkAsUnreadOptionIcon" format="reference" />
+        <attr name="ermisUiEditOptionIcon" format="reference" />
+        <attr name="ermisUiEditMessageEnabled" format="boolean" />
+        <attr name="ermisUiFlagOptionIcon" format="reference" />
+        <attr name="ermisUiFlagMessageEnabled" format="boolean" />
+        <attr name="ermisUiFlagMessageConfirmationEnabled" format="boolean" />
+        <attr name="ermisUiPinOptionIcon" format="reference" />
+        <attr name="ermisUiUnpinOptionIcon" format="reference" />
+        <attr name="ermisUiPinMessageEnabled" format="boolean" />
+        <attr name="ermisUiDeleteOptionIcon" format="reference" />
+        <attr name="ermisUiDeleteConfirmationEnabled" format="boolean" />
+        <attr name="ermisUiDeleteMessageEnabled" format="boolean" />
+        <attr name="ermisUiThreadsEnabled" format="boolean" />
+        <attr name="ermisUiThreadReplyOptionIcon" format="reference" />
+        <attr name="ermisUiMessageOptionBackgroundColor" format="color" />
+
+        <attr name="ermisUiMessageOptionsTextSize" format="dimension|reference" />
+        <attr name="ermisUiMessageOptionsTextColor" format="color|reference" />
+        <attr name="ermisUiMessageOptionsTextFont" format="reference" />
+        <attr name="ermisUiMessageOptionsTextFontAssets" format="string" />
+        <attr name="ermisUiMessageOptionsTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiWarningMessageOptionsTextSize" format="dimension|reference" />
+        <attr name="ermisUiWarningMessageOptionsTextColor" format="color|reference" />
+        <attr name="ermisUiWarningMessageOptionsTextFont" format="reference" />
+        <attr name="ermisUiWarningMessageOptionsTextFontAssets" format="string" />
+        <attr name="ermisUiWarningMessageOptionsTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessageOptionsUserReactionAlignment" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+            <enum name="by_user" value="2" />
+            <enum name="by_user_inverted" value="3" />
+        </attr>
+
+        <!-- User reactions card -->
+        <attr name="ermisUiUserReactionsBackgroundColor" format="color" />
+
+        <attr name="ermisUiUserReactionsTitleTextSize" format="dimension|reference" />
+        <attr name="ermisUiUserReactionsTitleTextColor" format="color|reference" />
+        <attr name="ermisUiUserReactionsTitleTextFont" format="reference" />
+        <attr name="ermisUiUserReactionsTitleTextFontAssets" format="string" />
+        <attr name="ermisUiUserReactionsTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Options overlay dialog -->
+        <attr name="ermisUiOptionsOverlayDimColor" format="color" />
+
+        <!-- Giphy view holder -->
+        <attr name="ermisUiGiphyCardBackgroundColor" format="color|reference" />
+        <attr name="ermisUiGiphyCardElevation" format="dimension|reference" />
+        <attr name="ermisUiGiphyCardButtonDividerColor" format="color|reference" />
+        <attr name="ermisUiGiphyIcon" format="reference" />
+
+        <attr name="ermisUiGiphyLabelTextSize" format="dimension|reference" />
+        <attr name="ermisUiGiphyLabelTextColor" format="color|reference" />
+        <attr name="ermisUiGiphyLabelTextFont" format="reference" />
+        <attr name="ermisUiGiphyLabelTextFontAssets" format="string" />
+        <attr name="ermisUiGiphyLabelTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiGiphyQueryTextSize" format="dimension|reference" />
+        <attr name="ermisUiGiphyQueryTextColor" format="color|reference" />
+        <attr name="ermisUiGiphyQueryTextFont" format="reference" />
+        <attr name="ermisUiGiphyQueryTextFontAssets" format="string" />
+        <attr name="ermisUiGiphyQueryTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiGiphyCancelButtonTextSize" format="dimension|reference" />
+        <attr name="ermisUiGiphyCancelButtonTextColor" format="color|reference" />
+        <attr name="ermisUiGiphyCancelButtonTextFont" format="reference" />
+        <attr name="ermisUiGiphyCancelButtonTextFontAssets" format="string" />
+        <attr name="ermisUiGiphyCancelButtonTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiGiphyShuffleButtonTextSize" format="dimension|reference" />
+        <attr name="ermisUiGiphyShuffleButtonTextColor" format="color|reference" />
+        <attr name="ermisUiGiphyShuffleButtonTextFont" format="reference" />
+        <attr name="ermisUiGiphyShuffleButtonTextFontAssets" format="string" />
+        <attr name="ermisUiGiphyShuffleButtonTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiGiphySendButtonTextSize" format="dimension|reference" />
+        <attr name="ermisUiGiphySendButtonTextColor" format="color|reference" />
+        <attr name="ermisUiGiphySendButtonTextFont" format="reference" />
+        <attr name="ermisUiGiphySendButtonTextFontAssets" format="string" />
+        <attr name="ermisUiGiphySendButtonTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="ermisUiMessageListLoadingView" format="reference" />
+        <attr name="ermisUiMessageListLoadingMoreView" format="reference" />
+        <attr name="ermisUiEmptyStateTextSize" format="dimension|reference" />
+        <attr name="ermisUiEmptyStateTextColor" format="color|reference" />
+        <attr name="ermisUiEmptyStateTextFont" format="reference" />
+        <attr name="ermisUiEmptyStateTextFontAssets" format="string" />
+        <attr name="ermisUiEmptyStateTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiMessagesStart" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+        </attr>
+
+        <attr name="ermisUiThreadMessagesStart" format="enum">
+            <enum name="bottom" value="0" />
+            <enum name="top" value="1" />
+        </attr>
+
+        <!-- Pinned message -->
+        <attr name="ermisUiPinnedMessageIndicatorTextSize" format="dimension|reference" />
+        <attr name="ermisUiPinnedMessageIndicatorTextColor" format="color|reference" />
+        <attr name="ermisUiPinnedMessageIndicatorTextFont" format="reference" />
+        <attr name="ermisUiPinnedMessageIndicatorTextFontAssets" format="string" />
+        <attr name="ermisUiPinnedMessageIndicatorTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <attr name="ermisUiPinnedMessageIndicatorIcon" format="reference" />
+
+        <attr name="ermisUiPinnedMessageBackgroundColor" format="color" />
+
+        <attr name="ermisUiMessageStartMargin" format="dimension|reference" />
+        <attr name="ermisUiMessageEndMargin" format="dimension|reference" />
+
+        <!-- Fraction used to compute max width for message sent by the current user. Should be in [75% - 100%] range. -->
+        <attr name="ermisUiMessageMaxWidthFactorMine" format="fraction" />
+        <!-- Fraction used to compute max width for message sent by other user. Should be in [75% - 100%] range. -->
+        <attr name="ermisUiMessageMaxWidthFactorTheirs" format="fraction" />
+
+        <!-- Prevent scroll while a dialog is shown over the message list -->
+        <attr name="ermisUiDisableScrollWhenShowingDialog" format="boolean" />
+
+        <!-- The margin between the selected message and the edit reactions bubble on the options overlay. -->
+        <attr name="ermisUiOptionsOverlayEditReactionsMarginBottom" format="dimension|reference" />
+        <!-- The margin between the edit reactions bubble on the options overlay and the parent. -->
+        <attr name="ermisUiOptionsOverlayEditReactionsMarginTop" format="dimension|reference" />
+        <attr name="ermisUiOptionsOverlayEditReactionsMarginStart" format="dimension|reference" />
+        <attr name="ermisUiOptionsOverlayEditReactionsMarginEnd" format="dimension|reference" />
+
+        <!-- The margin between the selected message and the user reaction list on the options overlay. -->
+        <attr name="ermisUiOptionsOverlayUserReactionsMarginTop" format="dimension|reference" />
+        <!-- The margin between the message option list and the user reaction list on the options overlay. -->
+        <attr name="ermisUiOptionsOverlayUserReactionsMarginBottom" format="dimension|reference" />
+        <!-- The margin between the user reaction list on the options overlay and the parent. -->
+        <attr name="ermisUiOptionsOverlayUserReactionsMarginStart" format="dimension|reference" />
+        <attr name="ermisUiOptionsOverlayUserReactionsMarginEnd" format="dimension|reference" />
+
+        <!-- The margin between the selected message and the message option list on the options overlay. -->
+        <attr name="ermisUiOptionsOverlayMessageOptionsMarginTop" format="dimension|reference" />
+        <!-- The margin between the message option list on the options overlay and the parent. -->
+        <attr name="ermisUiOptionsOverlayMessageOptionsMarginBottom" format="dimension|reference" />
+        <attr name="ermisUiOptionsOverlayMessageOptionsMarginStart" format="dimension|reference" />
+        <attr name="ermisUiOptionsOverlayMessageOptionsMarginEnd" format="dimension|reference" />
+
+        <!-- Show the edit reactions bubble for unsent messages on the options overlay. -->
+        <attr name="ermisUiShowReactionsForUnsentMessages" format="boolean" />
+        <!-- Shows a counter next to the read status of a message. -->
+        <attr name="ermisUiReadCount" format="boolean" />
+
+        <!-- Audio record player view style -->
+        <attr name="ermisUiMessageListAudioRecordPlayerViewStyleOwn" format="reference" />
+        <attr name="ermisUiMessageListAudioRecordPlayerViewStyleTheirs" format="reference" />
+    </declare-styleable>
+</resources>

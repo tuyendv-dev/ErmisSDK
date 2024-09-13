@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/channelActionsContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:divider="@drawable/divider"
+    android:orientation="vertical"
+    android:showDividers="middle"
+    tools:background="@drawable/round_bottom_sheet"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/channelMembersTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="64dp"
+            android:singleLine="true"
+            android:textColor="@color/ui_text_color_primary"
+            android:textDirection="locale"
+            android:textSize="@dimen/ui_text_large"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/channelMembersInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:textColor="@color/ui_text_color_secondary"
+            android:textDirection="locale"
+            android:textSize="@dimen/ui_text_small"
+            />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/ui_spacing_medium"
+            android:layout_marginBottom="24dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/ui_spacing_small"
+            android:paddingEnd="@dimen/ui_spacing_small"
+            android:scrollbars="none"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        />
+
+</LinearLayout>

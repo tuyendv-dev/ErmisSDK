@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="backend_error_info">Ups, something went wrong</string>
+    <string name="sdk_version_template">Ermis SDK v %s</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="leave">Leave</string>
+    <string name="clear_history">Clear History</string>
+    <string name="keep_history">Keep History</string>
+    <string name="remove">Remove</string>
+    <string name="ok">Ok</string>
+    <string name="action_add">Add</string>
+    <string name="action_Ban">Ban</string>
+    <string name="action_save">Save</string>
+
+    <!--User Login Screen-->
+    <string name="user_login_screen_title">Welcome to Ermis</string>
+    <string name="user_login_select_user">Select a user to try the Android SDK:</string>
+    <string name="user_login_user_subtitle">Ermis test account</string>
+    <string name="user_login_advanced_options">Advanced options</string>
+    <string name="user_login_custom_settings">Custom settings</string>
+    <string name="user_register_custom_title">Sign Up</string>
+    <string name="user_login_custom_title">Sign In</string>
+    <string name="user_profile_title">Profile</string>
+    <string name="user_update_profile_button">Update</string>
+    <string name="user_select_a_flatform">Select a platform</string>
+    <string name="user_select_a_flatform_des">Please choose one of the two platforms to proceed.</string>
+    <string name="user_select_sdk">Chats on platforms integrated through the SDK</string>
+    <string name="user_go_to_sdk">Go to SDK</string>
+    <string name="user_select_ermis">Chats on Ermis App</string>
+    <string name="user_go_to_ermis">Go to Ermis</string>
+
+    <!--Custom Login Screen-->
+    <string name="custom_register_button_text">I Don’t Have an Account</string>
+    <string name="custom_login_button_text">Login</string>
+    <string name="custom_login_coinbase_button_text">Login CoinBase</string>
+    <string name="custom_login_wallet_button_text">Login via Wallet</string>
+    <string name="custom_login_field_api_key_hint">Chat API Key</string>
+    <string name="custom_login_field_user_id_hint">User ID</string>
+    <string name="custom_login_field_user_token">User Token</string>
+    <string name="custom_login_field_user_name_hint">Username</string>
+    <string name="custom_login_field_user_phone_hint">Phone</string>
+    <string name="custom_login_field_user_about_hint">About</string>
+    <string name="custom_login_field_password_hint">Password</string>
+    <string name="custom_login_validation_error">This field is required</string>
+
+    <!--Project list-->
+    <string name="join_project_confirm_title">Join %s</string>
+    <string name="join_project_confirm_join">Join now</string>
+    <string name="join_project_confirm_join_later">Later</string>
+    <string name="your_project">Your projects</string>
+    <string name="new_project">New projects</string>
+    <string name="project_from_sdk">SDK</string>
+    <string name="project_from_ermis">ERMIS</string>
+    <string name="platforms_title">PLATFORMS</string>
+    <string name="platforms_sdks">SDKs</string>
+    <string name="platforms_ermis">ERMIS</string>
+
+    <!--Home screen-->
+    <string name="home_drawer_new_direct_message">New Direct Message</string>
+    <string name="home_drawer_new_group">New Group</string>
+    <string name="home_drawer_switch_user">Switch User</string>
+    <string name="home_drawer_request_notification_permissions">Request Notification Permissions</string>
+    <string name="home_drawer_sign_out">Sign Out</string>
+    <string name="home_bottom_nav_chats">Chats</string>
+    <string name="home_bottom_nav_mentions">Mentions</string>
+    <string name="home_bottom_nav_invited">Lời mời</string>
+
+    <!-- Channel list -->
+    <string name="channel_list_empty_title">Let\'s start chatting!</string>
+    <string name="channel_list_empty_description">How about sending your first message to a friend?</string>
+    <string name="channel_list_start_chat">Start a chat</string>
+
+    <!--Add Channel Screen-->
+    <string name="add_channel_title">New Chat</string>
+    <string name="add_member_title">TO:</string>
+    <string name="add_member_hint">Type a name</string>
+    <string name="create_group">Create a Group</string>
+    <string name="add_channel_empty_user_name_separator">Others</string>
+    <string name="add_channel_user_list_title">On the platform</string>
+    <string name="add_channel_user_list_search_title">Matches for \"%s\"</string>
+    <string name="add_channel_empty_users_title">No user matches these keywords…</string>
+    <string name="add_channel_empty_message_list_title">No chats here yet…</string>
+    <string name="add_channel_user_item_offline">Offline</string>
+    <string name="add_channel_user_item_online">Online</string>
+    <string name="add_channel_user_item_last_online">Last online %s</string>
+    <string name="add_channel_error_create_channel">Failed to create channel</string>
+    <string name="add_channel_success">Invitation sent</string>
+
+    <!--Add Group Channel Screens-->
+    <string name="add_group_channel_title">Add Group Members</string>
+    <string name="add_group_channel_next_button">Next</string>
+    <string name="add_group_channel_error_create_channel">Failed to create channel</string>
+    <string name="add_group_channel_select_name_title">Name of Group Chat</string>
+    <string name="add_group_channel_select_name_choose_title">Name group:</string>
+    <string name="add_group_channel_select_name_choose_hint">Choose a group chat name</string>
+    <plurals name="members_count_title">
+        <item quantity="one">%1d Member</item>
+        <item quantity="other">%1d Members</item>
+    </plurals>
+    <string name="add_group_channel_select_name_create_button_title">Create</string>
+
+    <!-- Chat Info Screens -->
+    <string name="chat_group_info_members">Members</string>
+    <string name="chat_group_info_permissions">Permissions</string>
+    <string name="chat_group_info_administrators">Administrators</string>
+    <string name="chat_group_info_banned_users">Banned Members</string>
+
+    <string name="chat_group_info_members_tab_members">Members</string>
+    <string name="chat_group_info_members_tab_invited">Invited Members</string>
+    <string name="chat_group_info_members_add_members">+ Add Members</string>
+    <string name="chat_group_info_members_add_moderator">+ Add Moderator</string>
+    <string name="chat_group_info_members_add_ban">+ Ban Members</string>
+    <string name="chat_group_info_members_permission">WHAT CAN MEMBERS OF THIS CHANNEL DO?</string>
+    <string name="permission_send_messages">Send Messages</string>
+    <string name="permission_edit_messages">Edit Messages</string>
+    <string name="permission_delete_messages">Delete Messages</string>
+    <string name="permission_react_messages">React Messages</string>
+    <string name="chat_group_info_members_manage_permission">WHAT CAN MEMBERS MANAGE THIS CHANNEL?</string>
+    <string name="permission_join_channel">Join Channel</string>
+    <string name="permission_invite_member">Invite channel member</string>
+    <string name="permission_change_channel_info">Change channel info</string>
+    <string name="action_unban_member">Unban</string>
+    <string name="remove_member_of_channel_success">removed member success</string>
+    <string name="promote_member_of_channel_success">promote member success</string>
+    <string name="ban_member_of_channel_success">banned member success</string>
+    <string name="remove_moderator_confirm">Are you sure you want to remove this user as a moderator?</string>
+    <string name="update_channel_success">Update channel success</string>
+    <string name="title_users">Users</string>
+
+
+
+
+    <string name="chat_info_user_name">Username</string>
+    <string name="chat_info_option_mute_user">Mute User</string>
+    <string name="chat_info_option_block_user">Block User</string>
+    <string name="chat_info_option_pinned_messages">Pinned Messages</string>
+    <string name="chat_info_option_media">Photos &amp; Videos</string>
+    <string name="chat_info_option_shared_media_empty_title">No media</string>
+    <string name="chat_info_option_shared_media_empty_description">Photos or video sent in this chat will appear here. </string>
+    <string name="chat_info_option_files">Files</string>
+    <string name="chat_info_option_shared_files_empty_title">No files</string>
+    <string name="chat_info_option_shared_files_empty_description">Files sent in this chat will appear here.</string>
+    <string name="chat_info_option_shared_groups">Shared Groups</string>
+    <string name="chat_info_option_shared_groups_empty_title">Groups shared with %s will appear here.</string>
+    <string name="chat_info_option_delete_conversation">Delete Conversation</string>
+    <string name="chat_info_delete_conversation_confirm">Are you sure you want to delete this conversation?</string>
+    <string name="chat_info_error_block_user">Failed to block user</string>
+    <string name="chat_info_error_mute_channel">Failed to switch mute state</string>
+    <string name="chat_info_error_delete_channel">Failed to delete channel</string>
+    <string name="chat_info_leave_channel_success">You have left the channel</string>
+
+    <string name="chat_group_info_owner">Owner</string>
+    <string name="chat_group_info_option_mute">Mute</string>
+    <string name="chat_group_info_option_hide">Hide Group</string>
+    <string name="chat_group_info_option_show">Show Group</string>
+    <string name="chat_group_info_option_hide_description">Do you really want to hide the group %s?</string>
+    <string name="chat_group_info_option_leave">Leave Group</string>
+    <string name="chat_group_info_option_members_separator_title">%d more</string>
+    <string name="chat_group_info_edit_name_label">Name:</string>
+    <string name="chat_group_info_edit_description_hint">Description:</string>
+    <string name="chat_group_info_leave_confirm">Are you sure you want to leave this channel?</string>
+    <string name="chat_group_info_user_option_view_info">View Info</string>
+    <string name="chat_group_info_user_option_message">Message</string>
+    <string name="chat_group_info_user_option_remove">Remove From Group</string>
+    <string name="chat_group_info_user_remove_title">Remove %s</string>
+    <string name="chat_group_info_user_remove_description">Are you sure you want to remove this member?</string>
+    <string name="chat_group_info_error_remove_member">Failed to remove member</string>
+    <string name="chat_group_info_error_change_name">Failed to change channel name</string>
+    <string name="chat_group_info_error_mute_channel">Failed to switch mute state</string>
+    <string name="chat_group_info_error_hide_channel">Failed to switch hide state</string>
+    <string name="chat_group_info_error_leave_channel">Failed to leave channel</string>
+    <string name="chat_group_info_error_add_member">Failed to send invite. Please retry</string>
+    <string name="chat_group_info_error_change_permission">Failed to change channel permission</string>
+
+    <!-- Pinned message list screen -->
+    <string name="pinned_message_list_title">Pinned Messages</string>
+
+    <!-- Chat Screen -->
+    <string name="message_forwarded">Forwarded</string>
+
+    <!-- Flag message -->
+    <string name="message_flagged_title">Message Flagged</string>
+    <string name="message_flagged_description">The message has been reported to a moderator.</string>
+
+    <!-- Profile user Screen -->
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_out_confirm">Sign Out</string>
+
+</resources>

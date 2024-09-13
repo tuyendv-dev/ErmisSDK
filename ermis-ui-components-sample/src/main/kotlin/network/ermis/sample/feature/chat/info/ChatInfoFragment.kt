@@ -1,0 +1,161 @@
+
+package network.ermis.sample.feature.chat.info
+
+import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
+import network.ermis.client.ErmisClient
+import network.ermis.client.events.NotificationChannelMutesUpdatedEvent
+import network.ermis.client.subscribeFor
+import network.ermis.state.utils.EventObserver
+import network.ermis.chat.ui.sample.R
+import network.ermis.sample.common.initToolbar
+import network.ermis.sample.common.showToast
+import network.ermis.chat.ui.sample.databinding.FragmentChatInfoBinding
+import network.ermis.sample.feature.common.ConfirmationDialogFragment
+
+class ChatInfoFragment : Fragment() {
+
+    // private val args: ChatInfoFragmentArgs by navArgs()
+    private val viewModel: ChatInfoViewModel by viewModels { ChatInfoViewModelFactory("args.cid", null) }
+    private val adapter: ChatInfoAdapter = ChatInfoAdapter()
+
+    private var _binding: FragmentChatInfoBinding? = null
+    private val binding get() = _binding!!
+
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        _binding = FragmentChatInfoBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
+        binding.optionsRecyclerView.itemAnimator = null
+        binding.optionsRecyclerView.adapter = adapter
+        bindChatInfoViewModel()
+    }
+
+    override fun onDestroyView() {
+        _binding = null
+        super.onDestroyView()
+    }
+
+    private fun bindChatInfoViewModel() {
+        subscribeForChannelMutesUpdatedEvents()
+        setOnClickListeners()
+
+        viewModel.channelDeletedState.observe(viewLifecycleOwner) { isDeleted ->
+            if (isDeleted) {
+                findNavController().popBackStack(R.id.homeFragment, false)
+            }
+        }
+        viewModel.state.observe(viewLifecycleOwner) { state ->
+            if (state.loading) {
+                binding.optionsRecyclerView.isVisible = false
+                binding.progressBar.isVisible = true
+                return@observe
+            }
+            adapter.submitList(buildChatInfoItems(state))
+            binding.optionsRecyclerView.isVisible = true
+            binding.progressBar.isVisible = false
+        }
+        viewModel.errorEvents.observe(
+            viewLifecycleOwner,
+            EventObserver {
+                when (it) {
+                    is ChatInfoViewModel.ErrorEvent.BlockUserError -> R.string.chat_info_error_block_user
+                    is ChatInfoViewModel.ErrorEvent.DeleteChannelError -> R.string.chat_info_error_delete_channel
+                    is ChatInfoViewModel.ErrorEvent.MuteChannelError -> R.string.chat_info_error_mute_channel
+                }.let(::showToast)
+            },
+        )
+    }
+
+    private fun buildChatInfoItems(state: ChatInfoViewModel.State): List<ChatInfoItem> {
+        return mutableListOf<ChatInfoItem>().apply {
+            // if (state.member != null) {
+            //     add(ChatInfoItem.MemberItem(state.member))
+            //     add(ChatInfoItem.Separator)
+            // }
+
+            if (state.channelExists) {
+                add(ChatInfoItem.Option.Stateful.MuteDistinctChannel(isChecked = state.channelMuted))
+            }
+
+            add(ChatInfoItem.Option.PinnedMessages)
+            add(ChatInfoItem.Option.SharedMedia)
+            add(ChatInfoItem.Option.SharedFiles)
+
+            if (state.member != null) {
+                add(ChatInfoItem.Option.SharedGroups)
+            }
+
+            if (state.canDeleteChannel) {
+                add(ChatInfoItem.Separator)
+                add(ChatInfoItem.Option.DeleteConversation)
+            }
+        }
+    }
+
+    private fun setOnClickListeners() {
+        adapter.setChatInfoStatefulOptionChangedListener { option, isChecked ->
+            viewModel.onAction(
+                when (option) {
+                    is ChatInfoItem.Option.Stateful.MuteDistinctChannel -> ChatInfoViewModel.Action.OptionMuteDistinctChannelClicked(
+                        isChecked
+                    )
+                    is ChatInfoItem.Option.Stateful.Block -> ChatInfoViewModel.Action.OptionBlockUserClicked(isChecked)
+                    else -> throw IllegalStateException("Chat info option $option is not supported!")
+                },
+            )
+        }
+        adapter.setChatInfoOptionClickListener { option ->
+            when (option) {
+                // ChatInfoItem.Option.PinnedMessages -> findNavController().navigateSafely(
+                //     ChatInfoFragmentDirections.actionChatInfoFragmentToPinnedMessageListFragment(args.cid),
+                // )
+                // ChatInfoItem.Option.SharedMedia -> findNavController().navigateSafely(
+                //     ChatInfoFragmentDirections.actionChatInfoFragmentToChatInfoSharedMediaFragment(args.cid),
+                // )
+                // ChatInfoItem.Option.SharedFiles -> findNavController().navigateSafely(
+                //     ChatInfoFragmentDirections.actionChatInfoFragmentToChatInfoSharedFilesFragment(args.cid),
+                // )
+                // ChatInfoItem.Option.SharedGroups -> {
+                //     // Option shouldn't be visible when member is not set
+                //     val member = viewModel.state.value!!.member ?: return@setChatInfoOptionClickListener
+                //     findNavController().navigateSafely(
+                //         ChatInfoFragmentDirections.actionChatInfoFragmentToChatInfoSharedGroupsFragment(
+                //             member.getUserId(),
+                //             member.user.name,
+                //         ),
+                //     )
+                // }
+                ChatInfoItem.Option.DeleteConversation -> {
+                    ConfirmationDialogFragment.newDeleteChannelInstance(requireContext()).apply {
+                        confirmClickListener =
+                            ConfirmationDialogFragment.ConfirmClickListener {
+                                viewModel.onAction(ChatInfoViewModel.Action.ChannelDeleted)
+                            }
+                    }.show(parentFragmentManager, ConfirmationDialogFragment.TAG)
+                }
+                else -> throw IllegalStateException("Chat info option $option is not supported!")
+            }
+        }
+    }
+
+    private fun subscribeForChannelMutesUpdatedEvents() {
+        ErmisClient.instance().subscribeFor<NotificationChannelMutesUpdatedEvent>(viewLifecycleOwner) {
+            viewModel.onAction(ChatInfoViewModel.Action.ChannelMutesUpdated(it.me.channelMutes))
+        }
+    }
+}

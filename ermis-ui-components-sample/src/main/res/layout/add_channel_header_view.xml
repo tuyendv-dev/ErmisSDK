@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ui_white"
+    android:paddingTop="16dp"
+    >
+
+    <TextView
+        android:id="@+id/addMemberTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/add_member_title"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/membersChipGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottomBarrier"
+        app:layout_constraintEnd_toStartOf="@id/addMemberButton"
+        app:layout_constraintStart_toEndOf="@id/addMemberTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/inputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/ui_literal_transparent"
+        android:drawableEnd="@drawable/ic_member"
+        android:hint="@string/add_member_hint"
+        android:inputType="text"
+        android:padding="0dp"
+        android:singleLine="true"
+        android:textColor="@color/ui_text_color_primary"
+        android:textColorHint="@color/ui_text_color_hint"
+        android:textSize="@dimen/ui_text_medium"
+        android:textDirection="locale"
+        app:drawableTint="@color/ui_grey"
+        app:layout_constraintBottom_toBottomOf="@id/separator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/addMemberTextView"
+        app:layout_constraintTop_toBottomOf="@id/membersChipGroup"
+        tools:ignore="Autofill"
+        />
+
+    <ImageButton
+        android:id="@+id/addMemberButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:selectableItemBackground"
+        android:src="@drawable/ic_member_add"
+        app:layout_constraintBottom_toBottomOf="@id/membersChipGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/ui_grey"
+        tools:ignore="ContentDescription"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/bottomBarrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="separator,inputEditText"
+        />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/ui_divider_height"
+        android:background="@drawable/divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

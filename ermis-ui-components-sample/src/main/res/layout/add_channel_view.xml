@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ui_white_snow"
+    >
+
+    <network.ermis.sample.feature.channel.add.header.AddChannelHeaderView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <network.ermis.sample.feature.channel.add.group.header.AddGroupChannelHeaderView
+        android:id="@+id/groupHeaderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerBarrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="headerView,groupHeaderView"
+        />
+
+    <LinearLayout
+        android:id="@+id/createGroupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="@color/ui_white_snow"
+        android:clipToPadding="false"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBarrier"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/createGroupImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_circle_white"
+            android:elevation="4dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_create_group"
+            app:tint="@color/ui_accent_blue"
+            />
+
+        <TextView
+            android:id="@+id/createGroupTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:text="@string/create_group"
+            android:textColor="@color/ui_text_color_primary"
+            android:textSize="@dimen/ui_text_medium"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/usersTitle"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@drawable/bg_gradient"
+        android:gravity="start|center_vertical"
+        android:paddingHorizontal="8dp"
+        android:text="@string/add_channel_user_list_title"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createGroupContainer"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/messageComposerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usersTitle"
+        />
+
+    <TextView
+        android:id="@+id/emptyStateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="8dp"
+        android:text="@string/add_channel_empty_users_title"
+        android:textColor="@color/ui_text_color_secondary"
+        android:textSize="@dimen/ui_text_medium"
+        android:visibility="visible"
+        app:drawableTopCompat="@drawable/empty_user_search"
+        app:layout_constraintBottom_toTopOf="@id/messageComposerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usersTitle"
+        />
+
+    <network.ermis.ui.view.MessageListView
+        android:id="@+id/messageListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/messageComposerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/usersTitle"
+        />
+
+    <network.ermis.ui.view.messages.composer.MessageComposerView
+        android:id="@+id/messageComposerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_height="56dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

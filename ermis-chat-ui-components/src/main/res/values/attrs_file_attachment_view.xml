@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <!-- FileAttachmentsView -->
+    <declare-styleable name="FileAttachmentView">
+        <!-- A drawable of the attachment upload progressbar -->
+        <attr name="ermisUiFileAttachmentProgressBarDrawable" format="reference" />
+        <!-- File attachment action button drawable -->
+        <attr name="ermisUiFileAttachmentActionButton" format="reference" />
+        <!-- Failed file attachment drawable -->
+        <attr name="ermisUiFileAttachmentFailedAttachmentIcon" format="reference" />
+        <!-- File attachment background color -->
+        <attr name="ermisUiFileAttachmentBackgroundColor" format="color|reference" />
+        <!-- File attachment stroke color -->
+        <attr name="ermisUiFileAttachmentStrokeColor" format="color|reference" />
+        <!-- File attachment stroke width -->
+        <attr name="ermisUiFileAttachmentStrokeWidth" format="dimension" />
+        <!-- File attachment corner radius -->
+        <attr name="ermisUiFileAttachmentCornerRadius" format="dimension" />
+
+        <!-- Text size of the file attachment title -->
+        <attr name="ermisUiFileAttachmentTitleTextSize" format="dimension|reference" />
+        <!-- A color of the file attachment title -->
+        <attr name="ermisUiFileAttachmentTitleTextColor" format="color|reference" />
+        <!-- Font name of the file attachment title -->
+        <attr name="ermisUiFileAttachmentTitleTextFont" format="reference" />
+        <!-- Font assets reference for the file attachment title -->
+        <attr name="ermisUiFileAttachmentTitleFontAssets" format="string" />
+        <!-- Text style of the file attachment title: "normal", "bold", and "italic". -->
+        <attr name="ermisUiFileAttachmentTitleTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+
+        <!-- Text size of the file attachment text size label -->
+        <attr name="ermisUiFileAttachmentFileSizeTextSize" format="dimension|reference" />
+        <!-- A color of the file attachment text size label -->
+        <attr name="ermisUiFileAttachmentFileSizeTextColor" format="color|reference" />
+        <!-- Font name of the file attachment text size label -->
+        <attr name="ermisUiFileAttachmentFileSizeTextFont" format="reference" />
+        <!-- Font assets reference for the file attachment text size label -->
+        <attr name="ermisUiFileAttachmentFileSizeFontAssets" format="string" />
+        <!-- Text style of the file attachment text size label: "normal", "bold", and "italic". -->
+        <attr name="ermisUiFileAttachmentFileSizeTextStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
