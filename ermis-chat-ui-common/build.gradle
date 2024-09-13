@@ -5,7 +5,7 @@ import network.ermis.Versions
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'de.mannodermaus.android-junit5'
-apply plugin: 'androidx.baselineprofile'
+//apply plugin: 'androidx.baselineprofile'
 
 ext {
     PUBLISH_GROUP_ID = Configuration.artifactGroup
@@ -51,12 +51,12 @@ android {
     }
 }
 
-baselineProfile {
-    baselineProfileOutputDir = "."
-    filter {
-        include("network.ermis.ui.common.**")
-    }
-}
+//baselineProfile {
+//    baselineProfileOutputDir = "."
+//    filter {
+//        include("network.ermis.ui.common.**")
+//    }
+//}
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {

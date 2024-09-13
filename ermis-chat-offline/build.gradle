@@ -5,7 +5,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.google.devtools.ksp'
 apply plugin: 'de.mannodermaus.android-junit5'
-apply plugin: 'androidx.baselineprofile'
+//apply plugin: 'androidx.baselineprofile'
 
 ext {
     PUBLISH_GROUP_ID = Configuration.artifactGroup
@@ -46,12 +46,12 @@ android {
     }
 }
 
-baselineProfile {
-    baselineProfileOutputDir = "."
-    filter {
-        include("io.ermis.chat.android.offline.**")
-    }
-}
+//baselineProfile {
+//    baselineProfileOutputDir = "."
+//    filter {
+//        include("io.ermis.chat.android.offline.**")
+//    }
+//}
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {

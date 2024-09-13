@@ -4,7 +4,7 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'de.mannodermaus.android-junit5'
-    id 'androidx.baselineprofile'
+//    id 'androidx.baselineprofile'
 }
 
 
@@ -43,12 +43,12 @@ android {
     }
 }
 
-baselineProfile {
-    baselineProfileOutputDir = "."
-    filter {
-        include("network.ermis.state.**")
-    }
-}
+//baselineProfile {
+//    baselineProfileOutputDir = "."
+//    filter {
+//        include("network.ermis.state.**")
+//    }
+//}
 
 tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
     kotlinOptions {
