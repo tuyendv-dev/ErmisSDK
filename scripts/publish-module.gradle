@@ -51,60 +51,6 @@ afterEvaluate {
                 pom {
                     name = PUBLISH_ARTIFACT_ID
                     description = 'Stream Chat official Android SDK'
-                    url = 'https://github.com/getstream/stream-chat-android'
-                    licenses {
-                        license {
-                            name = 'Stream License'
-                            url = 'https://github.com/GetStream/stream-chat-android/blob/main/LICENSE'
-                        }
-                    }
-                    developers {
-                        developer {
-                            id = 'tschellenbach'
-                            name = 'Thierry Schellenbach'
-                            email = 'thierry@getstream.io'
-                        }
-                        developer {
-                            id = 'jcminarro'
-                            name = 'Jc Miñarro'
-                            email = 'josecarlos@getstream.io'
-                        }
-                        developer {
-                            id = 'samiuelson'
-                            name = 'Samuel Urbanowicz'
-                            email = 'samuel@getstream.io'
-                        }
-                        developer {
-                            id = 'adasiewiczr'
-                            name = 'Rafal Adasiewicz'
-                            email = 'rafal@getstream.io'
-                        }
-                        developer {
-                            id = 'ogkuzmin'
-                            name = 'Oleg Kuzmin'
-                            email = 'oleg@getstream.io'
-                        }
-                        developer {
-                            id = 'zsmb13'
-                            name = 'Márton Braun'
-                            email = 'marton@getstream.io'
-                        }
-                        developer {
-                            id = 'leandroBorgesFerreira'
-                            name = 'Leandro Borges Ferreira'
-                            email = 'leandro@getstream.io'
-                        }
-                        developer {
-                            id = 'bychkovdmitry'
-                            name = 'Dmitrii Bychkov'
-                            email = 'dmitrii@getstream.io'
-                        }
-                    }
-                    scm {
-                        connection = 'scm:git:github.com/getstream/stream-chat-android.git'
-                        developerConnection = 'scm:git:ssh://github.com/getstream/stream-chat-android.git'
-                        url = 'https://github.com/getstream/stream-chat-android/tree/main'
-                    }
                 }
             }
         }
