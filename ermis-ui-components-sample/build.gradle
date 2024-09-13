@@ -97,17 +97,6 @@ android {
         disable 'MissingTranslation'
     }
 
-    packagingOptions {
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/license.txt'
-        exclude 'META-INF/NOTICE'
-        exclude 'META-INF/NOTICE.txt'
-        exclude 'META-INF/notice.txt'
-        exclude 'META-INF/ASL2.0'
-    }
-
     buildFeatures {
         viewBinding true
         buildConfig true
@@ -124,19 +113,6 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
 
 shot {
     applicationId = "com.chat.ermis"
-}
-
-repositories {
-    // huawei maven
-    maven {
-        url 'https://developer.huawei.com/repo/'
-        content {
-            includeGroup("com.huawei.agconnect")
-            includeGroup("com.huawei.android.hms")
-            includeGroup("com.huawei.hms")
-            includeGroup("com.huawei.hmf")
-        }
-    }
 }
 
 dependencies {
