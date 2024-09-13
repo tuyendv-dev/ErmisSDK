@@ -57,7 +57,7 @@ object Versions {
     internal const val KSP = "1.9.22-1.0.17"
     internal const val LEAK_CANARY = "2.4"
     internal const val MATERIAL_COMPONENTS = "1.8.0"
-    internal const val MACRO_BENCHMARK = "1.2.0"
+    internal const val MACRO_BENCHMARK = "1.3.0"
     internal const val MARKWON = "4.6.2"
     internal const val MOCKITO_KOTLIN = "5.0.0"
     internal const val MOCKITO = "5.4.0"

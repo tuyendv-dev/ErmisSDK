@@ -11,7 +11,6 @@ apply plugin: "com.github.ben-manes.versions"
 apply plugin: 'io.github.gradle-nexus.publish-plugin'
 apply plugin: 'binary-compatibility-validator'
 apply plugin: 'org.jetbrains.dokka'
-//apply from: "${rootDir}/scripts/sample-app-versioner.gradle"
 apply plugin: UnitTestsPlugin
 apply plugin: ReleasePlugin
 apply plugin: ChangelogReleaseSectionPlugin
