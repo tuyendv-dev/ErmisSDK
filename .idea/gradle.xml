@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/buildSrc" name="buildSrc">
+                <projects>
+                  <project path="$PROJECT_DIR$/buildSrc" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="#GRADLE_LOCAL_JAVA_HOME" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/ermis-chat-client" />
+            <option value="$PROJECT_DIR$/ermis-chat-core" />
+            <option value="$PROJECT_DIR$/ermis-chat-markdown" />
+            <option value="$PROJECT_DIR$/ermis-chat-offline" />
+            <option value="$PROJECT_DIR$/ermis-chat-state" />
+            <option value="$PROJECT_DIR$/ermis-chat-ui-common" />
+            <option value="$PROJECT_DIR$/ermis-chat-ui-components" />
+            <option value="$PROJECT_DIR$/ermis-chat-ui-utils" />
+            <option value="$PROJECT_DIR$/ermis-ui-components-sample" />
+          </set>
+        </option>
+        <option name="resolveExternalAnnotations" value="false" />
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
