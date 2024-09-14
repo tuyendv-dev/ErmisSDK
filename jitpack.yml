@@ -1,4 +1,4 @@
-jdk: openjdk11
+jdk: openjdk17
 before_install:
   - echo "signing.key=$SIGNING_KEY" >> local.properties && echo "signing.password=$SIGNING_PASSWORD" >> local.properties && echo "signing.keyId=$SIGNING_KEY_ID" >> local.properties
 install:
