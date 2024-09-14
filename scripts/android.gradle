@@ -10,16 +10,16 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 
     tasks.withType(JavaCompile).configureEach {
-        this.targetCompatibility = JavaVersion.VERSION_17.toString()
-        this.sourceCompatibility = JavaVersion.VERSION_17.toString()
+        this.targetCompatibility = JavaVersion.VERSION_11.toString()
+        this.sourceCompatibility = JavaVersion.VERSION_11.toString()
     }
 }

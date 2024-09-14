@@ -63,7 +63,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
                 '-opt-in=kotlin.RequiresOptIn',
                 '-opt-in=io.getstream.chat.android.core.internal.InternalErmisChatApi',
         ]
-        jvmTarget = JavaVersion.VERSION_17.toString()
+        jvmTarget = JavaVersion.VERSION_11.toString()
     }
 }
 
