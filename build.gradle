@@ -108,4 +108,4 @@ apiValidation {
     ]
 }
 
-apply from: "${rootDir}/scripts/publish-root.gradle"
+//apply from: "${rootDir}/scripts/publish-root.gradle"

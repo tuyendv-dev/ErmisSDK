@@ -1,4 +1,5 @@
 import network.ermis.Dependencies
+import network.ermis.Configuration
 
 plugins {
     id 'com.android.library'
@@ -9,9 +10,9 @@ plugins {
 
 
 ext {
-    PUBLISH_GROUP_ID = network.ermis.Configuration.artifactGroup
+    PUBLISH_GROUP_ID = Configuration.artifactGroup
     PUBLISH_ARTIFACT_ID = 'ermis-chat-state'
-    PUBLISH_VERSION = rootVersionName
+    PUBLISH_VERSION = Configuration.versionName
 }
 
 apply from: "${rootDir}/scripts/publish-module.gradle"

@@ -10,7 +10,7 @@ apply plugin: 'de.mannodermaus.android-junit5'
 ext {
     PUBLISH_GROUP_ID = Configuration.artifactGroup
     PUBLISH_ARTIFACT_ID = 'ermis-chat-ui-common'
-    PUBLISH_VERSION = rootVersionName
+    PUBLISH_VERSION = Configuration.versionName
 }
 
 apply from: "${rootDir}/scripts/publish-module.gradle"
