@@ -1,11 +1,11 @@
 package network.ermis.state.plugin.logic.channel
 
-import network.ermis.client.events.TypingStartEvent
-import network.ermis.core.models.TypingEvent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import network.ermis.client.events.TypingStartEvent
+import network.ermis.core.models.TypingEvent
 
 /**
  * A class used to keep track of typing events

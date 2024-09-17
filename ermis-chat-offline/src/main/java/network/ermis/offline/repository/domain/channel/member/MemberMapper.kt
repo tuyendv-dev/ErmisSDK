@@ -1,6 +1,5 @@
 package network.ermis.offline.repository.domain.channel.member
 
-import network.ermis.offline.repository.domain.channel.member.MemberEntity
 import network.ermis.core.models.Member
 import network.ermis.core.models.User
 

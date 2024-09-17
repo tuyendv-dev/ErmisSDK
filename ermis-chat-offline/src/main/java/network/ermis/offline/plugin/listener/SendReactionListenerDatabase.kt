@@ -1,17 +1,17 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.utils.extensions.internal.addMyReaction
-import network.ermis.client.utils.extensions.internal.enrichWithDataBeforeSending
-import network.ermis.client.utils.extensions.internal.updateSyncStatus
+import io.getstream.result.Error
+import io.getstream.result.Result
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.persistance.ReactionRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.plugin.listeners.SendReactionListener
 import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.internal.addMyReaction
+import network.ermis.client.utils.extensions.internal.enrichWithDataBeforeSending
+import network.ermis.client.utils.extensions.internal.updateSyncStatus
 import network.ermis.core.models.Reaction
 import network.ermis.core.models.User
-import io.getstream.result.Error
-import io.getstream.result.Result
 import java.util.Date
 
 /**

@@ -1,8 +1,6 @@
 package network.ermis.core.models
 
 import androidx.compose.runtime.Immutable
-import network.ermis.core.models.User
-import network.ermis.core.models.UserEntity
 import network.ermis.core.models.querysort.ComparableFieldProvider
 import java.util.Date
 

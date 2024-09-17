@@ -1,5 +1,10 @@
 package network.ermis.state.plugin.logic.channel
 
+import io.getstream.log.taggedLogger
+import io.getstream.result.Error
+import io.getstream.result.Result
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import network.ermis.client.ErmisClient
 import network.ermis.client.api.models.Pagination
 import network.ermis.client.api.models.QueryChannelRequest
@@ -53,12 +58,12 @@ import network.ermis.client.events.UserPresenceChangedEvent
 import network.ermis.client.events.UserStartWatchingEvent
 import network.ermis.client.events.UserStopWatchingEvent
 import network.ermis.client.events.UserUpdatedEvent
+import network.ermis.client.persistance.RepositoryFacade
+import network.ermis.client.query.pagination.AnyChannelPaginationRequest
 import network.ermis.client.utils.extensions.getCreatedAtOrDefault
 import network.ermis.client.utils.extensions.getCreatedAtOrNull
 import network.ermis.client.utils.extensions.internal.NEVER
 import network.ermis.client.utils.extensions.internal.applyPagination
-import network.ermis.client.persistance.RepositoryFacade
-import network.ermis.client.query.pagination.AnyChannelPaginationRequest
 import network.ermis.core.models.Channel
 import network.ermis.core.models.Message
 import network.ermis.core.models.User
@@ -66,11 +71,6 @@ import network.ermis.state.event.handler.utils.toChannelUserRead
 import network.ermis.state.model.QueryChannelPaginationRequest
 import network.ermis.state.model.toAnyChannelPaginationRequest
 import network.ermis.state.plugin.state.channel.ChannelMutableState
-import io.getstream.log.taggedLogger
-import io.getstream.result.Error
-import io.getstream.result.Result
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 import java.util.Date
 
 /**

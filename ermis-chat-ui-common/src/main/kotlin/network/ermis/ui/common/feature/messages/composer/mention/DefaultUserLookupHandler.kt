@@ -1,10 +1,10 @@
 package network.ermis.ui.common.feature.messages.composer.mention
 
+import io.getstream.log.taggedLogger
 import network.ermis.client.ErmisClient
 import network.ermis.core.models.User
 import network.ermis.ui.common.feature.messages.query.filter.DefaultQueryFilter
 import network.ermis.ui.common.feature.messages.query.filter.QueryFilter
-import io.getstream.log.taggedLogger
 
 /**
  * Default implementation for [UserLookupHandler].

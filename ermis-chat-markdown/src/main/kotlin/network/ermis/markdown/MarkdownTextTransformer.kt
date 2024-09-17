@@ -1,17 +1,16 @@
-
 package network.ermis.markdown
 
 import android.content.Context
 import android.widget.TextView
-import network.ermis.ui.view.messages.adapter.MessageListItem
-import network.ermis.ui.helper.transformer.ChatMessageTextTransformer
-import network.ermis.ui.utils.Linkify
 import io.noties.markwon.Markwon
 import io.noties.markwon.SoftBreakAddsNewLinePlugin
 import io.noties.markwon.core.CorePlugin
 import io.noties.markwon.ext.strikethrough.StrikethroughPlugin
 import io.noties.markwon.image.ImagesPlugin
 import io.noties.markwon.linkify.LinkifyPlugin
+import network.ermis.ui.helper.transformer.ChatMessageTextTransformer
+import network.ermis.ui.utils.Linkify
+import network.ermis.ui.view.messages.adapter.MessageListItem
 
 /**
  * Markdown based implementation of [ChatMessageTextTransformer] that parses the message text as Markdown

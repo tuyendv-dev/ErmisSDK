@@ -1,11 +1,13 @@
 package network.ermis.state.plugin.logic
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.client.ErmisClient
 import network.ermis.client.api.models.QueryChannelsRequest
 import network.ermis.client.channel.state.ChannelStateLogicProvider
-import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.client.persistance.RepositoryFacade
 import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.core.models.Channel
 import network.ermis.core.models.FilterObject
 import network.ermis.core.models.Message
@@ -21,8 +23,6 @@ import network.ermis.state.plugin.logic.querychannels.QueryChannelsStateLogic
 import network.ermis.state.plugin.state.StateRegistry
 import network.ermis.state.plugin.state.global.MutableGlobalState
 import network.ermis.state.plugin.state.querychannels.toMutableState
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.StateFlow
 import java.util.concurrent.ConcurrentHashMap
 
 /**

@@ -1,4 +1,3 @@
-
 package network.ermis.ui.common.state.messages.list
 
 /**

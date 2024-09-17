@@ -1,12 +1,12 @@
 package network.ermis.offline.plugin.listener
 
+import io.getstream.result.Result
+import io.getstream.result.onSuccessSuspend
 import network.ermis.client.api.models.QueryChannelRequest
 import network.ermis.client.persistance.RepositoryFacade
 import network.ermis.client.plugin.listeners.QueryChannelListener
 import network.ermis.core.models.Channel
 import network.ermis.core.models.ChannelConfig
-import io.getstream.result.Result
-import io.getstream.result.onSuccessSuspend
 
 /**
  * Implementation for [QueryChannelListener] that handles database update.

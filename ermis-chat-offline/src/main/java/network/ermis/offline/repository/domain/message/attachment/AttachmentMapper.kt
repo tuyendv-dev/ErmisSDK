@@ -1,10 +1,10 @@
 package network.ermis.offline.repository.domain.message.attachment
 
+import io.getstream.result.Error
 import network.ermis.core.models.Attachment
 import network.ermis.offline.repository.domain.message.attachment.UploadStateEntity.Companion.UPLOAD_STATE_FAILED
 import network.ermis.offline.repository.domain.message.attachment.UploadStateEntity.Companion.UPLOAD_STATE_IN_PROGRESS
 import network.ermis.offline.repository.domain.message.attachment.UploadStateEntity.Companion.UPLOAD_STATE_SUCCESS
-import io.getstream.result.Error
 import java.io.File
 
 internal fun Attachment.toEntity(messageId: String, index: Int): AttachmentEntity {

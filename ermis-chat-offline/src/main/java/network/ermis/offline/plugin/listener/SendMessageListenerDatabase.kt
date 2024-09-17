@@ -14,6 +14,7 @@ import network.ermis.core.models.SyncStatus
 import java.util.Date
 
 private const val TAG = "Chat:SendMessageHandlerDB"
+
 /**
  * Implementation of [SendMessageListener] that deals with updates of the database of the SDK.
  */

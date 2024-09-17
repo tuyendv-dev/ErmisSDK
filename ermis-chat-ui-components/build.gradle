@@ -62,6 +62,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
                 '-opt-in=network.ermis.core.internal.InternalErmisChatApi',
                 '-opt-in=network.ermis.core.ExperimentalErmisChatApi',
         ]
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 

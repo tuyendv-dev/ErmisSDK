@@ -1,7 +1,7 @@
 package network.ermis.state.plugin.state.channel.thread
 
-import network.ermis.core.models.Message
 import kotlinx.coroutines.flow.StateFlow
+import network.ermis.core.models.Message
 
 /** State container with reactive data of a thread.*/
 public interface ThreadState {

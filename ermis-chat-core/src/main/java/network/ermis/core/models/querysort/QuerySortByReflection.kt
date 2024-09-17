@@ -1,11 +1,11 @@
 package network.ermis.core.models.querysort
 
+import io.getstream.log.taggedLogger
 import network.ermis.core.extensions.camelCaseToSnakeCase
 import network.ermis.core.models.CustomObject
 import network.ermis.core.models.querysort.internal.SortAttribute
 import network.ermis.core.models.querysort.internal.SortSpecification
 import network.ermis.core.models.querysort.internal.compare
-import io.getstream.log.taggedLogger
 import kotlin.jvm.internal.Reflection
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1

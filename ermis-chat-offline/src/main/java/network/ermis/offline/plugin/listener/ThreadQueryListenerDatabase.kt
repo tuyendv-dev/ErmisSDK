@@ -1,11 +1,10 @@
-
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.utils.extensions.internal.users
+import io.getstream.result.Result
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.persistance.UserRepository
+import network.ermis.client.utils.extensions.internal.users
 import network.ermis.core.models.Message
-import io.getstream.result.Result
 
 /**
  * ThreadQueryListenerFull handles database read and updates. It updates the database once the requests for backend

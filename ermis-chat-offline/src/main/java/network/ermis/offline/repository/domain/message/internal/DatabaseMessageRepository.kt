@@ -1,6 +1,9 @@
 package network.ermis.offline.repository.domain.message.internal
 
 import androidx.collection.LruCache
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import network.ermis.client.api.models.Pagination
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.query.pagination.AnyChannelPaginationRequest
@@ -8,9 +11,6 @@ import network.ermis.core.models.Message
 import network.ermis.core.models.SyncStatus
 import network.ermis.core.models.User
 import network.ermis.offline.extensions.launchWithMutex
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.sync.Mutex
-import kotlinx.coroutines.sync.withLock
 import java.util.Date
 
 internal class DatabaseMessageRepository(

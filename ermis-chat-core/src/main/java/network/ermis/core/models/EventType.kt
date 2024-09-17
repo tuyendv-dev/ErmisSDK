@@ -47,7 +47,7 @@ public object EventType {
     public const val NOTIFICATION_MUTES_UPDATED: String = "notification.mutes_updated"
     public const val NOTIFICATION_CHANNEL_MUTES_UPDATED: String = "notification.channel_mutes_updated"
 
-    //call
+    // call
     public const val EVENT_TYPE_SIGNAL_CALL: String = "signal"
     public object CallAction {
         public const val WEB_RTC_CALL_VIDEO_SIGNAL: String = "video-signal"

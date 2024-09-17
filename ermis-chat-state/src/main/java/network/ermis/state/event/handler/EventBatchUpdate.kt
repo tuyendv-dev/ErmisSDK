@@ -1,6 +1,5 @@
 package network.ermis.state.event.handler
 
-import network.ermis.state.plugin.state.global.GlobalState
 import io.getstream.log.StreamLog
 import io.getstream.log.taggedLogger
 import network.ermis.client.persistance.RepositoryFacade
@@ -11,6 +10,7 @@ import network.ermis.client.utils.message.latestOrNull
 import network.ermis.core.models.Channel
 import network.ermis.core.models.Message
 import network.ermis.core.models.User
+import network.ermis.state.plugin.state.global.GlobalState
 import java.util.Date
 
 /**

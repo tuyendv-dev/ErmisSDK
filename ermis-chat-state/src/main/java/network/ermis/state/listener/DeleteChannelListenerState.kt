@@ -1,13 +1,13 @@
 package network.ermis.state.listener
 
+import io.getstream.result.Error
+import io.getstream.result.Result
 import network.ermis.client.ErmisClient
 import network.ermis.client.plugin.listeners.DeleteReactionListener
 import network.ermis.client.setup.ClientState
 import network.ermis.core.models.Channel
 import network.ermis.core.models.User
 import network.ermis.state.plugin.logic.LogicRegistry
-import io.getstream.result.Error
-import io.getstream.result.Result
 
 /**
  * [DeleteReactionListener] implementation for [io.getstream.chat.android.offline.plugin.internal.OfflinePlugin].

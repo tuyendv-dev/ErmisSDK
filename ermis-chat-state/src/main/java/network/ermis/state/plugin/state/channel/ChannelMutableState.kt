@@ -1,5 +1,8 @@
 package network.ermis.state.plugin.state.channel
 
+import io.getstream.log.taggedLogger
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.client.channel.state.ChannelState
 import network.ermis.client.events.TypingStartEvent
 import network.ermis.client.utils.extensions.getCreatedAtOrDefault
@@ -17,9 +20,6 @@ import network.ermis.core.models.TypingEvent
 import network.ermis.core.models.User
 import network.ermis.state.utils.combineStates
 import network.ermis.state.utils.mapState
-import io.getstream.log.taggedLogger
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 import java.util.Date
 import java.util.concurrent.atomic.AtomicInteger
 

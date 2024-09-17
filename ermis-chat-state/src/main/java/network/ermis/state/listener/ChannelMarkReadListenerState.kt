@@ -1,9 +1,9 @@
 package network.ermis.state.listener
 
-import network.ermis.client.plugin.listeners.ChannelMarkReadListener
-import network.ermis.state.plugin.state.StateRegistry
 import io.getstream.result.Error
 import io.getstream.result.Result
+import network.ermis.client.plugin.listeners.ChannelMarkReadListener
+import network.ermis.state.plugin.state.StateRegistry
 
 /**
  * [ChannelMarkReadListener] implementation for [io.getstream.chat.android.offline.plugin.internal.OfflinePlugin].

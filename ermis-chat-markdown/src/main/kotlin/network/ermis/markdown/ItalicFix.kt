@@ -1,4 +1,3 @@
-
 package network.ermis.markdown
 
 import java.util.Stack

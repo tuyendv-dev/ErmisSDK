@@ -1,6 +1,5 @@
 package network.ermis.state.listener
 
-import network.ermis.state.plugin.logic.LogicRegistry
 import io.getstream.log.StreamLog
 import io.getstream.result.Error
 import io.getstream.result.Result
@@ -9,6 +8,7 @@ import network.ermis.client.utils.extensions.enrichWithCid
 import network.ermis.core.errors.isPermanent
 import network.ermis.core.models.Message
 import network.ermis.core.models.SyncStatus
+import network.ermis.state.plugin.logic.LogicRegistry
 import java.util.Date
 
 private const val TAG = "Chat:SendMessageHandler"

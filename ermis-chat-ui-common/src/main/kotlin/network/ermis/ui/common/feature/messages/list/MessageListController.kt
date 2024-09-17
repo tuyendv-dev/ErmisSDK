@@ -1,13 +1,39 @@
 package network.ermis.ui.common.feature.messages.list
 
 import androidx.annotation.VisibleForTesting
+import io.getstream.log.TaggedLogger
+import io.getstream.log.taggedLogger
+import io.getstream.result.Error
+import io.getstream.result.Result
+import io.getstream.result.call.enqueue
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.filter
+import kotlinx.coroutines.flow.filterNotNull
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.flatMapLatest
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.onCompletion
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
 import network.ermis.client.ErmisClient
 import network.ermis.client.channel.state.ChannelState
+import network.ermis.client.setup.ClientState
 import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.client.utils.extensions.getCreatedAtOrDefault
 import network.ermis.client.utils.extensions.getCreatedAtOrNull
 import network.ermis.client.utils.extensions.internal.wasCreatedAfter
-import network.ermis.client.setup.ClientState
 import network.ermis.client.utils.message.isDeleted
 import network.ermis.client.utils.message.isError
 import network.ermis.client.utils.message.isGiphy
@@ -17,8 +43,6 @@ import network.ermis.client.utils.message.isSystem
 import network.ermis.core.errors.extractCause
 import network.ermis.core.internal.coroutines.DispatcherProvider
 import network.ermis.core.internal.exhaustive
-import network.ermis.core.utils.Debouncer
-import network.ermis.core.utils.diff
 import network.ermis.core.models.Attachment
 import network.ermis.core.models.Channel
 import network.ermis.core.models.ChannelUserRead
@@ -28,6 +52,8 @@ import network.ermis.core.models.Message
 import network.ermis.core.models.MessagesState
 import network.ermis.core.models.Reaction
 import network.ermis.core.models.User
+import network.ermis.core.utils.Debouncer
+import network.ermis.core.utils.diff
 import network.ermis.state.extensions.awaitRepliesAsState
 import network.ermis.state.extensions.cancelEphemeralMessage
 import network.ermis.state.extensions.getMessageUsingCache
@@ -81,32 +107,6 @@ import network.ermis.ui.common.state.messages.list.UnreadSeparatorItemState
 import network.ermis.ui.common.state.messages.list.stringify
 import network.ermis.ui.common.utils.extensions.onFirst
 import network.ermis.ui.common.utils.extensions.shouldShowMessageFooter
-import io.getstream.log.TaggedLogger
-import io.getstream.log.taggedLogger
-import io.getstream.result.Error
-import io.getstream.result.Result
-import io.getstream.result.call.enqueue
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.SharingStarted
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.filterNotNull
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.map
-import kotlinx.coroutines.flow.onCompletion
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.flow.stateIn
-import kotlinx.coroutines.launch
 import java.util.Date
 
 /**
@@ -1607,7 +1607,7 @@ public class MessageListController(
             chatClient.deleteReaction(
                 messageId = message.id,
                 reactionType = reaction.type,
-                cid = cid
+                cid = cid,
             ).enqueue(
                 onError = { error ->
                     logger.e {

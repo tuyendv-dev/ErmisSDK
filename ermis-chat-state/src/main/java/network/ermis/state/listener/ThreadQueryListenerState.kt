@@ -1,12 +1,12 @@
 package network.ermis.state.listener
 
-import network.ermis.client.persistance.MessageRepository
-import network.ermis.core.models.Message
-import network.ermis.state.plugin.logic.channel.thread.ThreadLogic
-import network.ermis.state.plugin.logic.LogicRegistry
 import io.getstream.log.taggedLogger
 import io.getstream.result.Error
 import io.getstream.result.Result
+import network.ermis.client.persistance.MessageRepository
+import network.ermis.core.models.Message
+import network.ermis.state.plugin.logic.LogicRegistry
+import network.ermis.state.plugin.logic.channel.thread.ThreadLogic
 
 /**
  * ThreadQueryListenerState handles both state in the SDK. It uses, if available, the database

@@ -1,16 +1,16 @@
 package network.ermis.state.errorhandler.internal
 
-import network.ermis.client.errorhandler.DeleteReactionErrorHandler
-import network.ermis.client.utils.extensions.cidToTypeAndId
-import network.ermis.client.setup.ClientState
-import network.ermis.core.models.Message
-import network.ermis.state.plugin.logic.LogicRegistry
 import io.getstream.result.Error
 import io.getstream.result.Result
 import io.getstream.result.call.Call
 import io.getstream.result.call.ReturnOnErrorCall
 import io.getstream.result.call.onErrorReturn
 import kotlinx.coroutines.CoroutineScope
+import network.ermis.client.errorhandler.DeleteReactionErrorHandler
+import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.cidToTypeAndId
+import network.ermis.core.models.Message
+import network.ermis.state.plugin.logic.LogicRegistry
 
 /**
  * Checks if the change was done offline and can be synced.

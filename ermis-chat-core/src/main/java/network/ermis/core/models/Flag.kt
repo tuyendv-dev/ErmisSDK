@@ -1,7 +1,6 @@
 package network.ermis.core.models
 
 import androidx.compose.runtime.Immutable
-import network.ermis.core.models.User
 import java.util.Date
 
 @Immutable

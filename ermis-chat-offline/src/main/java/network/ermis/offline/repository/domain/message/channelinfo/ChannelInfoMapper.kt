@@ -1,6 +1,5 @@
 package network.ermis.offline.repository.domain.message.channelinfo
 
-import network.ermis.offline.repository.domain.message.channelinfo.ChannelInfoEntity
 import network.ermis.core.models.ChannelInfo
 
 internal fun ChannelInfo.toEntity(): ChannelInfoEntity = ChannelInfoEntity(

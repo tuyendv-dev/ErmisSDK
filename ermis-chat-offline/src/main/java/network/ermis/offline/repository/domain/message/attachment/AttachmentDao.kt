@@ -2,8 +2,8 @@ package network.ermis.offline.repository.domain.message.attachment
 
 import androidx.room.Dao
 import androidx.room.Query
-import network.ermis.offline.repository.domain.message.attachment.AttachmentEntity.Companion.ATTACHMENT_ENTITY_TABLE_NAME
 import kotlinx.coroutines.flow.Flow
+import network.ermis.offline.repository.domain.message.attachment.AttachmentEntity.Companion.ATTACHMENT_ENTITY_TABLE_NAME
 
 @Dao
 internal interface AttachmentDao {

@@ -1,10 +1,10 @@
 package network.ermis.core.internal.coroutines
 
-import network.ermis.core.internal.coroutines.DispatcherProvider.reset
-import network.ermis.core.internal.coroutines.DispatcherProvider.set
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainCoroutineDispatcher
+import network.ermis.core.internal.coroutines.DispatcherProvider.reset
+import network.ermis.core.internal.coroutines.DispatcherProvider.set
 
 /**
  * Coroutine dispatchers used internally by Stream libraries. Should always be used

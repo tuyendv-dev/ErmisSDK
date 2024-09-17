@@ -1,9 +1,9 @@
 package network.ermis.ui.utils.extension
 
-import network.ermis.client.utils.extensions.uploadId
 import network.ermis.client.utils.attachment.isAudio
 import network.ermis.client.utils.attachment.isFile
 import network.ermis.client.utils.attachment.isVideo
+import network.ermis.client.utils.extensions.uploadId
 import network.ermis.core.models.Attachment
 
 /**

@@ -1,16 +1,16 @@
 package network.ermis.state.errorhandler.internal
 
-import network.ermis.client.errorhandler.CreateChannelErrorHandler
-import network.ermis.client.persistance.ChannelRepository
-import network.ermis.client.setup.ClientState
-import network.ermis.client.utils.channel.generateChannelIdIfNeeded
-import network.ermis.core.models.Channel
 import io.getstream.result.Error
 import io.getstream.result.Result
 import io.getstream.result.call.Call
 import io.getstream.result.call.ReturnOnErrorCall
 import io.getstream.result.call.onErrorReturn
 import kotlinx.coroutines.CoroutineScope
+import network.ermis.client.errorhandler.CreateChannelErrorHandler
+import network.ermis.client.persistance.ChannelRepository
+import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.channel.generateChannelIdIfNeeded
+import network.ermis.core.models.Channel
 
 /**
  * Returns a [Channel] instance if the channel was created offline and can be synced.

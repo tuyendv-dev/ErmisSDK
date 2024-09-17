@@ -1,6 +1,6 @@
-
 package io.ermis.chat.android
 
+import io.getstream.result.Error
 import network.ermis.core.models.Attachment
 import network.ermis.core.models.AttachmentType
 import network.ermis.core.models.Channel
@@ -18,7 +18,6 @@ import network.ermis.core.models.PushProvider
 import network.ermis.core.models.Reaction
 import network.ermis.core.models.SyncStatus
 import network.ermis.core.models.User
-import io.getstream.result.Error
 import java.io.File
 import java.util.Calendar
 import java.util.Date

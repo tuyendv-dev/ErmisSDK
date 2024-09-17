@@ -15,7 +15,7 @@ public fun Filters.defaultChannelListFilter(user: User?): FilterObject? {
         null
     } else {
         and(
-            eq("type", "team"),//"messaging"),
+            eq("type", "team"), // "messaging"),
             `in`("members", listOf(user.id)),
         )
     }

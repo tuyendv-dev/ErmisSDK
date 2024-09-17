@@ -41,16 +41,16 @@ buildscript {
         classpath Dependencies.dokka
         classpath Dependencies.kotlinBinaryValidator
         classpath Dependencies.shot
-        classpath Dependencies.spotlessGradlePlugin
+//        classpath Dependencies.spotlessGradlePlugin
         classpath Dependencies.ksp
 //        classpath Dependencies.detektPlugin
     }
 }
 
 subprojects {
-    if (it.buildFile.exists()) {
-        apply from: "${rootDir}/spotless/spotless.gradle"
-    }
+//    if (it.buildFile.exists()) {
+//        apply from: "${rootDir}/spotless/spotless.gradle"
+//    }
 //    apply plugin: "io.gitlab.arturbosch.detekt"
 }
 

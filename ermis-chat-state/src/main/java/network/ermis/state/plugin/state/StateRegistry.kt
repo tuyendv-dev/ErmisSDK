@@ -1,5 +1,10 @@
 package network.ermis.state.plugin.state
 
+import io.getstream.log.taggedLogger
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancelChildren
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.client.channel.state.ChannelState
 import network.ermis.client.events.ChannelDeletedEvent
 import network.ermis.client.events.NotificationChannelDeletedEvent
@@ -9,15 +14,10 @@ import network.ermis.core.models.User
 import network.ermis.core.models.querysort.QuerySorter
 import network.ermis.state.event.handler.batch.BatchEvent
 import network.ermis.state.plugin.state.channel.ChannelMutableState
-import network.ermis.state.plugin.state.channel.thread.ThreadState
 import network.ermis.state.plugin.state.channel.thread.ThreadMutableState
-import network.ermis.state.plugin.state.querychannels.QueryChannelsState
+import network.ermis.state.plugin.state.channel.thread.ThreadState
 import network.ermis.state.plugin.state.querychannels.QueryChannelsMutableState
-import io.getstream.log.taggedLogger
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.cancelChildren
-import kotlinx.coroutines.flow.StateFlow
+import network.ermis.state.plugin.state.querychannels.QueryChannelsState
 import java.util.concurrent.ConcurrentHashMap
 
 /**

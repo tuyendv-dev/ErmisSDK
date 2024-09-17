@@ -1,17 +1,17 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.core.errors.isPermanent
+import io.getstream.result.Error
+import io.getstream.result.Result
 import network.ermis.client.persistance.ChannelRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.plugin.listeners.CreateChannelListener
 import network.ermis.client.setup.ClientState
 import network.ermis.client.utils.channel.generateChannelIdIfNeeded
+import network.ermis.core.errors.isPermanent
 import network.ermis.core.models.Channel
 import network.ermis.core.models.Member
 import network.ermis.core.models.SyncStatus
 import network.ermis.core.models.User
-import io.getstream.result.Error
-import io.getstream.result.Result
 import java.util.Date
 
 /**

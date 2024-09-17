@@ -1,12 +1,12 @@
 package network.ermis.state.plugin.state.querychannels
 
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.client.api.models.QueryChannelsRequest
 import network.ermis.core.models.Channel
 import network.ermis.core.models.FilterObject
 import network.ermis.core.models.querysort.QuerySorter
 import network.ermis.state.event.chat.ChatEventHandler
 import network.ermis.state.event.chat.factory.ChatEventHandlerFactory
-import kotlinx.coroutines.flow.StateFlow
 
 /**
  * Contains a state related to a single query channels request.

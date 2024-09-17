@@ -1,12 +1,12 @@
 package network.ermis.state.plugin.state.channel.thread
 
-import network.ermis.core.models.Message
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import network.ermis.core.models.Message
 
 internal class ThreadMutableState(
     override val parentId: String,

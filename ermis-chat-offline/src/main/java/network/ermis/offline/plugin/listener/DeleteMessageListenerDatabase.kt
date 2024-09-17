@@ -1,15 +1,15 @@
 package network.ermis.offline.plugin.listener
 
+import io.getstream.result.Error
+import io.getstream.result.Result
 import network.ermis.client.errors.cause.MessageModerationDeletedException
-import network.ermis.client.utils.extensions.internal.users
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.internal.users
 import network.ermis.client.utils.message.isModerationError
 import network.ermis.core.models.Message
 import network.ermis.core.models.SyncStatus
-import io.getstream.result.Error
-import io.getstream.result.Result
 import java.util.Date
 
 /**

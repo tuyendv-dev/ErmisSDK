@@ -1,17 +1,21 @@
 package network.ermis.state.plugin.logic.channel
 
 import androidx.collection.LruCache
+import io.getstream.log.StreamLog
+import io.getstream.log.taggedLogger
+import io.getstream.result.Error
+import kotlinx.coroutines.CoroutineScope
 import network.ermis.client.api.models.QueryChannelRequest
 import network.ermis.client.channel.ChannelMessagesUpdateLogic
 import network.ermis.client.channel.state.ChannelState
-import network.ermis.core.errors.isPermanent
 import network.ermis.client.events.TypingStartEvent
 import network.ermis.client.events.UserStartWatchingEvent
 import network.ermis.client.events.UserStopWatchingEvent
-import network.ermis.client.utils.extensions.internal.NEVER
 import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.internal.NEVER
 import network.ermis.client.utils.message.isDeleted
 import network.ermis.client.utils.message.isReply
+import network.ermis.core.errors.isPermanent
 import network.ermis.core.models.Channel
 import network.ermis.core.models.ChannelData
 import network.ermis.core.models.ChannelUserRead
@@ -23,10 +27,6 @@ import network.ermis.core.models.User
 import network.ermis.state.message.AttachmentUrlValidator
 import network.ermis.state.plugin.state.channel.ChannelMutableState
 import network.ermis.state.plugin.state.global.MutableGlobalState
-import io.getstream.log.StreamLog
-import io.getstream.log.taggedLogger
-import io.getstream.result.Error
-import kotlinx.coroutines.CoroutineScope
 import java.util.Date
 
 @Suppress("TooManyFunctions")

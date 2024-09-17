@@ -1,5 +1,7 @@
 package network.ermis.state.listener
 
+import io.getstream.result.Result
+import kotlinx.coroutines.flow.MutableStateFlow
 import network.ermis.client.api.models.QueryChannelsRequest
 import network.ermis.client.plugin.listeners.QueryChannelsListener
 import network.ermis.client.query.pagination.AnyChannelPaginationRequest
@@ -7,8 +9,6 @@ import network.ermis.core.models.Channel
 import network.ermis.state.model.QueryChannelsPaginationRequest
 import network.ermis.state.model.toAnyChannelPaginationRequest
 import network.ermis.state.plugin.logic.LogicRegistry
-import io.getstream.result.Result
-import kotlinx.coroutines.flow.MutableStateFlow
 
 /**
  * [QueryChannelsListener] implementation for [StatePlugin].

@@ -1,13 +1,13 @@
 package network.ermis.ui.common.feature.messages.query.filter
 
+import io.getstream.log.taggedLogger
+import network.ermis.ui.common.feature.messages.composer.transliteration.DefaultStreamTransliterator
+import network.ermis.ui.common.feature.messages.composer.transliteration.StreamTransliterator
 import network.ermis.ui.common.feature.messages.query.formatter.Combine
 import network.ermis.ui.common.feature.messages.query.formatter.IgnoreDiacritics
 import network.ermis.ui.common.feature.messages.query.formatter.Lowercase
 import network.ermis.ui.common.feature.messages.query.formatter.QueryFormatter
 import network.ermis.ui.common.feature.messages.query.formatter.Transliterate
-import network.ermis.ui.common.feature.messages.composer.transliteration.DefaultStreamTransliterator
-import network.ermis.ui.common.feature.messages.composer.transliteration.StreamTransliterator
-import io.getstream.log.taggedLogger
 import kotlin.math.min
 
 /**

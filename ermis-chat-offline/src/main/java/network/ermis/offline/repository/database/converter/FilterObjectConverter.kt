@@ -63,7 +63,7 @@ private fun Map<String, Any>.toFilterObject(): FilterObject {
                 type,
                 this[KEY_MEMBERS] as List<String>,
                 this[KEY_MEMBER_ROLE] as List<String>,
-                projectId
+                projectId,
             )
         }
 

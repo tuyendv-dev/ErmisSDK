@@ -1,11 +1,11 @@
 package network.ermis.state.event.chat.factory
 
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.client.ErmisClient
 import network.ermis.client.setup.ClientState
 import network.ermis.core.models.Channel
 import network.ermis.state.event.chat.ChatEventHandler
 import network.ermis.state.event.chat.DefaultChatEventHandler
-import kotlinx.coroutines.flow.StateFlow
 
 /**
  * A [ChatEventHandler] factory.

@@ -14,7 +14,7 @@ object Versions {
     public const val ANDROIDX_COMPOSE_COMPILER = "1.5.10"
     internal const val ANDROIDX_CORE_TEST = "2.2.0"
     internal const val ANDROIDX_FRAGMENT = "1.6.1"
-    internal const val ANDROIDX_KTX = "1.10.1"
+    internal const val ANDROIDX_KTX = "1.13.1"
     internal const val ANDROIDX_LIFECYCLE = "2.6.1"
     internal const val ANDROIDX_NAVIGATION = "2.5.3"
     internal const val ANDROIDX_PREFERENCES = "1.2.1"

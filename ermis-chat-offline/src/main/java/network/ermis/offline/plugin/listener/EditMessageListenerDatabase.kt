@@ -1,15 +1,15 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.utils.extensions.internal.users
-import network.ermis.client.utils.extensions.updateFailedMessage
-import network.ermis.client.utils.extensions.updateMessageOnlineState
+import io.getstream.result.Result
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.plugin.listeners.EditMessageListener
 import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.internal.users
+import network.ermis.client.utils.extensions.updateFailedMessage
+import network.ermis.client.utils.extensions.updateMessageOnlineState
 import network.ermis.core.models.Message
 import network.ermis.core.models.SyncStatus
-import io.getstream.result.Result
 
 /**
  * Implementation of [EditMessageListener] that deals with database read and write.

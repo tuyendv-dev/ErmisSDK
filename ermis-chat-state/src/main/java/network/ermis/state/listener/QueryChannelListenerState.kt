@@ -1,12 +1,12 @@
 package network.ermis.state.listener
 
+import io.getstream.log.taggedLogger
+import io.getstream.result.Result
 import network.ermis.client.api.models.QueryChannelRequest
 import network.ermis.client.plugin.listeners.QueryChannelListener
 import network.ermis.client.utils.stringify
 import network.ermis.core.models.Channel
 import network.ermis.state.plugin.logic.LogicRegistry
-import io.getstream.log.taggedLogger
-import io.getstream.result.Result
 
 /**
  * Implementation of [QueryChannelListener] that handles state updates in the SDK.

@@ -1,6 +1,14 @@
 package network.ermis.state.plugin.factory
 
 import android.content.Context
+import io.getstream.log.StreamLog
+import io.getstream.log.taggedLogger
+import kotlinx.coroutines.CoroutineExceptionHandler
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.job
 import network.ermis.client.ErmisClient
 import network.ermis.client.events.ChatEvent
 import network.ermis.client.persistance.RepositoryFacade
@@ -19,14 +27,6 @@ import network.ermis.state.plugin.state.StateRegistry
 import network.ermis.state.plugin.state.global.MutableGlobalState
 import network.ermis.state.sync.OfflineSyncFirebaseMessagingHandler
 import network.ermis.state.sync.SyncManager
-import io.getstream.log.StreamLog
-import io.getstream.log.taggedLogger
-import kotlinx.coroutines.CoroutineExceptionHandler
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.SupervisorJob
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.job
 import kotlin.reflect.KClass
 
 /**

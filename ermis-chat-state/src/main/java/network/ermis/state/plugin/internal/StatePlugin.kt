@@ -1,5 +1,6 @@
 package network.ermis.state.plugin.internal
 
+import kotlinx.coroutines.flow.MutableStateFlow
 import network.ermis.client.errorhandler.ErrorHandler
 import network.ermis.client.errorhandler.factory.ErrorHandlerFactory
 import network.ermis.client.persistance.RepositoryFacade
@@ -7,7 +8,6 @@ import network.ermis.client.plugin.Plugin
 import network.ermis.client.setup.ClientState
 import network.ermis.core.models.User
 import network.ermis.state.event.handler.EventHandler
-import network.ermis.state.plugin.config.StatePluginConfig
 import network.ermis.state.listener.ChannelMarkReadListenerState
 import network.ermis.state.listener.DeleteChannelListenerState
 import network.ermis.state.listener.DeleteMessageListenerState
@@ -25,13 +25,13 @@ import network.ermis.state.listener.SendReactionListenerState
 import network.ermis.state.listener.ShuffleGiphyListenerState
 import network.ermis.state.listener.ThreadQueryListenerState
 import network.ermis.state.listener.TypingEventListenerState
+import network.ermis.state.plugin.config.StatePluginConfig
 import network.ermis.state.plugin.logic.LogicRegistry
 import network.ermis.state.plugin.state.StateRegistry
 import network.ermis.state.plugin.state.global.GlobalState
 import network.ermis.state.plugin.state.global.MutableGlobalState
 import network.ermis.state.sync.SyncHistoryManager
 import network.ermis.state.sync.SyncManager
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlin.reflect.KClass
 
 /**

@@ -1,11 +1,11 @@
 package network.ermis.state.listener
 
+import io.getstream.result.Error
+import io.getstream.result.Result
 import network.ermis.client.events.ChatEvent
 import network.ermis.core.models.EventType
 import network.ermis.state.plugin.state.StateRegistry
 import network.ermis.state.plugin.state.channel.ChannelMutableState
-import io.getstream.result.Error
-import io.getstream.result.Result
 import java.util.Date
 
 /**

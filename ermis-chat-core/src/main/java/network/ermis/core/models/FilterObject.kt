@@ -4,11 +4,11 @@ package network.ermis.core.models
  * Filter object that specifies requests for backend queries.
  */
 public sealed class FilterObject
-public data class BeloFilterChannelObject (
+public data class BeloFilterChannelObject(
     val type: String? = null,
     val members: List<String>,
-    val roles: List<String> = listOf("member","owner"),
-    val project_id: String? = null
+    val roles: List<String> = listOf("member", "owner"),
+    val project_id: String? = null,
 ) : FilterObject()
 public data class AndFilterObject internal constructor(val filterObjects: Set<FilterObject>) : FilterObject()
 public data class OrFilterObject internal constructor(val filterObjects: Set<FilterObject>) : FilterObject()

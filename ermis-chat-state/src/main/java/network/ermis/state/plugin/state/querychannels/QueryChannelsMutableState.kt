@@ -1,16 +1,5 @@
 package network.ermis.state.plugin.state.querychannels
 
-import network.ermis.client.api.models.QueryChannelsRequest
-import network.ermis.client.events.ChatEvent
-import network.ermis.client.utils.extensions.internal.updateUsers
-import network.ermis.client.query.QueryChannelsSpec
-import network.ermis.core.models.Channel
-import network.ermis.core.models.FilterObject
-import network.ermis.core.models.User
-import network.ermis.core.models.querysort.QuerySorter
-import network.ermis.state.event.chat.ChatEventHandler
-import network.ermis.state.event.chat.EventHandlingResult
-import network.ermis.state.event.chat.factory.ChatEventHandlerFactory
 import io.getstream.log.taggedLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -19,6 +8,17 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
+import network.ermis.client.api.models.QueryChannelsRequest
+import network.ermis.client.events.ChatEvent
+import network.ermis.client.query.QueryChannelsSpec
+import network.ermis.client.utils.extensions.internal.updateUsers
+import network.ermis.core.models.Channel
+import network.ermis.core.models.FilterObject
+import network.ermis.core.models.User
+import network.ermis.core.models.querysort.QuerySorter
+import network.ermis.state.event.chat.ChatEventHandler
+import network.ermis.state.event.chat.EventHandlingResult
+import network.ermis.state.event.chat.factory.ChatEventHandlerFactory
 
 internal class QueryChannelsMutableState(
     override val filter: FilterObject,

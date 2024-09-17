@@ -1,12 +1,12 @@
 package network.ermis.ui.common.feature.messages.composer.mention
 
+import io.getstream.log.taggedLogger
 import network.ermis.client.ErmisClient
 import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.core.models.User
 import network.ermis.state.extensions.state
 import network.ermis.ui.common.feature.messages.query.filter.DefaultQueryFilter
 import network.ermis.ui.common.feature.messages.query.filter.QueryFilter
-import io.getstream.log.taggedLogger
 
 /**
  * Local user lookup handler. It uses the local state to search for users.

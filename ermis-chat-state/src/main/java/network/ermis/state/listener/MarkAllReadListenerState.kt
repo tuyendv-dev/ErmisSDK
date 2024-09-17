@@ -1,7 +1,7 @@
 package network.ermis.state.listener
 
-import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.client.plugin.listeners.MarkAllReadListener
+import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.state.plugin.logic.LogicRegistry
 import network.ermis.state.plugin.state.StateRegistry
 

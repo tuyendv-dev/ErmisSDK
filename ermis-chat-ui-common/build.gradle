@@ -65,6 +65,7 @@ tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).all {
                 '-Xexplicit-api=strict',
                 '-opt-in=network.ermis.core.internal.InternalErmisChatApi'
         ]
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
 }
 

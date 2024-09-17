@@ -1,9 +1,9 @@
 package network.ermis.state.listener
 
-import network.ermis.state.plugin.logic.LogicRegistry
 import io.getstream.result.Result
 import network.ermis.client.plugin.listeners.SendGiphyListener
 import network.ermis.core.models.Message
+import network.ermis.state.plugin.logic.LogicRegistry
 
 /**
  * [SendGiphyListener] implementation for [StatePlugin].

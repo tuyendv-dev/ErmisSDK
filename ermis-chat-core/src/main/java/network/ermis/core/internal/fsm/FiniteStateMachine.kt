@@ -1,11 +1,11 @@
 package network.ermis.core.internal.fsm
 
-import network.ermis.core.internal.fsm.builder.FSMBuilder
-import network.ermis.core.internal.fsm.builder.StateFunction
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import network.ermis.core.internal.fsm.builder.FSMBuilder
+import network.ermis.core.internal.fsm.builder.StateFunction
 import kotlin.reflect.KClass
 
 /**

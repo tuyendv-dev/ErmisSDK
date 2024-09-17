@@ -1,12 +1,12 @@
 package network.ermis.offline.plugin.listener
 
+import io.getstream.result.Result
 import network.ermis.client.persistance.ChannelRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.plugin.listeners.DeleteChannelListener
 import network.ermis.client.setup.ClientState
 import network.ermis.core.models.Channel
 import network.ermis.core.models.User
-import io.getstream.result.Result
 
 /**
  * [DeleteChannelListener] implementation for [io.getstream.chat.android.offline.plugin.internal.OfflinePlugin].

@@ -1,11 +1,11 @@
 package network.ermis.ui.common.utils.typing
 
-import network.ermis.core.internal.coroutines.DispatcherProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import network.ermis.core.internal.coroutines.DispatcherProvider
 
 /**
  * After you call [onKeystroke] the class will call automatically

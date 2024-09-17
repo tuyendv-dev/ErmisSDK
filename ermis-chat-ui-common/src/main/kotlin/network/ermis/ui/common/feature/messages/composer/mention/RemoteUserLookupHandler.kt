@@ -1,12 +1,12 @@
 package network.ermis.ui.common.feature.messages.composer.mention
 
+import io.getstream.log.taggedLogger
+import io.getstream.result.Result
 import network.ermis.client.ErmisClient
 import network.ermis.client.utils.extensions.cidToTypeAndId
 import network.ermis.core.models.Filters
 import network.ermis.core.models.User
 import network.ermis.core.models.querysort.QuerySortByField
-import io.getstream.log.taggedLogger
-import io.getstream.result.Result
 
 /**
  * Remote user lookup handler. It uses the remote API to search for users.

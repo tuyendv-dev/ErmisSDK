@@ -1,5 +1,6 @@
 package network.ermis.state.event.chat
 
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.client.events.ChatEvent
 import network.ermis.client.events.CidEvent
 import network.ermis.client.events.HasChannel
@@ -14,7 +15,6 @@ import network.ermis.client.setup.ClientState
 import network.ermis.core.models.Channel
 import network.ermis.core.models.FilterObject
 import network.ermis.core.models.Member
-import kotlinx.coroutines.flow.StateFlow
 
 /**
  * Default implementation of [ChatEventHandler] which is based on the current user membership.

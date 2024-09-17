@@ -1,4 +1,3 @@
-
 package network.ermis.ui.view.messages.adapter.view.internal
 
 import android.content.Context

@@ -1,10 +1,10 @@
 package network.ermis.state.listener
 
-import network.ermis.client.utils.extensions.internal.toCid
+import io.getstream.result.Result
 import network.ermis.client.plugin.listeners.HideChannelListener
+import network.ermis.client.utils.extensions.internal.toCid
 import network.ermis.client.utils.internal.validateCidWithResult
 import network.ermis.state.plugin.logic.LogicRegistry
-import io.getstream.result.Result
 import java.util.Date
 
 /**

@@ -1,11 +1,6 @@
 package network.ermis.state.event.handler.batch
 
 import androidx.annotation.VisibleForTesting
-import network.ermis.client.events.ChatEvent
-import network.ermis.client.events.ConnectedEvent
-import network.ermis.client.events.ConnectingEvent
-import network.ermis.client.events.DisconnectedEvent
-import network.ermis.state.event.handler.utils.realType
 import io.getstream.log.taggedLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -13,6 +8,11 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import network.ermis.client.events.ChatEvent
+import network.ermis.client.events.ConnectedEvent
+import network.ermis.client.events.ConnectingEvent
+import network.ermis.client.events.DisconnectedEvent
+import network.ermis.state.event.handler.utils.realType
 
 /**
  * Collects socket events to produce a single [BatchEvent].

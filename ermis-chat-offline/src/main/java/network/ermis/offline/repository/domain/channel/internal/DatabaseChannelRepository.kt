@@ -1,19 +1,19 @@
 package network.ermis.offline.repository.domain.channel.internal
 
 import android.util.LruCache
-import network.ermis.client.utils.extensions.syncUnreadCountWithReads
-import network.ermis.client.persistance.ChannelRepository
-import network.ermis.core.utils.maxOf
-import network.ermis.core.utils.minOf
-import network.ermis.core.models.Channel
-import network.ermis.core.models.Member
-import network.ermis.core.models.Message
-import network.ermis.core.models.User
-import network.ermis.offline.extensions.launchWithMutex
 import io.getstream.log.taggedLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import network.ermis.client.persistance.ChannelRepository
+import network.ermis.client.utils.extensions.syncUnreadCountWithReads
+import network.ermis.core.models.Channel
+import network.ermis.core.models.Member
+import network.ermis.core.models.Message
+import network.ermis.core.models.User
+import network.ermis.core.utils.maxOf
+import network.ermis.core.utils.minOf
+import network.ermis.offline.extensions.launchWithMutex
 import java.util.Date
 
 /**

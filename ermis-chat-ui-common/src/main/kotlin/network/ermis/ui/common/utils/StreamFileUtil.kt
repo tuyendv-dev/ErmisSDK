@@ -6,14 +6,14 @@ import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Environment
 import androidx.core.content.FileProvider
-import network.ermis.client.ErmisClient
-import network.ermis.core.models.Attachment
-import network.ermis.ui.common.StreamFileProvider
 import io.getstream.result.Error
 import io.getstream.result.Result
 import io.getstream.result.Result.Failure
 import io.getstream.result.Result.Success
 import io.getstream.result.flatMap
+import network.ermis.client.ErmisClient
+import network.ermis.core.models.Attachment
+import network.ermis.ui.common.StreamFileProvider
 import java.io.File
 import java.io.IOException
 

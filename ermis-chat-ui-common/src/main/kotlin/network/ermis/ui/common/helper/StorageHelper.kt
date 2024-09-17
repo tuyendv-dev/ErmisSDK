@@ -6,9 +6,9 @@ import android.database.Cursor
 import android.net.Uri
 import android.provider.MediaStore
 import android.webkit.MimeTypeMap
-import network.ermis.ui.common.state.messages.composer.AttachmentMetaData
 import network.ermis.core.ExperimentalErmisChatApi
 import network.ermis.core.models.AttachmentType
+import network.ermis.ui.common.state.messages.composer.AttachmentMetaData
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date

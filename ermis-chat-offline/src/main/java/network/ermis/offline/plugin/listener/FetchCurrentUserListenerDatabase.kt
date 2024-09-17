@@ -1,10 +1,10 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.persistance.UserRepository
-import network.ermis.core.models.User
 import io.getstream.log.taggedLogger
 import io.getstream.result.Result
 import io.getstream.result.onSuccessSuspend
+import network.ermis.client.persistance.UserRepository
+import network.ermis.core.models.User
 
 internal class FetchCurrentUserListenerDatabase(
     private val userRepository: UserRepository,

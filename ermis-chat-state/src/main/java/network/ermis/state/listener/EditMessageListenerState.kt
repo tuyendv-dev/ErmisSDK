@@ -1,13 +1,13 @@
 package network.ermis.state.listener
 
-import network.ermis.client.utils.extensions.updateFailedMessage
-import network.ermis.client.utils.extensions.updateMessageOnlineState
+import io.getstream.result.Result
 import network.ermis.client.plugin.listeners.EditMessageListener
 import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.updateFailedMessage
+import network.ermis.client.utils.extensions.updateMessageOnlineState
 import network.ermis.core.models.Message
 import network.ermis.core.models.SyncStatus
 import network.ermis.state.plugin.logic.LogicRegistry
-import io.getstream.result.Result
 
 /**
  * Implementation of [EditMessageListener] that deals with state read and write.

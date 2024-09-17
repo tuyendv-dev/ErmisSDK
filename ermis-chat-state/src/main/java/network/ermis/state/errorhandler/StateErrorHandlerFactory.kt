@@ -1,5 +1,6 @@
 package network.ermis.state.errorhandler
 
+import kotlinx.coroutines.CoroutineScope
 import network.ermis.client.errorhandler.ErrorHandler
 import network.ermis.client.errorhandler.factory.ErrorHandlerFactory
 import network.ermis.client.persistance.RepositoryFacade
@@ -9,7 +10,6 @@ import network.ermis.state.errorhandler.internal.DeleteReactionErrorHandlerImpl
 import network.ermis.state.errorhandler.internal.QueryMembersErrorHandlerImpl
 import network.ermis.state.errorhandler.internal.SendReactionErrorHandlerImpl
 import network.ermis.state.plugin.logic.LogicRegistry
-import kotlinx.coroutines.CoroutineScope
 
 internal class StateErrorHandlerFactory(
     private val scope: CoroutineScope,

@@ -2,10 +2,10 @@ package network.ermis.ui.common.utils
 
 import android.content.Context
 import androidx.annotation.StringRes
-import network.ermis.ui.common.R
-import network.ermis.ui.utils.extension.getDisplayName
 import network.ermis.core.models.Channel
 import network.ermis.core.models.User
+import network.ermis.ui.common.R
+import network.ermis.ui.utils.extension.getDisplayName
 
 /**
  *  An interface that generates a name for the given channel.

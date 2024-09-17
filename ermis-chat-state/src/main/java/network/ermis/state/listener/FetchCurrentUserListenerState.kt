@@ -1,12 +1,12 @@
 package network.ermis.state.listener
 
+import io.getstream.log.taggedLogger
+import io.getstream.result.Result
 import network.ermis.client.setup.ClientState
 import network.ermis.core.models.User
 import network.ermis.state.event.handler.model.SelfUserFull
 import network.ermis.state.event.handler.utils.updateCurrentUser
 import network.ermis.state.plugin.state.global.MutableGlobalState
-import io.getstream.log.taggedLogger
-import io.getstream.result.Result
 
 internal class FetchCurrentUserListenerState(
     private val clientState: ClientState,

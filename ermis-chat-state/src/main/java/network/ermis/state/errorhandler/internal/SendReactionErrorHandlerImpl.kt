@@ -1,15 +1,15 @@
 package network.ermis.state.errorhandler.internal
 
-import network.ermis.client.errorhandler.SendReactionErrorHandler
-import network.ermis.client.utils.extensions.internal.enrichWithDataBeforeSending
-import network.ermis.client.setup.ClientState
-import network.ermis.core.models.Reaction
-import network.ermis.core.models.User
 import io.getstream.result.Result
 import io.getstream.result.call.Call
 import io.getstream.result.call.ReturnOnErrorCall
 import io.getstream.result.call.onErrorReturn
 import kotlinx.coroutines.CoroutineScope
+import network.ermis.client.errorhandler.SendReactionErrorHandler
+import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.internal.enrichWithDataBeforeSending
+import network.ermis.core.models.Reaction
+import network.ermis.core.models.User
 
 /**
  * Returns a [Reaction] instance enriched with user [Reaction.syncStatus] if reaction was send offline and can be synced.

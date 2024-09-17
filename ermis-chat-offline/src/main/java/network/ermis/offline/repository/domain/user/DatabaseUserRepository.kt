@@ -1,9 +1,6 @@
 package network.ermis.offline.repository.domain.user
 
 import androidx.collection.LruCache
-import network.ermis.client.persistance.UserRepository
-import network.ermis.core.models.User
-import network.ermis.offline.extensions.launchWithMutex
 import io.getstream.log.taggedLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -11,6 +8,9 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
+import network.ermis.client.persistance.UserRepository
+import network.ermis.core.models.User
+import network.ermis.offline.extensions.launchWithMutex
 
 internal class DatabaseUserRepository(
     private val scope: CoroutineScope,

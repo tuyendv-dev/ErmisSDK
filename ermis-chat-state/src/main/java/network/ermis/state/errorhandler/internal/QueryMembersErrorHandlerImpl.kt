@@ -1,18 +1,18 @@
 package network.ermis.state.errorhandler.internal
 
-import network.ermis.client.errorhandler.QueryMembersErrorHandler
-import network.ermis.client.utils.extensions.internal.toCid
-import network.ermis.client.persistance.ChannelRepository
-import network.ermis.client.setup.ClientState
-import network.ermis.core.models.FilterObject
-import network.ermis.core.models.Member
-import network.ermis.core.models.querysort.QuerySorter
 import io.getstream.log.taggedLogger
 import io.getstream.result.Result
 import io.getstream.result.call.Call
 import io.getstream.result.call.ReturnOnErrorCall
 import io.getstream.result.call.onErrorReturn
 import kotlinx.coroutines.CoroutineScope
+import network.ermis.client.errorhandler.QueryMembersErrorHandler
+import network.ermis.client.persistance.ChannelRepository
+import network.ermis.client.setup.ClientState
+import network.ermis.client.utils.extensions.internal.toCid
+import network.ermis.core.models.FilterObject
+import network.ermis.core.models.Member
+import network.ermis.core.models.querysort.QuerySorter
 
 /**
  * Checks if the change was done offline and can be synced.

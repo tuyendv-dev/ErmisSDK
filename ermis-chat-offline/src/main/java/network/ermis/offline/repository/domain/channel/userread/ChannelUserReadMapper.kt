@@ -1,6 +1,5 @@
 package network.ermis.offline.repository.domain.channel.userread
 
-import network.ermis.offline.repository.domain.channel.userread.ChannelUserReadEntity
 import network.ermis.core.models.ChannelUserRead
 import network.ermis.core.models.User
 

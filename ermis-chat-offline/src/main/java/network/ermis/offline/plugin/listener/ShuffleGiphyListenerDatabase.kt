@@ -1,12 +1,12 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.utils.extensions.internal.users
+import io.getstream.result.Result
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.plugin.listeners.ShuffleGiphyListener
+import network.ermis.client.utils.extensions.internal.users
 import network.ermis.core.models.Message
 import network.ermis.core.models.SyncStatus
-import io.getstream.result.Result
 
 /**
 * [ShuffleGiphyListener] implementation for [io.getstream.chat.android.offline.plugin.internal.OfflinePlugin].

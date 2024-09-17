@@ -71,10 +71,10 @@ public object Filters {
     public fun distinct(memberIds: List<String>): FilterObject = DistinctFilterObject(memberIds.toSet())
 
     @JvmStatic
-    public fun beloChannels(type: String?, memberIds: List<String>, roles: List<String> = listOf("member","owner", "moder"), projectId: String? = null): FilterObject = BeloFilterChannelObject(type, memberIds, roles, projectId)
+    public fun beloChannels(type: String?, memberIds: List<String>, roles: List<String> = listOf("member", "owner", "moder"), projectId: String? = null): FilterObject = BeloFilterChannelObject(type, memberIds, roles, projectId)
 
     @JvmStatic
-    public fun joindChannels(memberId: String, projectId: String? = null): FilterObject = BeloFilterChannelObject(null, listOf(memberId), listOf("member","owner", "moder"), projectId)
+    public fun joindChannels(memberId: String, projectId: String? = null): FilterObject = BeloFilterChannelObject(null, listOf(memberId), listOf("member", "owner", "moder"), projectId)
 
     @JvmStatic
     public fun invitedChannels(memberId: String, projectId: String? = null): FilterObject = BeloFilterChannelObject(null, listOf(memberId), listOf("pending"), projectId)

@@ -1,10 +1,10 @@
 package network.ermis.ui.common.feature.messages.composer.mention
 
 import network.ermis.core.models.User
-import network.ermis.ui.common.feature.messages.query.filter.DefaultQueryFilter
-import network.ermis.ui.common.feature.messages.query.filter.QueryFilter
 import network.ermis.ui.common.feature.messages.composer.transliteration.DefaultStreamTransliterator
 import network.ermis.ui.common.feature.messages.composer.transliteration.StreamTransliterator
+import network.ermis.ui.common.feature.messages.query.filter.DefaultQueryFilter
+import network.ermis.ui.common.feature.messages.query.filter.QueryFilter
 
 /**
  * Default implementation of [QueryFilter] for [User] objects.

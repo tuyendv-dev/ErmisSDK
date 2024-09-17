@@ -1,11 +1,11 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.persistance.RepositoryFacade
-import network.ermis.client.plugin.listeners.GetMessageListener
-import network.ermis.core.models.Message
 import io.getstream.log.StreamLog
 import io.getstream.result.Error
 import io.getstream.result.Result
+import network.ermis.client.persistance.RepositoryFacade
+import network.ermis.client.plugin.listeners.GetMessageListener
+import network.ermis.core.models.Message
 
 /**
  * An implementation of [GetMessageListener] used to perform database operations when making an API call

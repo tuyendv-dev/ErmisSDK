@@ -1,7 +1,7 @@
 package network.ermis.state.listener
 
-import network.ermis.state.plugin.logic.LogicRegistry
 import network.ermis.core.models.Message
+import network.ermis.state.plugin.logic.LogicRegistry
 
 /**
  * Updates the state of the SDK accordingly with request to send attachments to backend.

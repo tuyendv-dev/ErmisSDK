@@ -1,18 +1,18 @@
 package network.ermis.ui.common.feature.messages.composer
 
+import io.getstream.log.StreamLog
+import io.getstream.log.TaggedLogger
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.launch
 import network.ermis.client.audio.AudioPlayer
 import network.ermis.client.audio.AudioState
 import network.ermis.client.audio.ProgressData
 import network.ermis.client.utils.extensions.EXTRA_WAVEFORM_DATA
 import network.ermis.core.internal.coroutines.DispatcherProvider
+import network.ermis.ui.common.recording.ErmisMediaRecorder
 import network.ermis.ui.common.state.messages.composer.RecordingState
 import network.ermis.ui.common.state.messages.composer.copy
-import io.getstream.log.StreamLog
-import io.getstream.log.TaggedLogger
-import network.ermis.ui.common.recording.ErmisMediaRecorder
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.launch
 import java.io.File
 import java.util.Date
 import kotlin.math.abs

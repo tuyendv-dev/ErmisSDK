@@ -1,6 +1,5 @@
 package network.ermis.core.internal.concurrency
 
-
 /**
  * An object reference that may be updated thread-safely.
  */

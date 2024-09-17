@@ -29,7 +29,7 @@ public fun Channel.getPreviewMessage(currentUser: User?): Message? =
         .filter { it.deletedAt == null }
         .filter { !it.silent }
         .filter { it.user.id == currentUser?.id || !it.shadowed }
-        .filter { it.isRegular() || it.isSystem() || it.isReply()}
+        .filter { it.isRegular() || it.isSystem() || it.isReply() }
         .maxByOrNull { requireNotNull(it.createdAt ?: it.createdLocallyAt) }
 
 /**

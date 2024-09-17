@@ -1,11 +1,11 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.utils.extensions.internal.toCid
+import io.getstream.result.Result
 import network.ermis.client.persistance.ChannelRepository
 import network.ermis.client.persistance.MessageRepository
 import network.ermis.client.plugin.listeners.HideChannelListener
+import network.ermis.client.utils.extensions.internal.toCid
 import network.ermis.client.utils.internal.validateCidWithResult
-import io.getstream.result.Result
 import java.util.Date
 
 /**

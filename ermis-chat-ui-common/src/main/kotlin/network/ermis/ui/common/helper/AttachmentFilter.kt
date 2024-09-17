@@ -1,9 +1,9 @@
 package network.ermis.ui.common.helper
 
 import androidx.core.content.MimeTypeFilter
-import network.ermis.ui.common.state.messages.composer.AttachmentMetaData
 import network.ermis.client.ErmisClient
 import network.ermis.core.models.AttachmentType
+import network.ermis.ui.common.state.messages.composer.AttachmentMetaData
 
 /**
  * A filter that is used to filter out attachments that will not be accepted by the backend.

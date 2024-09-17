@@ -1,15 +1,15 @@
 package network.ermis.offline.plugin.listener
 
-import network.ermis.client.utils.extensions.internal.toCid
+import io.getstream.result.Error
+import io.getstream.result.Result
 import network.ermis.client.persistance.ChannelRepository
 import network.ermis.client.persistance.UserRepository
 import network.ermis.client.plugin.listeners.QueryMembersListener
+import network.ermis.client.utils.extensions.internal.toCid
 import network.ermis.core.models.FilterObject
 import network.ermis.core.models.Member
 import network.ermis.core.models.User
 import network.ermis.core.models.querysort.QuerySorter
-import io.getstream.result.Error
-import io.getstream.result.Result
 
 /**
  * [QueryMembersListener] implementation for [io.getstream.chat.android.offline.plugin.internal.OfflinePlugin].

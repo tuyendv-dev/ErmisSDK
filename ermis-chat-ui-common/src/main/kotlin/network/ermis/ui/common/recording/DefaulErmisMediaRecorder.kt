@@ -5,12 +5,6 @@ import android.media.MediaMetadataRetriever
 import android.media.MediaRecorder
 import android.os.Build
 import androidx.core.net.toUri
-import network.ermis.client.utils.extensions.EXTRA_DURATION
-import network.ermis.client.utils.extensions.EXTRA_WAVEFORM_DATA
-import network.ermis.core.internal.coroutines.DispatcherProvider
-import network.ermis.core.models.Attachment
-import network.ermis.core.models.AttachmentType
-import network.ermis.ui.common.utils.StreamFileUtil
 import io.getstream.log.taggedLogger
 import io.getstream.result.Error
 import io.getstream.result.Result
@@ -18,6 +12,12 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import network.ermis.client.utils.extensions.EXTRA_DURATION
+import network.ermis.client.utils.extensions.EXTRA_WAVEFORM_DATA
+import network.ermis.core.internal.coroutines.DispatcherProvider
+import network.ermis.core.models.Attachment
+import network.ermis.core.models.AttachmentType
+import network.ermis.ui.common.utils.StreamFileUtil
 import java.io.File
 import kotlin.math.log10
 

@@ -1,8 +1,5 @@
 package network.ermis.state.plugin.logic.querychannels
 
-import network.ermis.state.plugin.state.StateRegistry
-import network.ermis.state.plugin.state.querychannels.QueryChannelsState
-import network.ermis.state.plugin.state.querychannels.QueryChannelsMutableState
 import io.getstream.log.taggedLogger
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.async
@@ -16,6 +13,9 @@ import network.ermis.core.models.Channel
 import network.ermis.core.models.User
 import network.ermis.state.event.chat.EventHandlingResult
 import network.ermis.state.plugin.logic.LogicRegistry
+import network.ermis.state.plugin.state.StateRegistry
+import network.ermis.state.plugin.state.querychannels.QueryChannelsMutableState
+import network.ermis.state.plugin.state.querychannels.QueryChannelsState
 
 internal class QueryChannelsStateLogic(
     private val mutableState: QueryChannelsMutableState,

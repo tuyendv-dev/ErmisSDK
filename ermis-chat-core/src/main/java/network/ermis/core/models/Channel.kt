@@ -1,7 +1,6 @@
 package network.ermis.core.models
 
 import androidx.compose.runtime.Immutable
-import network.ermis.core.models.SyncStatus
 import network.ermis.core.models.querysort.ComparableFieldProvider
 import java.util.Date
 

@@ -1,8 +1,8 @@
 package network.ermis.ui.common.feature.messages.composer.mention
 
-import network.ermis.core.models.User
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.suspendCancellableCoroutine
+import network.ermis.core.models.User
 import kotlin.coroutines.resume
 
 /**

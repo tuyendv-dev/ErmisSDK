@@ -1,6 +1,8 @@
 package network.ermis.offline.plugin.factory
 
 import android.content.Context
+import io.getstream.log.taggedLogger
+import kotlinx.coroutines.SupervisorJob
 import network.ermis.client.ErmisClient
 import network.ermis.client.persistance.factory.RepositoryFactory
 import network.ermis.client.plugin.Plugin
@@ -24,8 +26,6 @@ import network.ermis.offline.plugin.listener.ShuffleGiphyListenerDatabase
 import network.ermis.offline.plugin.listener.ThreadQueryListenerDatabase
 import network.ermis.offline.repository.database.ChatDatabase
 import network.ermis.offline.repository.factory.DatabaseRepositoryFactory
-import io.getstream.log.taggedLogger
-import kotlinx.coroutines.SupervisorJob
 import kotlin.reflect.KClass
 
 /**

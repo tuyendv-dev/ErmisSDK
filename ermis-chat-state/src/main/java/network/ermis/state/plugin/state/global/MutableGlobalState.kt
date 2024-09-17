@@ -1,11 +1,11 @@
 package network.ermis.state.plugin.state.global
 
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import network.ermis.core.models.ChannelMute
 import network.ermis.core.models.Mute
 import network.ermis.core.models.TypingEvent
 import network.ermis.state.plugin.internal.StatePlugin
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
 
 /**
  * Mutable global state of [StatePlugin].

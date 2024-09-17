@@ -1,5 +1,12 @@
 package network.ermis.state.plugin.state.internal
 
+import io.getstream.log.taggedLogger
+import io.getstream.result.call.launch
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.CoroutineStart
+import kotlinx.coroutines.Deferred
+import kotlinx.coroutines.async
+import kotlinx.coroutines.flow.first
 import network.ermis.client.ErmisClient
 import network.ermis.client.api.models.QueryChannelRequest
 import network.ermis.client.api.models.QueryChannelsRequest
@@ -11,13 +18,6 @@ import network.ermis.state.model.QueryChannelPaginationRequest
 import network.ermis.state.plugin.state.StateRegistry
 import network.ermis.state.plugin.state.channel.thread.ThreadState
 import network.ermis.state.plugin.state.querychannels.QueryChannelsState
-import io.getstream.log.taggedLogger
-import io.getstream.result.call.launch
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.CoroutineStart
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.async
-import kotlinx.coroutines.flow.first
 
 /**
  * Adapter for [ErmisClient] that wraps some of it's request.

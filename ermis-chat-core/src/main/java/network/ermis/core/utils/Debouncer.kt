@@ -1,11 +1,11 @@
 package network.ermis.core.utils
 
-import network.ermis.core.internal.coroutines.DispatcherProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import network.ermis.core.internal.coroutines.DispatcherProvider
 
 /**
  * Utility class for debouncing high frequency events.

@@ -13,7 +13,6 @@ import network.ermis.client.api.ErmisClientConfig
 import network.ermis.client.api.RetrofitCallAdapterFactory
 import network.ermis.client.api.RetrofitCdnApi
 import network.ermis.client.api.interceptor.ApiKeyInterceptor
-import network.ermis.client.api.interceptor.ApiRequestAnalyserInterceptor
 import network.ermis.client.api.interceptor.HeadersInterceptor
 import network.ermis.client.api.interceptor.HttpLoggingInterceptor
 import network.ermis.client.api.interceptor.ProgressInterceptor
@@ -47,7 +46,6 @@ import network.ermis.client.notifications.handler.NotificationConfig
 import network.ermis.client.notifications.handler.NotificationHandler
 import network.ermis.client.parser.ChatParser
 import network.ermis.client.parser.MoshiChatParser
-import network.ermis.client.plugin.requests.ApiRequestsAnalyser
 import network.ermis.client.scope.ClientScope
 import network.ermis.client.scope.UserScope
 import network.ermis.client.setup.MutableClientState
@@ -166,11 +164,11 @@ internal open class BaseChatModule(
             .addInterceptor(ApiKeyInterceptor(config.apiKey))
             .addInterceptor(UserIdInterceptor(tokenManager))
             .addInterceptor(HeadersInterceptor(getAnonymousProvider(config, isAnonymousApi)))
-            .apply {
-                if (config.debugRequests) {
-                    addInterceptor(ApiRequestAnalyserInterceptor(ApiRequestsAnalyser.get()))
-                }
-            }
+//            .apply {
+//                if (config.debugRequests) {
+//                    addInterceptor(ApiRequestAnalyserInterceptor(ApiRequestsAnalyser.get()))
+//                }
+//            }
             .let(httpClientConfig)
             .addInterceptor(
                 TokenAuthInterceptor(
