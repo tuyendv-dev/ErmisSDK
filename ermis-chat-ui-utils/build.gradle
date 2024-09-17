@@ -11,7 +11,7 @@ ext {
     PUBLISH_VERSION = Configuration.versionName
 }
 
-apply from: "${rootDir}/scripts/publish-module.gradle"
+//apply from: "${rootDir}/scripts/publish-module.gradle"
 apply from: "${rootDir}/scripts/android.gradle"
 
 android {
