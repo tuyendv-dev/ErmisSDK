@@ -43,7 +43,7 @@ buildscript {
         classpath Dependencies.shot
         classpath Dependencies.spotlessGradlePlugin
         classpath Dependencies.ksp
-        classpath Dependencies.detektPlugin
+//        classpath Dependencies.detektPlugin
     }
 }
 
@@ -51,7 +51,7 @@ subprojects {
     if (it.buildFile.exists()) {
         apply from: "${rootDir}/spotless/spotless.gradle"
     }
-    apply plugin: "io.gitlab.arturbosch.detekt"
+//    apply plugin: "io.gitlab.arturbosch.detekt"
 }
 
 allprojects {
@@ -59,29 +59,30 @@ allprojects {
         google()
         mavenCentral()
         maven { url "https://jitpack.io" }
+        maven { url "https://maven.google.com/" }
     }
 }
 
-versionPrint {
-    printFilePath = "build/tmp/temp-version"
-}
+//versionPrint {
+//    printFilePath = "build/tmp/temp-version"
+//}
 
-unitTestDebugScript {
-    outputPath = "build/tmp/unit-tests-command.sh"
-}
+//unitTestDebugScript {
+//    outputPath = "build/tmp/unit-tests-command.sh"
+//}
 
-releaseScript {
-    changelogPath = "CHANGELOG.md"
-}
+//releaseScript {
+//    changelogPath = "CHANGELOG.md"
+//}
 
-changelogReleaseSection {
-    changelogPath = "CHANGELOG.md"
-}
+//changelogReleaseSection {
+//    changelogPath = "CHANGELOG.md"
+//}
 
-changelogAddModelSection {
-    changelogPath = "CHANGELOG.md"
-    changelogModel = "CHANGELOG_MODEL.md"
-}
+//changelogAddModelSection {
+//    changelogPath = "CHANGELOG.md"
+//    changelogModel = "CHANGELOG_MODEL.md"
+//}
 
 task clean(type: Delete) {
     delete rootProject.buildDir

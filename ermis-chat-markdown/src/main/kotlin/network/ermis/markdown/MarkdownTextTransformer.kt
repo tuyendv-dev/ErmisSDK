@@ -31,7 +31,7 @@ public class MarkdownTextTransformer @JvmOverloads constructor(
 
     override fun transformAndApply(textView: TextView, messageItem: MessageListItem.MessageItem) {
         val displayedText = getDisplayedText(messageItem)
-        markwon.setMarkdown(textView, displayedText.fixItalicAtEnd())
+        markwon.setMarkdown(textView, displayedText.fixMarkdownItalicAtEnd())
         Linkify.addLinks(textView)
     }
 }

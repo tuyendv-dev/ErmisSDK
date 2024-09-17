@@ -97,9 +97,10 @@ dependencies {
     implementation Dependencies.retrofit
     implementation Dependencies.okhttpLoggingInterceptor
     implementation Dependencies.ok2curl
-    debugImplementation Dependencies.flipper
-    debugImplementation Dependencies.flipperNetwork
-    debugImplementation Dependencies.flipperLoader
+//    debugImplementation Dependencies.flipper
+//    debugImplementation Dependencies.flipperNetwork
+//    debugImplementation Dependencies.flipperLoader
+//    releaseImplementation Dependencies.flipperNoop
     implementation Dependencies.timber
 
     // Instrumentation tests
@@ -107,5 +108,5 @@ dependencies {
     androidTestImplementation Dependencies.espressoCore
     androidTestImplementation Dependencies.androidxTestJunit
 
-    detektPlugins(Dependencies.detektFormatting)
+//    detektPlugins(Dependencies.detektFormatting)
 }

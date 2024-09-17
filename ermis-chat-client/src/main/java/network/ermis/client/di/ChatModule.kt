@@ -53,6 +53,7 @@ internal class ChatModule(
             config,
             parser,
             isAnonymousApi,
-        ).addNetworkInterceptor(flipperInterceptor())
+        )
+//            .addNetworkInterceptor(flipperInterceptor())
     }
 }

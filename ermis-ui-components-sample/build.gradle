@@ -154,10 +154,11 @@ dependencies {
     implementation Dependencies.coilGif
     implementation Dependencies.shimmer
 
-    debugImplementation Dependencies.flipper
-    debugImplementation Dependencies.flipperNetwork
-    debugImplementation Dependencies.flipperLoader
+//    debugImplementation Dependencies.flipper
+//    debugImplementation Dependencies.flipperNetwork
+//    debugImplementation Dependencies.flipperLoader
+//    debugImplementation Dependencies.flipperNoop
     debugImplementation Dependencies.fragmentTest
 
-    detektPlugins(Dependencies.detektFormatting)
+//    detektPlugins(Dependencies.detektFormatting)
 }

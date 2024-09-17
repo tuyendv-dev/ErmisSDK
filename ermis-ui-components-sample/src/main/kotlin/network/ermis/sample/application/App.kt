@@ -29,7 +29,7 @@ class App : Application() {
         chatInitializer.init(getApiKey())
         instance = this
         DebugMetricsHelper.init()
-        ApplicationConfigurator.configureApp(this)
+//        ApplicationConfigurator.configureApp(this)
         val connectionType = ConnectionType.AUTOMATIC // ConnectionType.MANUAL
         val projectId = "9aed225a8d150bbf27be18f90dd3e387" // Get Project ID at https://cloud.walletconnect.com/
         val relayUrl = "relay.walletconnect.com"

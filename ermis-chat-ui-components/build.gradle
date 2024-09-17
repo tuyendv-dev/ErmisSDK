@@ -88,5 +88,5 @@ dependencies {
     implementation Dependencies.keyboardVisibilityEvent
     implementation Dependencies.permissionx
 
-    detektPlugins(Dependencies.detektFormatting)
+//    detektPlugins(Dependencies.detektFormatting)
 }

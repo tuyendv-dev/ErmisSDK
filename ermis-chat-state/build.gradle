@@ -73,5 +73,5 @@ dependencies {
     implementation Dependencies.androidxAppCompat
     implementation Dependencies.workRuntimeKtx
 
-    detektPlugins(Dependencies.detektFormatting)
+//    detektPlugins(Dependencies.detektFormatting)
 }

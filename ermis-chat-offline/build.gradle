@@ -87,5 +87,5 @@ dependencies {
     implementation Dependencies.moshiAdapters
     ksp Dependencies.moshiCodegen
 
-    detektPlugins(Dependencies.detektFormatting)
+//    detektPlugins(Dependencies.detektFormatting)
 }

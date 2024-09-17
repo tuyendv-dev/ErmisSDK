@@ -14,7 +14,7 @@ ext {
     PUBLISH_VERSION = Configuration.versionName
 }
 
-//apply from: "${rootDir}/scripts/publish-module.gradle"
+apply from: "${rootDir}/scripts/publish-module.gradle"
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
@@ -45,5 +45,5 @@ dependencies {
     api Dependencies.streamResultCall
     implementation Dependencies.streamLog
 
-    detektPlugins(Dependencies.detektFormatting)
+//    detektPlugins(Dependencies.detektFormatting)
 }

@@ -1,8 +1,8 @@
 package network.ermis.client.di
 
-import com.facebook.flipper.plugins.network.FlipperOkhttpInterceptor
-import com.facebook.flipper.plugins.network.NetworkFlipperPlugin
-
-public val networkFlipper: NetworkFlipperPlugin = NetworkFlipperPlugin()
-
-public fun flipperInterceptor(): FlipperOkhttpInterceptor = FlipperOkhttpInterceptor(networkFlipper)
+//import com.facebook.flipper.plugins.network.FlipperOkhttpInterceptor
+//import com.facebook.flipper.plugins.network.NetworkFlipperPlugin
+//
+//public val networkFlipper: NetworkFlipperPlugin = NetworkFlipperPlugin()
+//
+//public fun flipperInterceptor(): FlipperOkhttpInterceptor = FlipperOkhttpInterceptor(networkFlipper)
